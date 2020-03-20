@@ -1,0 +1,42 @@
+.menu-collection {
+  padding: 15px !important;
+  border: none;
+}
+.menu-collection .collection-item {
+  margin: 15px 0px;
+  border: none;
+  border-radius: 25px;
+  background-color: transparent;
+  min-width: 170px;
+}
+.menu-collection .collection-item span{
+  color: #333333;
+  font-weight: 600;
+}
+.content-pad {
+  padding:20px;
+}
+.content-pad .main-content{
+  padding:20px;
+  border-radius: 5px;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background-color:transparent;
+  outline:none !important;
+}
+.wp-person a:focus .gravatar, a:focus, a:focus .media-icon img{
+  box-shadow: unset;
+}
+.tabs .tab a{
+  color:#212121;
+  font-weight:600;
+  text-transform:capitalize;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+  color:#4DB6AC;
+  font-weight:600;
+  text-transform:capitalize;
+}
+.tabs .indicator {
+  background-color:#4DB6AC;
+}
