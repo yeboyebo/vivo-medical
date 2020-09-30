@@ -5,7 +5,7 @@ Plugin Name: Add Expires Headers
 Plugin URI: http://www.addexpiresheaders.com/wp-plugin
 Description: This plugin will add expires headers for various types of resources of website to have better performance optimization.
 Author: Passionate Brains
-Version: 2.0
+Version: 2.1
 Author URI: http://www.addexpiresheaders.com/
 License: GPLv2 or later
 */
@@ -41,8 +41,9 @@ if ( function_exists( 'dd_aeh' ) ) {
                     'is_require_payment' => true,
                 ),
                     'menu'           => array(
-                    'slug'    => 'aeh_pro_plugin_options',
-                    'support' => false,
+                    'slug'       => 'aeh_pro_plugin_options',
+                    'first-path' => 'plugins.php?plugin_status=all',
+                    'support'    => false,
                 ),
                     'is_live'        => true,
                 ) );
@@ -67,11 +68,11 @@ if ( function_exists( 'dd_aeh' ) ) {
     if ( !defined( 'AEH_URL' ) ) {
         define( 'AEH_URL', plugin_dir_url( __FILE__ ) );
     }
-    if ( !defined( 'SITE_URL' ) ) {
-        define( 'SITE_URL', site_url() );
+    if ( !defined( 'AEH_SITE_URL' ) ) {
+        define( 'AEH_SITE_URL', site_url() );
     }
-    if ( !defined( 'SITE_DOMAIN' ) ) {
-        define( 'SITE_DOMAIN', trim( str_ireplace( array( 'http://', 'https://' ), '', trim( SITE_URL, '/' ) ) ) );
+    if ( !defined( 'AEH_SITE_DOMAIN' ) ) {
+        define( 'AEH_SITE_DOMAIN', trim( str_ireplace( array( 'http://', 'https://' ), '', trim( AEH_SITE_URL, '/' ) ) ) );
     }
     if ( !defined( 'AEH_PREFIX' ) ) {
         define( 'AEH_PREFIX', 'AEH_' );
@@ -96,8 +97,12 @@ if ( function_exists( 'dd_aeh' ) ) {
             
             private function __construct()
             {
-                $this->includes();
-                $this->init();
+                
+                if ( $this->aeh_compat_checker() ) {
+                    $this->includes();
+                    $this->init();
+                }
+            
             }
             
             /*loads other support classes*/
@@ -138,11 +143,13 @@ if ( function_exists( 'dd_aeh' ) ) {
             
             public static function dd_aeh_uninstall_cleanup()
             {
-                AEH_Pro::get_instance()->main()->remove_settings();
+                if ( class_exists( 'AEH_Main' ) ) {
+                    AEH_Pro::get_instance()->main()->remove_settings();
+                }
             }
             
             /* checking compatibility for plugin to get activated and working */
-            public static function aeh_compat_checker()
+            public function aeh_compat_checker()
             {
                 global  $wp_version ;
                 $error = '';
@@ -151,22 +158,6 @@ if ( function_exists( 'dd_aeh' ) ) {
                 if ( version_compare( PHP_VERSION, '5.4', '<' ) ) {
                     $error = 'Add Expires Headers requires PHP 5.4 or higher. You’re still on ' . PHP_VERSION;
                 }
-                if ( isset( $_SERVER['SERVER_SOFTWARE'] ) ) {
-					if ( stripos( $_SERVER['SERVER_SOFTWARE'], 'Apache' ) !== false ) {
-						# php extension requirements
-						if (function_exists('apache_get_modules')){
-							if ( !in_array( 'mod_expires', apache_get_modules() ) ) {
-								$error = 'Add Expires Headers requires the apache mod_expires module to be installed on the server.';
-							}
-						} else {
-							$error = 'Not getting apache modules info';
-                        }							
-					} else {
-						$error = 'plugin compatibility is limited to apache only';
-					}
-                } else {
-					$error = 'we did not get server software info for compatibility check';
-				}	
                 # wp version requirements
                 if ( version_compare( $GLOBALS['wp_version'], '4.5', '<' ) ) {
                     $error = 'Add Expires Headers requires WP 4.5 or higher. You’re still on ' . $GLOBALS['wp_version'];
@@ -179,15 +170,11 @@ if ( function_exists( 'dd_aeh' ) ) {
                     }
                     //deactivate_plugins( plugin_basename( __FILE__ ) );
                     add_action( 'admin_notices', function () use( $error ) {
-                        echo  '<div class="notice notice-error is-dismissible"><p>' . $error . '<strong> Please Deactivate Add Expires Headers Plugin for Normal Operation of Website</strong></p></div>' ;
+                        echo  '<div class="notice notice-error is-dismissible"><p><b>' . $error . '</b></p></div>' ;
                     } );
-                    $current_url = $_SERVER['REQUEST_URI'];
-                    $plugin_url = admin_url( 'plugins.php' );
-                    if ( is_admin() ) {
-                        if ( !stripos( $plugin_url, $_SERVER['REQUEST_URI'] ) ) {
-                            wp_redirect( $plugin_url );
-                        }
-                    }
+                    return false;
+                } else {
+                    return true;
                 }
             
             }
@@ -196,7 +183,6 @@ if ( function_exists( 'dd_aeh' ) ) {
     }
     // Init the plugin and load the plugin instance for the first time.
     add_action( 'plugins_loaded', array( 'AEH_Pro', 'get_instance' ) );
-    add_action( 'admin_init', array( 'AEH_Pro', 'aeh_compat_checker' ) );
     /* deactivation hook */
     dd_aeh()->add_action( 'after_uninstall', array( 'AEH_Pro', 'dd_aeh_uninstall_cleanup' ) );
     register_deactivation_hook( __FILE__, array( 'AEH_Pro', 'dd_aeh_uninstall_cleanup' ) );

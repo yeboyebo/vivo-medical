@@ -63,7 +63,7 @@ if ( isset( $_POST['aeh_expires_headers_submit'] ) ) {
 
 ?>
 
-<div class="col s12">
+<div class="col s12 aeh-options">
 	<form action="" method="POST">
 		<div class="col s12" style="margin-top:15px">
 			<h5 class="left margin-zero" style="margin:0px">Cache Settings</h5>
@@ -71,10 +71,23 @@ if ( isset( $_POST['aeh_expires_headers_submit'] ) ) {
 if ( dd_aeh()->is_plan( 'pro' ) ) {
     ?>
 				<div class="switch right">
-				    <a href="https://join.skype.com/invite/lzJh3CNR6LXE" target="_blank" style="margin-left:15px" class="waves-effect waves-light btn-small right"><i class="material-icons left">message</i>Support</a>
+				    <a href="https://www.addexpiresheaders.com/technical-support/" target="_blank" style="margin-left:15px" class="waves-effect waves-light btn-small right"><i class="material-icons left">message</i>Support</a>
 				</div>
     <?php 
 }
+?>
+		<?php 
+
+if ( dd_aeh()->is_not_paying() ) {
+    ?>
+			<div class="switch right">
+				<a class="waves-effect waves-light btn-small right" href="<?php 
+    echo  dd_aeh()->get_upgrade_url() ;
+    ?>"><i class="material-icons left">local_offer</i>Sign-up for Pro Version!</a>
+			</div>
+	<?php 
+}
+
 ?>
 		</div>
 		<div class="clearfix" style="clear:both"></div>
@@ -83,7 +96,7 @@ if ( dd_aeh()->is_plan( 'pro' ) ) {
 foreach ( $general_settings as $key => $value ) {
     ?>
 		<div class="row">
-      <div class="col s4" style="margin-top:15px">
+      <div class="col m4 s12" style="margin-top:15px">
 				<div class="switch">
 				  <label>
 				    <input type="checkbox" name="aeh_expires_headers_settings[general][<?php 
@@ -98,14 +111,14 @@ foreach ( $general_settings as $key => $value ) {
 				  </label>
 				</div>
 			</div>
-      <div class="col s4">
+      <div class="col m4 s12">
 				<div class="row">
 					<?php 
     $col = array_chunk( ${$key . '_types'}, ceil( count( ${$key . '_types'} ) / 2 ), true );
     if ( !empty($col) ) {
         foreach ( $col as $single_col ) {
             ?>
-									<div class="col s6" style="margin-top:10px">
+									<div class="col m6 s6" style="margin-top:10px">
                   <?php 
             foreach ( $single_col as $key1 => $value1 ) {
                 ?>
@@ -139,7 +152,7 @@ foreach ( $general_settings as $key => $value ) {
     ?>
 				 </div>
 			</div>
-			<div class="col s4" style="margin-top:15px">
+			<div class="col m4 s12" style="margin-top:15px">
 				<div class="input-field">
 					<input type="number" min="0" step="1" name="aeh_expires_headers_settings[expires_days][<?php 
     echo  $key ;

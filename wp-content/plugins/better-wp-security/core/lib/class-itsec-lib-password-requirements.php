@@ -1,5 +1,7 @@
 <?php
 
+use iThemesSecurity\User_Groups;
+
 /**
  * Class ITSEC_Lib_Password_Requirements
  */
@@ -48,24 +50,32 @@ class ITSEC_Lib_Password_Requirements {
 			( array_key_exists( 'validate', $opts ) || array_key_exists( 'evaluate', $opts ) ) &&
 			( ! is_callable( $merged['validate'] ) || ! is_callable( $merged['evaluate'] ) )
 		) {
+			_doing_it_wrong( __METHOD__, 'Validate and evaluate must be callable if defined.', '5.8.0' );
 			return;
 		}
 
 		if ( array_key_exists( 'flag_check', $opts ) && ! is_callable( $merged['flag_check'] ) ) {
+			_doing_it_wrong( __METHOD__, 'Flag check must be callable if defined.', '5.8.0' );
+
 			return;
 		}
 
 		if ( array_key_exists( 'defaults', $opts ) ) {
 			if ( ! is_array( $merged['defaults'] ) ) {
+				_doing_it_wrong( __METHOD__, 'Defaults must be an array if defined.', '5.8.0' );
 				return;
 			}
 
 			if ( ! array_key_exists( 'settings_config', $opts ) ) {
+				_doing_it_wrong( __METHOD__, 'Settings config must be defined if defaults are provided.', '5.8.0' );
+
 				return;
 			}
 		}
 
 		if ( array_key_exists( 'settings_config', $opts ) && ! is_callable( $merged['settings_config'] ) ) {
+			_doing_it_wrong( __METHOD__, 'Settings config must be a callable if defined.', '5.8.0' );
+
 			return;
 		}
 
@@ -144,19 +154,25 @@ class ITSEC_Lib_Password_Requirements {
 			return $error;
 		}
 
-		require_once( ITSEC_Core::get_core_dir() . '/lib/class-itsec-lib-canonical-roles.php' );
+		ITSEC_Lib::load( 'canonical-roles' );
 
 		if ( isset( $args['role'] ) && $user instanceof WP_User ) {
 			$canonical = ITSEC_Lib_Canonical_Roles::get_canonical_role_from_role_and_user( $args['role'], $user );
+			$target    = User_Groups\Match_Target::for_user( $user, $args['role'] );
 		} elseif ( isset( $args['role'] ) ) {
+			$target    = User_Groups\Match_Target::for_role( $args['role'] );
 			$canonical = ITSEC_Lib_Canonical_Roles::get_canonical_role_from_role( $args['role'] );
 		} elseif ( empty( $user->ID ) || ! is_numeric( $user->ID ) ) {
-			$canonical = ITSEC_Lib_Canonical_Roles::get_canonical_role_from_role( get_option( 'default_role', 'subscriber' ) );
+			$args['role'] = get_option( 'default_role', 'subscriber' );
+			$target       = User_Groups\Match_Target::for_role( $args['role'] );
+			$canonical    = ITSEC_Lib_Canonical_Roles::get_canonical_role_from_role( $args['role'] );
 		} else {
+			$target    = User_Groups\Match_Target::for_user( get_userdata( $user->ID ) );
 			$canonical = ITSEC_Lib_Canonical_Roles::get_user_role( $user );
 		}
 
 		$args['canonical'] = $canonical;
+		$args['target']    = $target;
 
 		/**
 		 * Fires when modules should validate a password according to their rules.

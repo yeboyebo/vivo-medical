@@ -1,4 +1,5 @@
 (function ($) {
+  "use strict";
 
   var is_blocked = function ($node) {
     return $node.is('.processing') || $node.parents('.processing').length;
@@ -72,7 +73,7 @@
         data = new FormData();
       }
 
-      var i = 0, len = this.files.length, img, reader, file;
+      var i = 0, len = this.files.length, file;
       for (; i < len; i++) {
         file = this.files[i];
         if (data) {

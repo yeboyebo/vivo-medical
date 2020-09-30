@@ -3,6 +3,8 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+// Disable indexing of CookieLawInfo Cookie data
+echo "<!--googleoff: all-->";
 
 if($notify_html==""){ return; } //if filter is applied
 echo $notify_html;
@@ -30,8 +32,6 @@ if(file_exists($pop_content_html_file))
 </div>
 <div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
 <div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
-<script type="text/javascript">
-  /* <![CDATA[ */
-  cli_cookiebar_settings='<?php echo Cookie_Law_Info::get_json_settings(); ?>';
-  /* ]]> */
-</script>
+<?php 
+// Re-enable indexing
+echo "<!--googleon: all-->";

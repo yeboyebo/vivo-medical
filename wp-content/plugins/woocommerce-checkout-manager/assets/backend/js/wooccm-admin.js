@@ -1,11 +1,12 @@
 (function ($) {
+  "use strict";
 
   $('.wooccm-premium-field').closest('tr').addClass('wooccm-premium');
 
   function date_picker_select(datepicker) {
     var option = $(datepicker).next().is('.hasDatepicker') ? 'minDate' : 'maxDate',
-            otherDateField = 'minDate' === option ? $(datepicker).next() : $(datepicker).prev(),
-            date = $(datepicker).datepicker('getDate');
+      otherDateField = 'minDate' === option ? $(datepicker).next() : $(datepicker).prev(),
+      date = $(datepicker).datepicker('getDate');
 
     $(otherDateField).datepicker('option', option, date);
     $(datepicker).change();
@@ -110,14 +111,14 @@
     $('.wooccm-enhanced-options').each(function () {
 
       var $table = $(this),
-              $add = $table.find('.add-option'),
-              $remove = $table.find('.remove-options');
+        $add = $table.find('.add-option'),
+        $remove = $table.find('.remove-options');
 
       $add.on('click', function (e) {
 
         var $tr = $table.find('tbody > tr'),
-                id = $tr.length,
-                tr = $tr.first().clone().html().replace(/options\[([0-9]+)\]/g, 'options[' + id + ']').replace('disabled="disabled"', '').replace('checked="checked"', '').replace('<input value="0"', '<input value="' + id + '"').replace('<input value="0"', '<input value="' + id + '"');
+          id = $tr.length,
+          tr = $tr.first().clone().html().replace(/options\[([0-9]+)\]/g, 'options[' + id + ']').replace('disabled="disabled"', '').replace('checked="checked"', '').replace('<input value="0"', '<input value="' + id + '"').replace('<input value="0"', '<input value="' + id + '"');
 
         $tr.last().after($('<tr>' + tr + '</tr>')).find('input').trigger('change');
 
@@ -148,6 +149,13 @@
         allowClear: $(this).data('allow_clear') ? true : false,
         placeholder: $(this).data('placeholder')
       }, getEnhancedSelectFormatString());
+
+      var name = $(this).attr('name');
+
+      // fix serializeJSON empty select and multiselect
+      //if (name.indexOf('[]') >= 0) {
+      //  $(this).prepend('<input type="hidden" name="' + name + '" value="[]" />');
+      //}
 
       $(this).selectWoo(select2_args).addClass('enhanced');
     });
@@ -182,7 +190,7 @@
             var terms = [];
             if (data) {
               $.each(data, function (id, text) {
-                terms.push({id: id, text: text});
+                terms.push({ id: id, text: text });
               });
             }
             return {
@@ -194,6 +202,13 @@
       };
 
       select2_args = $.extend(select2_args, getEnhancedSelectFormatString());
+
+      var name = $(this).attr('name');
+
+      // fix serializeJSON empty select and multiselect
+      //if (name.indexOf('[]') >= 0) {
+      //  $(this).prepend('<input type="hidden" name="' + name + '" value="[]" />');
+      //}
 
       $(this).selectWoo(select2_args).addClass('enhanced');
 
@@ -216,9 +231,11 @@
         });
         // Keep multiselects ordered alphabetically if they are not sortable.
       } else if ($(this).prop('multiple')) {
+
         $(this).on('change', function () {
           var $children = $(this).children();
-          $children.sort(function (a, b) {
+          //filter option fix appended input hidden
+          $children.filter('option').sort(function (a, b) {
             var atext = a.text.toLowerCase();
             var btext = b.text.toLowerCase();
 
@@ -230,6 +247,7 @@
             }
             return 0;
           });
+
           $(this).html($children);
         });
       }
@@ -263,10 +281,10 @@
           var terms = [];
           if (data) {
             $.each(data, function (id, text) {
-              terms.push({id: id, text: text});
+              terms.push({ id: id, text: text });
             });
           }
-          return {results: terms};
+          return { results: terms };
         }
       }
     };

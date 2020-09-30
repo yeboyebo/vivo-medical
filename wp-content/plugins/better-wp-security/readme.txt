@@ -1,10 +1,10 @@
 === iThemes Security (formerly Better WP Security) ===
 Contributors: ithemes, chrisjean, mattdanner, timothyblynjacobs
 Tags: security, security plugin, malware, hack, secure, block, SSL, admin, htaccess, lockdown, login, protect, protection, anti virus, attack, injection, login security, maintenance, permissions, prevention, authentication, administration, password, brute force, ban, permissions, bots, user agents, xml rpc, security log
-Requires at least: 4.7
-Tested up to: 5.3.0
-Stable tag: 7.6.1
-Requires PHP: 5.5
+Requires at least: 5.2
+Tested up to: 5.5
+Stable tag: 7.8.0
+Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,9 +43,9 @@ Pro Features:
 * wp-cli Integration - Manage your site's security from the command line.
 
 
-= iThemes Sync Integration =
+= iThemes Sync Pro Integration =
 
-Manage more than one WordPress site? Manage Away Mode, release lockouts and keep your themes, plugins and WordPress core up to date from one dashboard with iThemes Sync. <a href="http://ithemes.com/sync/">Start managing 10 WordPress sites for free with iThemes Sync</a>.
+Manage more than one WordPress site? Manage Away Mode, release lockouts and keep your themes, plugins and WordPress core up to date from one dashboard with iThemes Sync Pro. <a href="https://ithemes.com/sync/">Start your free trial of Themes Sync Pro</a>.
 
 = iThemes Brute Force Attack Protection Network =
 
@@ -188,6 +188,43 @@ Free support may be available with the help of the community in the <a href="htt
 5. Free malware scan powered by Sucuri SiteCheck.
 
 == Changelog ==
+
+= 7.8.0 =
+* New Feature: The new, improved WordPress Security Site Scan powered by iThemes checks if Google has detected malware and added your site to their threat list.
+* Enhancement: Remove quick bans. Persist banned hosts to .htaccess or nginx.conf on an hourly schedule.
+* Tweak: Cap banned hosts persisted to .htaccess or nginx.conf to the most recent 100. This number can be adjusted with the "itsec_ban_users_max_hosts_for_server_config" filter. Older banned hosts will be locked out after WordPress loads.
+* Tweak: Ensure randomly generated passwords are considered strong by the Strong Passwords library.
+* Tweak: Suggest a 32 character password when forcing a password change.
+* Tweak: Change insensitive language to be more inclusive.
+* Bug Fix: PHP warning when a user's email address is updated outside of the user edit admin page.
+* Bug Fix: Fix login interstitials on WP Engine when using a front-end login form.
+* Bug Fix: PHP warning when checking opaque tokens.
+* Bug Fix: PHP warning after successfully connecting a site to iThemes Sync via the login connection flow.
+* Bug Fix: File Change Security Message would not appear for new installs.
+
+= 7.7.1 =
+* Bug Fix: PHP warning when evaluating password requirements.
+
+= 7.7.0 =
+* Important: iThemes Security requires PHP 5.6 or greater and WordPress 5.2 or greater.
+* New Feature: Save Time Securing WordPress With User Groups!
+* New Feature: Simplified connection flow when setting up iThemes Sync.
+* Enhancement: Add a warning if a WordPress Salt is set to an invalid value.
+* Enhancement: Include child log items in the logs list table. These are helpful for debugging issues.
+* Enhancement: Improve performance of the logs page on sites with large number of log items.
+* Enhancement: Check tables exist after completing a DB upgrade.
+* Tweak: When logging $_SERVER, only log a snapshot of available properties.
+* Bug Fix: The "Mulisite Tweaks -> Hide Updates" setting prevented auto-updates from running with WP Cron.
+* Bug Fix: Backup event was not added when the WP Cron Scheduler was reset manually.
+* Bug Fix: Admin Notices Popover was not being hidden when clicking outside the Popover on WP 5.3.
+* Bug Fix: New Password Requirements for already created accounts were not enforced until the second login.
+* Bug Fix: Update admin notices styling to be compatible with WordPress 5.4.
+* Bug Fix: Periodically clear expired opaque tokens.
+* Bug Fix: Don't block registration page when "wp-signup.php" is the Hide Backend register slug.
+* Bug Fix: Users with weak passwords would not be forced to change their password if the strong password requirement had been enabled after their password strength was checked.
+* Bug Fix: Remove "get_magic_quotes()" call that existed for backwards compatibility with PHP versions 5.3 and earlier. This function call was causing a warning on PHP 7.4.
+* Bug Fix: Warning when loading the settings page on PHP 7.4.
+* Bug Fix: Warning when loading the debug page on PHP 7.4.
 
 = 7.6.1 =
 * Bug Fix: Properly notate that iThemes Security requires PHP 5.5 or greater.
@@ -569,5 +606,5 @@ Free support may be available with the help of the community in the <a href="htt
 
 == Upgrade Notice ==
 
-= 7.6.1 =
-Version 7.6.1 contains new features and bug fixes. It is recommended for all users.
+= 7.8.0 =
+Version 7.8.0 contains new features and bug fixes. It is recommended for all users.

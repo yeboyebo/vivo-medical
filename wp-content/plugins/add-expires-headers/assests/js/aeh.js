@@ -1,5 +1,6 @@
 jQuery(document).ready(function(){
     jQuery('.tabs').tabs();
+    jQuery('.tooltipped').tooltip();
     M.updateTextFields();
     jQuery('#repeater').createRepeater({
       showFirstItemToDefault: true,

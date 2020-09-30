@@ -10,10 +10,14 @@ class AEH_Admin_View extends AEH_View
 {
     public function on_load()
     {
-        $this->tabs = apply_filters( 'aeh_setting_tabs', array(
-            'cache'   => 'Cache Settings',
-            'advance' => 'Advance Settings',
-        ) );
+        global  $is_apache ;
+        $aeh_tabs = array(
+            'cache'    => 'Cache Settings',
+            'external' => 'External Resources',
+            'advance'  => 'Advance Settings',
+            'status'   => 'Plugin Status',
+        );
+        $this->tabs = apply_filters( 'aeh_setting_tabs', $aeh_tabs );
     }
     
     public function render()
@@ -21,6 +25,11 @@ class AEH_Admin_View extends AEH_View
         ?>
     <div class="row">
      <div class="col s12 m12 l3 xl3">
+			 <div class="content-pad">
+         <img class="responsive-img small-plugin-image" src="<?php 
+        echo  AEH_URL . 'assests/images/AddExpiresHeaders.png' ;
+        ?>">
+       </div>
 			 <ul class="collection menu-collection">
 				 <?php 
         foreach ( $this->get_tabs() as $tab => $name ) {
@@ -32,15 +41,15 @@ class AEH_Admin_View extends AEH_View
             ?>">
 						 <span><?php 
             echo  esc_html( $name ) ;
-            ?></span><i class="material-icons right"><?php 
+            ?></span><?php 
             
-            if ( $tab === 'advance' ) {
-                echo  ( dd_aeh()->can_use_premium_code() ? 'check_circle' : 'info' ) ;
+            if ( $tab === 'advance' || $tab === 'external' ) {
+                echo  ( dd_aeh()->can_use_premium_code() ? '<i class="material-icons right">check_circle</i>' : '<i class="material-icons right text-color-free">info</i>' ) ;
             } else {
-                echo  'check_circle' ;
+                echo  '<i class="material-icons right">check_circle</i>' ;
             }
             
-            ?></i></li>
+            ?></li>
 					 </a>
 				 <?php 
         }
@@ -76,7 +85,10 @@ class AEH_Admin_View extends AEH_View
                     'defaults'          => $aeh_settings->init_general_defaults(),
                 );
             case 'advance':
-                defult:
+                return array();
+            case 'external':
+                return array();
+            default:
                 return array();
         }
     }

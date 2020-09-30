@@ -3,8 +3,8 @@ Contributors: passionatebrains, freemius
 Donate link: http://www.addexpiresheaders.com/donate
 Tags: expires header, expires headers, far future expiration, cache, expiry header, expiry, wp-cache, minify, gzip, speed optimization, etags
 Requires at least: 3.5
-Tested up to: 5.3.2
-Stable tag: 2.0
+Tested up to: 5.5
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,17 +23,19 @@ Plugin will improve your website loading speed by caching various types of stati
 4) Larger band of predefined file types are covered so it will increase bandwidth of files which can have expiry headers.
 
 = Pro Features =
-1) Adding new file types for adding expires headers.
+1) Ability to add expires headers to External Resources
 
-2) Refresh cache periodically
+2) Adding new file types for adding expires headers
 
-3) Unset Entity Tags
+3) Refresh cache periodically
 
-4) HTTP(Gzip) compression
+4) Unset Entity Tags
 
-5) Prevent Specific files from caching
+5) HTTP(Gzip) compression
 
-6) Removing version info from files 
+6) Prevent Specific files from caching
+
+7) Removing version info from files
 
 = Documentation =
 For Plugin documentation, please refer our <a href="https://www.addexpiresheaders.com/add-expires-headers-plugin/" rel="follow">plugin website</a>.
@@ -43,8 +45,10 @@ For Plugin documentation, please refer our <a href="https://www.addexpiresheader
 
 2) It is necessary to have read/write permission of .htaccess file to plugin. If not then update file permissions accordingly.
 
+3) check status page of plugin for more info.
+
 == Installation ==
-1) Deactivate and uninstall any other expires headers plugin you may be using. 
+1) Deactivate and uninstall any other expires headers plugin you may be using.
 
 2) Login as an administrator to your WordPress Admin account. Using the “Add New” menu option under the “Plugins” section of the navigation, you can either search for: "add expires headers" or if you’ve downloaded the plugin already, click the “Upload” link, find the .zip file you download and then click “Install Now”. Or you can unzip and FTP upload the plugin to your plugins directory (wp-content/plugins/).
 
@@ -71,7 +75,7 @@ Yes base on Mime Type you can have different expiry time.
 No, But if you upgrade to pro verion you will have facility for same.
 
 = Can we add custom file types for adding expires headers? =
-No, But with upgrade you can have facility to add custom file types. 
+No, But with upgrade you can have facility to add custom file types.
 
 == Changelog ==
 
@@ -89,6 +93,10 @@ Adding functionality to disable Etags.
 Basic feature for adding expires headers for pre define file types
 Ability to have Pro-Version
 
+= 2.1 =
+Adding functionality for caching and adding expires headers to External resources
+Added Plugin compatibility status page
+Added more file formats
+
 == Screenshots ==
 1. Plugin Settings
-

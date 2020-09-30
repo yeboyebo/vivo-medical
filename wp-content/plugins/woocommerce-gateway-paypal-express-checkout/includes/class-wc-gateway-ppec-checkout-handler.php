@@ -11,16 +11,16 @@ $includes_path = wc_gateway_ppec()->includes_path;
 
 // TODO: Use spl autoload to require on-demand maybe?
 
-require_once( $includes_path . 'class-wc-gateway-ppec-settings.php' );
-require_once( $includes_path . 'class-wc-gateway-ppec-session-data.php' );
-require_once( $includes_path . 'class-wc-gateway-ppec-checkout-details.php' );
+require_once $includes_path . 'class-wc-gateway-ppec-settings.php';
+require_once $includes_path . 'class-wc-gateway-ppec-session-data.php';
+require_once $includes_path . 'class-wc-gateway-ppec-checkout-details.php';
 
-require_once( $includes_path . 'class-wc-gateway-ppec-api-error.php' );
-require_once( $includes_path . 'exceptions/class-wc-gateway-ppec-api-exception.php' );
-require_once( $includes_path . 'exceptions/class-wc-gateway-ppec-missing-session-exception.php' );
+require_once $includes_path . 'class-wc-gateway-ppec-api-error.php';
+require_once $includes_path . 'exceptions/class-wc-gateway-ppec-api-exception.php';
+require_once $includes_path . 'exceptions/class-wc-gateway-ppec-missing-session-exception.php';
 
-require_once( $includes_path . 'class-wc-gateway-ppec-payment-details.php' );
-require_once( $includes_path . 'class-wc-gateway-ppec-address.php' );
+require_once $includes_path . 'class-wc-gateway-ppec-payment-details.php';
+require_once $includes_path . 'class-wc-gateway-ppec-address.php';
 
 class WC_Gateway_PPEC_Checkout_Handler {
 
@@ -37,8 +37,6 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		add_action( 'init', array( $this, 'init' ) );
 		add_filter( 'the_title', array( $this, 'endpoint_page_titles' ) );
 		add_action( 'woocommerce_checkout_init', array( $this, 'checkout_init' ) );
-		add_filter( 'woocommerce_default_address_fields', array( $this, 'filter_default_address_fields' ) );
-		add_filter( 'woocommerce_billing_fields', array( $this, 'filter_billing_fields' ) );
 		add_action( 'woocommerce_checkout_process', array( $this, 'copy_checkout_details_to_post' ) );
 
 		add_action( 'wp', array( $this, 'maybe_return_from_paypal' ) );
@@ -64,7 +62,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		} else {
 			add_filter( 'woocommerce_get_script_data', array( $this, 'filter_wc_checkout_params' ), 10, 2 );
 		}
-		if ( isset( $_GET['startcheckout'] ) && 'true' === $_GET['startcheckout'] ) {
+		if ( isset( $_GET['startcheckout'] ) && 'true' === $_GET['startcheckout'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			ob_start();
 		}
 	}
@@ -91,7 +89,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 *
 	 * @param WC_Checkout $checkout
 	 */
-	function checkout_init( $checkout ) {
+	public function checkout_init( $checkout ) {
 		if ( ! $this->has_active_session() ) {
 			return;
 		}
@@ -101,11 +99,15 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		remove_action( 'woocommerce_checkout_billing', array( $checkout, 'checkout_form_billing' ) );
 		remove_action( 'woocommerce_checkout_shipping', array( $checkout, 'checkout_form_shipping' ) );
 
-		// Lastly, let's add back in 1) displaying customer details from PayPal, 2) allow for
+		// Secondly, let's add back in 1) displaying customer details from PayPal, 2) allow for
 		// account registration and 3) shipping details from PayPal
 		add_action( 'woocommerce_checkout_billing', array( $this, 'paypal_billing_details' ) );
 		add_action( 'woocommerce_checkout_billing', array( $this, 'account_registration' ) );
 		add_action( 'woocommerce_checkout_shipping', array( $this, 'paypal_shipping_details' ) );
+
+		// Lastly make address fields optional depending on PayPal settings.
+		add_filter( 'woocommerce_default_address_fields', array( $this, 'filter_default_address_fields' ) );
+		add_filter( 'woocommerce_billing_fields', array( $this, 'filter_billing_fields' ) );
 	}
 
 	/**
@@ -124,6 +126,11 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			return $fields;
 		}
 
+		// Regardless of shipping, PP doesn't have the county required (e.g. using Ireland without a county is acceptable)
+		if ( array_key_exists( 'state', $fields ) ) {
+			$fields['state']['required'] = false;
+		}
+
 		if ( ! apply_filters( 'woocommerce_paypal_express_checkout_address_not_required', ! WC_Gateway_PPEC_Plugin::needs_shipping() ) ) {
 			return $fields;
 		}
@@ -135,11 +142,6 @@ class WC_Gateway_PPEC_Checkout_Handler {
 					$fields[ $not_required_field ]['required'] = false;
 				}
 			}
-		}
-
-		// Regardless of shipping, PP doesn't have the county required (e.g. using Ireland without a county is acceptable)
-		if ( array_key_exists( 'state', $fields ) ) {
-			$fields['state']['required'] = false;
 		}
 
 		return $fields;
@@ -188,14 +190,14 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		}
 
 		// Make sure the selected payment method is ppec_paypal
-		if ( ! isset( $_POST['payment_method'] ) || ( 'ppec_paypal' !== $_POST['payment_method'] ) ) {
+		if ( ! isset( $_POST['payment_method'] ) || ( 'ppec_paypal' !== $_POST['payment_method'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			return;
 		}
 
 		// Get the buyer details from PayPal
 		try {
 			$session          = WC()->session->get( 'paypal' );
-			$token            = isset( $_GET['token'] ) ? $_GET['token'] : $session->token;
+			$token            = isset( $_GET['token'] ) ? $_GET['token'] : $session->token; // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 			$checkout_details = $this->get_checkout_details( $token );
 		} catch ( PayPal_API_Exception $e ) {
 			wc_add_notice( $e->getMessage(), 'error' );
@@ -238,8 +240,8 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * Is hooked to woocommerce_checkout_billing action by checkout_init
 	 */
 	public function paypal_billing_details() {
-		$session          = WC()->session->get( 'paypal' );
-		$token            = isset( $_GET['token'] ) ? $_GET['token'] : $session->token;
+		$session = WC()->session->get( 'paypal' );
+		$token   = isset( $_GET['token'] ) ? $_GET['token'] : $session->token; // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 		try {
 			$checkout_details = $this->get_checkout_details( $token );
 		} catch ( PayPal_API_Exception $e ) {
@@ -253,22 +255,22 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			$fields = WC()->checkout->get_checkout_fields( 'billing' );
 		}
 		?>
-		<h3><?php _e( 'Billing details', 'woocommerce-gateway-paypal-express-checkout' ); ?></h3>
+		<h3><?php esc_html_e( 'Billing details', 'woocommerce-gateway-paypal-express-checkout' ); ?></h3>
 		<ul>
 			<?php if ( ! empty( $checkout_details->payer_details->billing_address ) ) : ?>
-				<li><strong><?php _e( 'Address:', 'woocommerce-gateway-paypal-express-checkout' ) ?></strong></br><?php echo WC()->countries->get_formatted_address( $this->get_mapped_billing_address( $checkout_details ) ); ?></li>
+				<li><strong><?php esc_html_e( 'Address:', 'woocommerce-gateway-paypal-express-checkout' ); ?></strong></br><?php echo WC()->countries->get_formatted_address( $this->get_mapped_billing_address( $checkout_details ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></li>
 			<?php elseif ( ! empty( $checkout_details->payer_details->first_name ) && ! empty( $checkout_details->payer_details->last_name ) ) : ?>
-				<li><strong><?php _e( 'Name:', 'woocommerce-gateway-paypal-express-checkout' ) ?></strong> <?php echo esc_html( $checkout_details->payer_details->first_name . ' ' . $checkout_details->payer_details->last_name ); ?></li>
+				<li><strong><?php esc_html_e( 'Name:', 'woocommerce-gateway-paypal-express-checkout' ); ?></strong> <?php echo esc_html( $checkout_details->payer_details->first_name . ' ' . $checkout_details->payer_details->last_name ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $checkout_details->payer_details->email ) ) : ?>
-				<li><strong><?php _e( 'Email:', 'woocommerce-gateway-paypal-express-checkout' ) ?></strong> <?php echo esc_html( $checkout_details->payer_details->email ); ?></li>
+				<li><strong><?php esc_html_e( 'Email:', 'woocommerce-gateway-paypal-express-checkout' ); ?></strong> <?php echo esc_html( $checkout_details->payer_details->email ); ?></li>
 			<?php else : ?>
 				<li><?php woocommerce_form_field( 'billing_email', $fields['billing_email'], WC()->checkout->get_value( 'billing_email' ) ); ?></li>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $checkout_details->payer_details->phone_number ) ) : ?>
-				<li><strong><?php _e( 'Phone:', 'woocommerce-gateway-paypal-express-checkout' ) ?></strong> <?php echo esc_html( $checkout_details->payer_details->phone_number ); ?></li>
+				<li><strong><?php esc_html_e( 'Phone:', 'woocommerce-gateway-paypal-express-checkout' ); ?></strong> <?php echo esc_html( $checkout_details->payer_details->phone_number ); ?></li>
 			<?php elseif ( 'yes' === wc_gateway_ppec()->settings->require_phone_number ) : ?>
 				<li><?php woocommerce_form_field( 'billing_phone', $fields['billing_phone'], WC()->checkout->get_value( 'billing_phone' ) ); ?></li>
 			<?php endif; ?>
@@ -292,7 +294,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			if ( $checkout->enable_guest_checkout ) {
 				?>
 				<p class="form-row form-row-wide create-account">
-					<input class="input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true) ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php _e( 'Create an account?', 'woocommerce-gateway-paypal-express-checkout' ); ?></label>
+					<input class="input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ); ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php esc_html_e( 'Create an account?', 'woocommerce-gateway-paypal-express-checkout' ); ?></label>
 				</p>
 				<?php
 			}
@@ -301,7 +303,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 				?>
 				<div class="create-account">
 
-					<p><?php _e( 'Create an account by entering the information below. If you are a returning customer please login at the top of the page.', 'woocommerce-gateway-paypal-express-checkout' ); ?></p>
+					<p><?php esc_html_e( 'Create an account by entering the information below. If you are a returning customer please login at the top of the page.', 'woocommerce-gateway-paypal-express-checkout' ); ?></p>
 
 					<?php foreach ( $checkout->checkout_fields['account'] as $key => $field ) : ?>
 
@@ -314,7 +316,6 @@ class WC_Gateway_PPEC_Checkout_Handler {
 				</div>
 				<?php
 			}
-
 		}
 	}
 
@@ -326,8 +327,8 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * Is hooked to woocommerce_checkout_shipping action by checkout_init
 	 */
 	public function paypal_shipping_details() {
-		$session          = WC()->session->get( 'paypal' );
-		$token            = isset( $_GET['token'] ) ? $_GET['token'] : $session->token;
+		$session = WC()->session->get( 'paypal' );
+		$token   = isset( $_GET['token'] ) ? $_GET['token'] : $session->token; // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 
 		try {
 			$checkout_details = $this->get_checkout_details( $token );
@@ -341,9 +342,9 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		}
 
 		?>
-		<h3><?php _e( 'Shipping details', 'woocommerce-gateway-paypal-express-checkout' ); ?></h3>
+		<h3><?php esc_html_e( 'Shipping details', 'woocommerce-gateway-paypal-express-checkout' ); ?></h3>
 		<?php
-		echo WC()->countries->get_formatted_address( $this->get_mapped_shipping_address( $checkout_details ) );
+		echo WC()->countries->get_formatted_address( $this->get_mapped_shipping_address( $checkout_details ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**
@@ -368,8 +369,8 @@ class WC_Gateway_PPEC_Checkout_Handler {
 
 		if ( ! empty( $checkout_details->payer_details->phone_number ) ) {
 			$phone = $checkout_details->payer_details->phone_number;
-		} elseif ( 'yes' === wc_gateway_ppec()->settings->require_phone_number && ! empty( $_POST['billing_phone'] ) ) {
-			$phone = wc_clean( $_POST['billing_phone'] );
+		} elseif ( 'yes' === wc_gateway_ppec()->settings->require_phone_number && ! empty( $_POST['billing_phone'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$phone = wc_clean( $_POST['billing_phone'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 		}
 
 		return array(
@@ -401,15 +402,15 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		$name       = explode( ' ', $checkout_details->payments[0]->shipping_address->getName() );
 		$first_name = array_shift( $name );
 		$last_name  = implode( ' ', $name );
-		$result = array(
-			'first_name'    => $first_name,
-			'last_name'     => $last_name,
-			'address_1'     => $checkout_details->payments[0]->shipping_address->getStreet1(),
-			'address_2'     => $checkout_details->payments[0]->shipping_address->getStreet2(),
-			'city'          => $checkout_details->payments[0]->shipping_address->getCity(),
-			'state'         => $checkout_details->payments[0]->shipping_address->getState(),
-			'postcode'      => $checkout_details->payments[0]->shipping_address->getZip(),
-			'country'       => $checkout_details->payments[0]->shipping_address->getCountry(),
+		$result     = array(
+			'first_name' => $first_name,
+			'last_name'  => $last_name,
+			'address_1'  => $checkout_details->payments[0]->shipping_address->getStreet1(),
+			'address_2'  => $checkout_details->payments[0]->shipping_address->getStreet2(),
+			'city'       => $checkout_details->payments[0]->shipping_address->getCity(),
+			'state'      => $checkout_details->payments[0]->shipping_address->getState(),
+			'postcode'   => $checkout_details->payments[0]->shipping_address->getZip(),
+			'country'    => $checkout_details->payments[0]->shipping_address->getCountry(),
 		);
 		if ( ! empty( $checkout_details->payer_details ) && property_exists( $checkout_details->payer_details, 'business_name' ) ) {
 			$result['company'] = $checkout_details->payer_details->business_name;
@@ -421,6 +422,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * Checks data is correctly set when returning from PayPal Checkout
 	 */
 	public function maybe_return_from_paypal() {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
 		if (
 			isset( $_GET['woo-paypal-return'] )
 			&& isset( $_GET['update_subscription_payment_method'] )
@@ -430,12 +432,11 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			return;
 		}
 
-		if ( empty( $_GET['woo-paypal-return'] ) || empty( $_GET['token'] ) || empty( $_GET['PayerID'] ) ) {
+		if ( empty( $_GET['woo-paypal-return'] ) || empty( $_GET['token'] ) ) {
 			return;
 		}
 
-		$token                    = $_GET['token'];
-		$payer_id                 = $_GET['PayerID'];
+		$token                    = $_GET['token']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 		$create_billing_agreement = ! empty( $_GET['create-billing-agreement'] );
 		$session                  = WC()->session->get( 'paypal' );
 
@@ -446,8 +447,16 @@ class WC_Gateway_PPEC_Checkout_Handler {
 
 		// Store values in session.
 		$session->checkout_completed = true;
-		$session->payer_id           = $payer_id;
 		$session->token              = $token;
+
+		if ( ! empty( $_GET['PayerID'] ) ) {
+			$session->payer_id = $_GET['PayerID']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
+		} elseif ( $create_billing_agreement ) {
+			$session->create_billing_agreement = true;
+		} else {
+			return;
+		}
+		// phpcs:enable
 
 		// Update customer addresses here from PayPal selection so they can be used to calculate local taxes.
 		$this->update_customer_addresses_from_paypal( $token );
@@ -468,13 +477,17 @@ class WC_Gateway_PPEC_Checkout_Handler {
 				}
 
 				// Complete the payment now.
-				$this->do_payment( $order, $session->token, $session->payer_id );
+				if ( ! empty( $session->payer_id ) ) {
+					$this->do_payment( $order, $session->token, $session->payer_id );
+				} elseif ( $order->get_total() <= 0 ) {
+					$order->payment_complete();
+				}
 
 				// Clear Cart
 				WC()->cart->empty_cart();
 
 				// Redirect
-				wp_redirect( $order->get_checkout_order_received_url() );
+				wp_redirect( $order->get_checkout_order_received_url() ); // phpcs:ignore WordPress.Security.SafeRedirect.wp_redirect_wp_redirect
 				exit;
 			}
 		} catch ( PayPal_API_Exception $e ) {
@@ -554,16 +567,15 @@ class WC_Gateway_PPEC_Checkout_Handler {
 					unset( $gateways[ $id ] );
 				}
 			}
-
-		// If using PayPal standard (this is admin choice) we don't need to also show PayPal EC on checkout.
 		} elseif ( is_checkout() && ( isset( $gateways['paypal'] ) || 'no' === wc_gateway_ppec()->settings->mark_enabled ) ) {
+			// If using PayPal standard (this is admin choice) we don't need to also show PayPal EC on checkout.
 			unset( $gateways['ppec_paypal'] );
 		}
 
 		// If the cart total is zero (e.g. because of a coupon), don't allow this gateway.
 		// We do this only if we're on the checkout page (is_checkout), but not on the order-pay page (is_checkout_pay_page)
 		if ( is_cart() || ( is_checkout() && ! is_checkout_pay_page() ) ) {
-			if ( isset( $gateways['ppec_paypal'] ) && ( 0 >= WC()->cart->total ) ) {
+			if ( isset( $gateways['ppec_paypal'] ) && ! WC()->cart->needs_payment() ) {
 				unset( $gateways['ppec_paypal'] );
 			}
 		}
@@ -597,6 +609,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * Clears the session data and display notice.
 	 */
 	public function maybe_cancel_checkout_with_paypal() {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
 		if (
 			isset( $_GET['update_subscription_payment_method'] )
 			&& 'true' === $_GET['update_subscription_payment_method']
@@ -605,11 +618,12 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			$this->handle_subscription_payment_change_failure();
 			return;
 		}
+		// phpcs:enable
 
-		if ( is_cart() && ! empty( $_GET['wc-gateway-ppec-clear-session'] ) ) {
+		if ( is_cart() && ! empty( $_GET['wc-gateway-ppec-clear-session'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$this->maybe_clear_session_data();
 
-			$notice =  __( 'You have cancelled Checkout with PayPal. Please try to process your order again.', 'woocommerce-gateway-paypal-express-checkout' );
+			$notice = __( 'You have cancelled Checkout with PayPal. Please try to process your order again.', 'woocommerce-gateway-paypal-express-checkout' );
 			if ( ! wc_has_notice( $notice, 'notice' ) ) {
 				wc_add_notice( $notice, 'notice' );
 			}
@@ -655,7 +669,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		}
 
 		$session = WC()->session->paypal;
-		return ( is_a( $session, 'WC_Gateway_PPEC_Session_Data' ) && $session->payer_id && $session->expiry_time > time() );
+		return ( is_a( $session, 'WC_Gateway_PPEC_Session_Data' ) && ( $session->payer_id || ! empty( $session->create_billing_agreement ) ) && $session->expiry_time > time() );
 	}
 
 	/**
@@ -710,8 +724,9 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * @return string Redirect URL.
 	 */
 	protected function start_checkout( $context_args, $session_data_args ) {
-		$settings     = wc_gateway_ppec()->settings;
-		$client       = wc_gateway_ppec()->client;
+		$settings = wc_gateway_ppec()->settings;
+		$client   = wc_gateway_ppec()->client;
+
 		$context_args['create_billing_agreement'] = $this->needs_billing_agreement_creation( $context_args );
 
 		$params   = $client->get_set_express_checkout_params( $context_args );
@@ -734,7 +749,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * @return string Redirect URL.
 	 */
 	public function start_checkout_from_cart( $skip_checkout = true ) {
-		$settings     = wc_gateway_ppec()->settings;
+		$settings = wc_gateway_ppec()->settings;
 
 		$context_args = array(
 			'skip_checkout' => $skip_checkout,
@@ -758,7 +773,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * @return string Redirect URL.
 	 */
 	public function start_checkout_from_order( $order_id, $use_ppc ) {
-		$settings     = wc_gateway_ppec()->settings;
+		$settings = wc_gateway_ppec()->settings;
 
 		$context_args = array(
 			'skip_checkout' => false,
@@ -818,8 +833,8 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			return $this->_checkout_details;
 		}
 
-		if ( false === $token && ! empty( $_GET['token'] ) ) {
-			$token = $_GET['token'];
+		if ( false === $token && ! empty( $_GET['token'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$token = $_GET['token']; // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 		}
 
 		$client   = wc_gateway_ppec()->client;
@@ -859,7 +874,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			throw new PayPal_API_Exception( $resp );
 		}
 
-		$old_wc = version_compare( WC_VERSION, '3.0', '<' );
+		$old_wc   = version_compare( WC_VERSION, '3.0', '<' );
 		$order_id = $old_wc ? $order->id : $order->get_id();
 		if ( $old_wc ) {
 			update_post_meta( $order_id, '_ppec_billing_agreement_id', $resp['BILLINGAGREEMENTID'] );
@@ -885,21 +900,22 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * Complete a payment that has been authorized via PPEC.
 	 */
 	public function do_payment( $order, $token, $payer_id ) {
-		$settings     = wc_gateway_ppec()->settings;
 		$session_data = WC()->session->get( 'paypal', null );
 
 		if ( ! $order || null === $session_data || $this->session_has_expired( $token ) || empty( $payer_id ) ) {
 			throw new PayPal_Missing_Session_Exception();
 		}
 
-		$client = wc_gateway_ppec()->client;
-		$old_wc = version_compare( WC_VERSION, '3.0', '<' );
+		$client   = wc_gateway_ppec()->client;
+		$old_wc   = version_compare( WC_VERSION, '3.0', '<' );
 		$order_id = $old_wc ? $order->id : $order->get_id();
-		$params = $client->get_do_express_checkout_params( array(
-			'order_id' => $order_id,
-			'token'    => $token,
-			'payer_id' => $payer_id,
-		) );
+		$params   = $client->get_do_express_checkout_params(
+			array(
+				'order_id' => $order_id,
+				'token'    => $token,
+				'payer_id' => $payer_id,
+			)
+		);
 
 		$response = $client->do_express_checkout_payment( $params );
 
@@ -907,38 +923,7 @@ class WC_Gateway_PPEC_Checkout_Handler {
 			$payment_details = new PayPal_Payment_Details();
 			$payment_details->loadFromDoECResponse( $response );
 
-			$meta = $old_wc ? get_post_meta( $order_id, '_woo_pp_txnData', true ) : $order->get_meta( '_woo_pp_txnData', true );
-			if ( ! empty( $meta ) ) {
-				$txnData = $meta;
-			} else {
-				$txnData = array( 'refundable_txns' => array() );
-			}
-
-			$paymentAction = $settings->get_paymentaction();
-
-			$txn = array(
-				'txnID'           => $payment_details->payments[0]->transaction_id,
-				'amount'          => $order->get_total(),
-				'refunded_amount' => 0
-			);
-			if ( 'Completed' == $payment_details->payments[0]->payment_status ) {
-				$txn['status'] = 'Completed';
-			} else {
-				$txn['status'] = $payment_details->payments[0]->payment_status . '_' . $payment_details->payments[0]->pending_reason;
-			}
-			$txnData['refundable_txns'][] = $txn;
-
-			if ( 'authorization' == $paymentAction ) {
-				$txnData['auth_status'] = 'NotCompleted';
-			}
-
-			$txnData['txn_type'] = $paymentAction;
-
-			if ( $old_wc ) {
-				update_post_meta( $order_id, '_woo_pp_txnData', $txnData );
-			} else {
-				$order->update_meta_data( '_woo_pp_txnData', $txnData );
-			}
+			wc_gateway_ppec_save_transaction_data( $order, $response, 'PAYMENTINFO_0_' );
 
 			// Payment was taken so clear session
 			$this->maybe_clear_session_data();
@@ -963,13 +948,14 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		// Handle $payment response
 		if ( 'completed' === strtolower( $payment->payment_status ) ) {
 			$order->payment_complete( $payment->transaction_id );
-			if ( isset( $payment->fee_amount ) ){
+			if ( isset( $payment->fee_amount ) ) {
 				wc_gateway_ppec_set_transaction_fee( $order, $payment->fee_amount );
 			}
 		} else {
 			if ( 'authorization' === $payment->pending_reason ) {
 				$order->update_status( 'on-hold', __( 'Payment authorized. Change payment status to processing or complete to capture funds.', 'woocommerce-gateway-paypal-express-checkout' ) );
 			} else {
+				// Translators: placeholder is a reason (from PayPal) for the payment to be pending.
 				$order->update_status( 'on-hold', sprintf( __( 'Payment pending (%s).', 'woocommerce-gateway-paypal-express-checkout' ), $payment->pending_reason ) );
 			}
 			if ( $old_wc ) {
@@ -992,13 +978,13 @@ class WC_Gateway_PPEC_Checkout_Handler {
 	 * @return mixed
 	 */
 	public function maybe_add_shipping_information( $packages ) {
-		if ( empty( $_GET['woo-paypal-return'] ) || empty( $_GET['token'] ) || empty( $_GET['PayerID'] ) ) {
+		if ( empty( $_GET['woo-paypal-return'] ) || empty( $_GET['token'] ) || empty( $_GET['PayerID'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			return $packages;
 		}
 
 		// Shipping details from PayPal
 		try {
-			$checkout_details = $this->get_checkout_details( wc_clean( $_GET['token'] ) );
+			$checkout_details = $this->get_checkout_details( wc_clean( $_GET['token'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 		} catch ( PayPal_API_Exception $e ) {
 			return $packages;
 		}
@@ -1107,8 +1093,8 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		$params['wc_ajax_url'] = remove_query_arg( 'wc-ajax', $params['wc_ajax_url'] );
 
 		foreach ( $fields as $field ) {
-			if ( ! empty( $_GET[ $field ] ) ) {
-				$params['wc_ajax_url'] = add_query_arg( $field, $_GET[ $field ], $params['wc_ajax_url'] );
+			if ( ! empty( $_GET[ $field ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				$params['wc_ajax_url'] = add_query_arg( $field, $_GET[ $field ], $params['wc_ajax_url'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.ValidatedSanitizedInput.MissingUnslash
 			}
 		}
 
@@ -1130,8 +1116,8 @@ class WC_Gateway_PPEC_Checkout_Handler {
 		try {
 			$session = WC()->session->get( 'paypal' );
 
-			if ( isset( $_GET['token'] ) ) {
-				$token = sanitize_text_field( wp_unslash( $_GET['token'] ) );
+			if ( isset( $_GET['token'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				$token = sanitize_text_field( wp_unslash( $_GET['token'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			} elseif ( isset( $session->token ) ) {
 				$token = $session->token;
 			}

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package Polylang
+ */
 
 /**
  * The language switcher widget
@@ -64,7 +67,7 @@ class PLL_Widget_Languages extends WP_Widget {
 	 * @return array Settings to save or bool false to cancel saving
 	 */
 	public function update( $new_instance, $old_instance ) {
-		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+		$instance = array( 'title' => sanitize_text_field( $new_instance['title'] ) );
 		foreach ( array_keys( PLL_Switcher::get_switcher_options( 'widget' ) ) as $key ) {
 			$instance[ $key ] = ! empty( $new_instance[ $key ] ) ? 1 : 0;
 		}
@@ -135,7 +138,7 @@ class PLL_Widget_Languages extends WP_Widget {
 				// Remove all options if dropdown is checked
 				$( '.widgets-sortables,.control-section-sidebar' ).on( 'change', '.pll-dropdown', function() {
 					var this_id = $( this ).parent().parent().parent().children( '.widget-id' ).attr( 'value' );
-					pll_toggle( $( '.no-dropdown-' + this_id ), 'checked' != $( this ).attr( 'checked' ) );
+					pll_toggle( $( '.no-dropdown-' + this_id ), true != $( this ).prop( 'checked' ) );
 				} );
 
 				// Disallow unchecking both show names and show flags
@@ -143,7 +146,7 @@ class PLL_Widget_Languages extends WP_Widget {
 				$.each( options, function( i, v ) {
 					$( '.widgets-sortables,.control-section-sidebar' ).on( 'change', '.pll' + v, function() {
 						var this_id = $( this ).parent().parent().parent().children( '.widget-id' ).attr( 'value' );
-						if ( 'checked' != $( this ).attr( 'checked' ) ) {
+						if ( true != $( this ).prop( 'checked' ) ) {
 							$( '#widget-' + this_id + options[ 1-i ] ).prop( 'checked', true );
 						}
 					} );

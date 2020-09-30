@@ -8,53 +8,53 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Declaring Class
  */
 class AEH_Settings {
-  //private $main_setting = true;
-
   public $expires_headers_image_types = array(
-    'gif' => true,
-    'ico' => true,
-    'jpeg'=> true,
-    'jpg'=> true,
+    'gif' => null,
+    'ico' => null,
+    'jpeg'=> null,
+    'jpg'=> null,
   );
 
   public $expires_headers_audio_types = array(
-    'dct' => true,
-    'gsm' => true,
-    'mp3'=> true,
-    'ogg'=> true,
+    'dct' => null,
+    'gsm' => null,
+    'mp3'=> null,
+    'ogg'=> null,
   );
 
   public $expires_headers_video_types = array(
-    '3gp' => true,
-    'avi' => true,
-    'flv'=> true,
-    'mkv'=> true,
+    '3gp' => null,
+    'avi' => null,
+    'flv'=> null,
+    'mkv'=> null,
   );
 	public $expires_headers_font_types = array(
-    'otf' => true,
+    'otf' => null,
+	'ttf' => null,
   );
   public $expires_headers_text_types = array(
-    'css' => true,
+    'css' => null,
   );
 
   public $expires_headers_application_types = array(
-    'js' => true,
+	'javascript' => null,
+	'x-javascript' => null,
   );
 
   public $expires_headers_general_settings = array(
-    'image' => false,
-    'audio' => false,
-    'video' => false,
-		'font' => false,
-    'text' => false,
-    'application' => false,
+    'image' => null,
+    'audio' => null,
+    'video' => null,
+	'font' => null,
+    'text' => null,
+    'application' => null,
   );
 
   public $expires_headers_days_settings = array(
     'image' => 30,
     'audio' => 30,
     'video' => 30,
-		'font'=> 30,
+	'font'=> 30,
     'text' => 30,
     'application' => 30,
   );
@@ -85,10 +85,10 @@ class AEH_Settings {
         'filter' => FILTER_VALIDATE_BOOLEAN,
         'flags'  => FILTER_REQUIRE_ARRAY,
       ),
-			'font'          => array(
-				'filter' => FILTER_VALIDATE_BOOLEAN,
-				'flags'  => FILTER_REQUIRE_ARRAY,
-			),
+	'font'          => array(
+		'filter' => FILTER_VALIDATE_BOOLEAN,
+		'flags'  => FILTER_REQUIRE_ARRAY,
+	),
       'text'          => array(
         'filter' => FILTER_VALIDATE_BOOLEAN,
         'flags'  => FILTER_REQUIRE_ARRAY,
@@ -121,62 +121,50 @@ class AEH_Settings {
   public function init_general_defaults() {
 		$defaults = array(
 			'general' => array(
-        'image' => true,
-        'audio' => false,
-        'video' => false,
-				'font' => false,
-        'text' => false,
-        'application' => false,
+        'image' => null,
+        'audio' => null,
+        'video' => null,
+				'font' => null,
+        'text' => null,
+        'application' => null,
 			),
-			'image'          => array(
-        'gif' => true,
-        'ico' => true,
-        'jpeg'=> true,
-        'jpg'=> true,
-        'png'=> true,
-        'tiff'=> true,
-        'webp'=>true,
+			'image'   => array(
+        'gif' => null,
+        'ico' => null,
+        'jpeg'=> null,
+        'jpg'=> null,
 			),
 			'audio'       => array(
-        'dct' => true,
-        'gsm' => true,
-        'mp3'=> true,
-        'ogg'=> true,
-        'raw'=> true,
-        'vox'=> true,
-        'wav'=>true,
+        'dct' => null,
+        'gsm' => null,
+        'mp3'=> null,
+        'ogg'=> null,
 			),
 			'video'         => array(
-        '3gp' => true,
-        'avi' => true,
-        'flv'=> true,
-        'mkv'=> true,
-        'mp4'=> true,
-        'webm'=> true,
-        'wmv'=>true,
+        '3gp' => null,
+        'avi' => null,
+        'flv'=> null,
+        'mkv'=> null,
 			),
 			'font' => array(
-        'otf' => true,
+        'otf' => null,
 			),
 			'text'   =>array(
-        'css' => true,
+        'css' => null,
       ),
-			'application' => array(
-        'js' => true,
+	'application' => array(
+		'javascript' => null,
+		'x-javascript' => null,
       ),
 			'expires_days' => array (
         'image' => 30,
         'audio' => 30,
         'video' => 30,
-				'font' => 30,
+		'font' => 30,
         'text' => 30,
         'application' => 30,
       ),
 		);
     return $defaults;
 	}
-	/*public function init_main_default() {
-		$main_defaults = $this->main_setting;
-		return $main_defaults;
-	}*/
 }

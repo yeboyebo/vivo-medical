@@ -9,18 +9,64 @@ class ITSEC_Lib_Feature_Flags {
 	private static $flags = array();
 
 	/**
+	 * Whether the Feature Flag UI should be displayed.
+	 *
+	 * @return bool
+	 */
+	public static function show_ui() {
+		$show = count( self::get_enabled() ) > 0;
+
+		if ( defined( 'ITSEC_SHOW_FEATURE_FLAGS' ) ) {
+			$show = ITSEC_SHOW_FEATURE_FLAGS;
+		}
+
+		return apply_filters( 'itsec_show_feature_flags_ui', $show );
+	}
+
+	/**
 	 * Register a feature flag.
 	 *
 	 * @param string $name
 	 * @param array  $args
+	 *
+	 * @return true|WP_Error
 	 */
 	public static function register_flag( $name, $args = array() ) {
+		if ( ! preg_match( '/^[a-zA-Z0-9_]+$/', $name ) ) {
+			return new WP_Error( 'invalid_flag_name', __( 'Invalid flag name.', 'better-wp-security' ) );
+		}
+
 		self::$flags[ $name ] = wp_parse_args( $args, array(
-			'rate'        => false,
-			'remote'      => false,
-			'title'       => '',
-			'description' => '',
+			'rate'          => false,
+			'remote'        => false,
+			'title'         => '',
+			'description'   => '',
+			'documentation' => '',
+			'requirements'  => [],
 		) );
+
+		return true;
+	}
+
+	/**
+	 * Is the given flag available to be enabled.
+	 *
+	 * @param string $flag
+	 *
+	 * @return bool
+	 */
+	public static function is_available( $flag ) {
+		if ( ! $config = self::get_flag_config( $flag ) ) {
+			return false;
+		}
+
+		if ( ! $config['requirements'] ) {
+			return true;
+		}
+
+		$error = ITSEC_Lib::evaluate_requirements( $config['requirements'] );
+
+		return ! $error->has_errors();
 	}
 
 	/**
@@ -29,6 +75,17 @@ class ITSEC_Lib_Feature_Flags {
 	 * @return array
 	 */
 	public static function get_available_flags() {
+		$flags = self::get_registered_flags();
+
+		return array_filter( $flags, [ __CLASS__, 'is_available' ], ARRAY_FILTER_USE_KEY );
+	}
+
+	/**
+	 * Get a list of all registered flags.
+	 *
+	 * @return array
+	 */
+	public static function get_registered_flags() {
 		self::load();
 
 		$flags = array();
@@ -69,9 +126,17 @@ class ITSEC_Lib_Feature_Flags {
 			return false;
 		}
 
+		if ( ! self::is_available( $flag ) ) {
+			return false;
+		}
+
 		if ( defined( 'ITSEC_FF_' . $flag ) ) {
 			// A constant overrules everything.
 			return (bool) constant( 'ITSEC_FF_' . $flag );
+		}
+
+		if ( ! empty( $config['disabled'] ) ) {
+			return false;
 		}
 
 		$flags = ITSEC_Modules::get_setting( 'global', 'feature_flags' );
@@ -88,8 +153,8 @@ class ITSEC_Lib_Feature_Flags {
 				return false;
 			}
 
-			// If the rice haven't been rolled, or the rate has changed since the last run, roll the dice.
-			if ( ! isset( $flags[ $flag ]['rate'] ) || $flags[ $flag ]['rate'] !== $rate ) {
+			// If the dice haven't been rolled, or the rate has changed since the last run, roll the dice.
+			if ( ! isset( $flags[ $flag ]['rate'] ) || $flags[ $flag ]['rate'] < $rate ) {
 				$enabled = mt_rand( 1, 100 ) <= $rate;
 
 				$flags[ $flag ] = array(
@@ -107,6 +172,41 @@ class ITSEC_Lib_Feature_Flags {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Get's the reason for the flag being enabled/disabled.
+	 *
+	 * @param string $flag
+	 *
+	 * @return array
+	 */
+	public static function get_reason( $flag ) {
+		if ( ! $config = self::get_flag_config( $flag ) ) {
+			return [ 'unknown', __( 'Unknown flag' ) ];
+		}
+
+		if ( ! self::is_available( $flag ) ) {
+			$evaluation = ITSEC_Lib::evaluate_requirements( $config['requirements'] );
+
+			return [ 'requirements', $evaluation->get_error_message() ];
+		}
+
+		if ( defined( 'ITSEC_FF_' . $flag ) ) {
+			return [ 'constant', __( 'Manually configured with a constant.' ) ];
+		}
+
+		if ( ! empty( $config['disabled'] ) ) {
+			return [ 'remote', __( 'Remotely disabled by iThemes.' ) ];
+		}
+
+		$flags = ITSEC_Modules::get_setting( 'global', 'feature_flags' );
+
+		if ( isset( $flags[ $flag ]['rate'] ) ) {
+			return [ 'rollout', __( 'Gradually rolling out.' ) ];
+		}
+
+		return [ 'setting', __( 'Configured in the Feature Flags settings page.' ) ];
 	}
 
 	/**
@@ -150,7 +250,6 @@ class ITSEC_Lib_Feature_Flags {
 	 */
 	public static function get_flag_config( $flag ) {
 		self::load();
-
 
 		if ( ! isset( self::$flags[ $flag ] ) ) {
 			return null;

@@ -9,14 +9,75 @@ if ( !defined( 'ABSPATH' ) ) {
 class AEH_Main
 {
     public  $settings ;
+    public  $external_settings ;
     public function __construct()
     {
         $this->settings = AEH_Settings::get_instance();
+        $this->external_settings = get_option( 'aeh_expires_headers_external_cache_settings' );
     }
     
     public function remove_settings()
     {
         $this->delete_from_htaccess();
+        if ( get_option( 'aeh_scanned_urls' ) ) {
+            delete_option( 'aeh_scanned_urls' );
+        }
+        if ( get_option( 'aeh_extracted_urls' ) ) {
+            delete_option( 'aeh_extracted_urls' );
+        }
+        if ( get_option( 'aeh_expires_headers_external_cache_settings' ) ) {
+            delete_option( 'aeh_expires_headers_external_cache_settings' );
+        }
+        if ( get_option( 'aeh_expires_headers_advance_settings' ) ) {
+            delete_option( 'aeh_expires_headers_advance_settings' );
+        }
+        if ( get_option( 'aeh_expires_headers_settings' ) ) {
+            delete_option( 'aeh_expires_headers_settings' );
+        }
+        // Folder path to be flushed
+        $files = glob( AEH_DIR . 'cached-scripts/*' );
+        if ( $files ) {
+            foreach ( $files as $file ) {
+                if ( is_file( $file ) ) {
+                    unlink( $file );
+                }
+            }
+        }
+    }
+    
+    /*checking for mod_expires module on server */
+    public function aeh_is_mod_not_loaded( $mod, $default = false )
+    {
+        global  $is_apache ;
+        
+        if ( $is_apache ) {
+            
+            if ( function_exists( 'apache_get_modules' ) ) {
+                $mods = apache_get_modules();
+                
+                if ( in_array( $mod, $mods ) ) {
+                    return false;
+                } else {
+                    return 'Add Expires Headers requires the apache mod_expires module to be enabled on the server.';
+                }
+            
+            } elseif ( function_exists( 'phpinfo' ) && false === strpos( ini_get( 'disable_functions' ), 'phpinfo' ) ) {
+                ob_start();
+                phpinfo( 8 );
+                $phpinfo = ob_get_clean();
+                
+                if ( false !== strpos( $phpinfo, $mod ) ) {
+                    return false;
+                } else {
+                    return 'Add Expires Headers requires the apache mod_expires module to be enabled on the server.';
+                }
+            
+            }
+        
+        } else {
+            return false;
+        }
+    
     }
     
     /* main function which updates lines to .htaccess file according to plugin settings */

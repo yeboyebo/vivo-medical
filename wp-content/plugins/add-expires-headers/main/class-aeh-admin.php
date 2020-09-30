@@ -49,7 +49,7 @@ class AEH_Admin {
     $settings_page = is_multisite() && is_network_admin() ? network_admin_url( 'admin.php?page=aeh_pro_plugin_options' ) : menu_page_url( 'aeh_pro_plugin_options', false );
     // If networkwide setting url is needed.
     $settings_page = $url_only && $networkwide && is_multisite() ? network_admin_url( 'admin.php?page=aeh_pro_plugin_options' ) : $settings_page;
-    $settings      = '<a href="' . $settings_page . '">Settings</a>';
+    $settings      = '<a href="' . $settings_page . '">' . __( 'Settings', 'wp-smushit' ) . '</a>';
 
     // Return only settings page link.
     if ( $url_only ) {

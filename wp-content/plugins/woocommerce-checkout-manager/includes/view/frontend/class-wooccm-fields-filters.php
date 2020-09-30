@@ -1,15 +1,18 @@
 <?php
 
-class WOOCCM_Fields_Filter {
+class WOOCCM_Fields_Filter
+{
 
   protected static $_instance;
   public $count = 0;
 
-  public function __construct() {
+  public function __construct()
+  {
     $this->init();
   }
 
-  public static function instance() {
+  public static function instance()
+  {
     if (is_null(self::$_instance)) {
       self::$_instance = new self();
     }
@@ -18,7 +21,8 @@ class WOOCCM_Fields_Filter {
 
   // Custom fields
   // ---------------------------------------------------------------------------
-  public function custom_field($field = '', $key, $args, $value) {
+  public function custom_field($field = '', $key, $args, $value)
+  {
 
     $field = '';
 
@@ -33,7 +37,8 @@ class WOOCCM_Fields_Filter {
       $args['label_class'] = array($args['label_class']);
     }
 
-    if (is_null($value)) {
+    //if (is_null($value)) {
+    if (!$value) {
       $value = $args['default'];
     }
 
@@ -75,7 +80,7 @@ class WOOCCM_Fields_Filter {
     $field_container = '<p class="form-row %1$s" id="%2$s" data-priority="' . esc_attr($sort) . '">%3$s</p>';
     switch ($args['type']) {
 
-      case 'radio' :
+      case 'radio':
         $field = '';
 
         if (!empty($args['options'])) {
@@ -83,7 +88,7 @@ class WOOCCM_Fields_Filter {
           $field .= ' <span class="woocommerce-radio-wrapper" ' . implode(' ', $custom_attributes) . '>';
 
           foreach ($args['options'] as $option_key => $option_text) {
-            $field .= '<input type="radio" class="input-checkbox" value="' . esc_attr($option_key) . '" name="' . esc_attr($key) . '" id="' . esc_attr($key) . '_' . esc_attr($option_key) . '"' . checked($value, $option_key, false) . ' />';
+            $field .= '<input type="radio" class="input-checkbox" value="' . esc_attr($option_text) . '" name="' . esc_attr($key) . '" id="' . esc_attr($key) . '_' . esc_attr($option_key) . '"' . checked($value, $option_text, false) . ' />';
             $field .= '<label for="' . esc_attr($key) . '_' . esc_attr($option_key) . '" class="checkbox ' . implode(' ', $args['label_class']) . '">' . $option_text . '</label><br>';
           }
 
@@ -102,34 +107,34 @@ class WOOCCM_Fields_Filter {
             $field .= '<option value="" disabled="disabled" selected="selected">' . esc_attr($args['placeholder']) . '</option>';
           }
           foreach ($args['options'] as $option_key => $option_text) {
-            $field .= '<option value="' . esc_attr($option_key) . '" ' . selected($value, $option_key, false) . '>' . esc_attr($option_text) . '</option>';
+            $field .= '<option value="' . esc_attr($option_text) . '" ' . selected($value, $option_text, false) . '>' . esc_attr($option_text) . '</option>';
           }
           $field .= '</select>';
         }
 
         break;
 
-      case 'multiselect' :
+      case 'multiselect':
 
         $field = '';
 
-        $value = is_array($value) ? $value : array($value);
+        $value = is_array($value) ? $value : array_map('trim', (array) explode(',', $value));
 
         if (!empty($args['options'])) {
           $field .= '<select name="' . esc_attr($key) . '[]" id="' . esc_attr($key) . '" class="select ' . esc_attr(implode(' ', $args['input_class'])) . '" multiple="multiple" ' . implode(' ', $custom_attributes) . '>';
           foreach ($args['options'] as $option_key => $option_text) {
-            $field .= '<option value="' . esc_attr($option_key) . '" ' . selected(in_array($option_key, $value), 1, false) . '>' . esc_attr($option_text) . '</option>';
+            $field .= '<option value="' . esc_attr($option_text) . '" ' . selected(in_array($option_text, $value), 1, false) . '>' . esc_attr($option_text) . '</option>';
           }
           $field .= ' </select>';
         }
 
         break;
 
-      case 'multicheckbox' :
+      case 'multicheckbox':
 
         $field = '';
 
-        $value = is_array($value) ? $value : array($value);
+        $value = is_array($value) ? $value : array_map('trim', (array) explode(',', $value));
 
         if (!empty($args['options'])) {
 
@@ -137,7 +142,7 @@ class WOOCCM_Fields_Filter {
 
           foreach ($args['options'] as $option_key => $option_text) {
             //$field .='<label><input type="checkbox" name="' . esc_attr($key) . '[]" value="1"' . checked(in_array($option_key, $value), 1, false) . ' /> ' . esc_attr($option_text) . '</label>';
-            $field .='<label><input type="checkbox" name="' . esc_attr($key) . '[]" value="' . esc_attr($option_key) . '"' . checked(in_array($option_key, $value), 1, false) . ' /> ' . esc_attr($option_text) . '</label>';
+            $field .= '<label><input type="checkbox" name="' . esc_attr($key) . '[]" value="' . esc_attr($option_text) . '"' . checked(in_array($option_text, $value), 1, false) . ' /> ' . esc_attr($option_text) . '</label>';
           }
 
           $field .= '</span>';
@@ -145,7 +150,7 @@ class WOOCCM_Fields_Filter {
 
         break;
 
-      case 'file' :
+      case 'file':
 
         $field = '';
 
@@ -183,7 +188,8 @@ class WOOCCM_Fields_Filter {
 
   // Heading
   // ---------------------------------------------------------------------------
-  public function heading_field($field = '', $key, $args, $value) {
+  public function heading_field($field = '', $key, $args, $value)
+  {
 
     // Custom attribute handling.
     $custom_attributes = array();
@@ -207,7 +213,8 @@ class WOOCCM_Fields_Filter {
 
   // Colorpicker
   // ---------------------------------------------------------------------------
-  public function colorpicker_field($field = '', $key, $args, $value) {
+  public function colorpicker_field($field = '', $key, $args, $value)
+  {
 
     $args['type'] = 'text';
     $args['maxlength'] = 7;
@@ -225,7 +232,8 @@ class WOOCCM_Fields_Filter {
 
   // Country 
   // ---------------------------------------------------------------------------
-  public function country_field($field = '', $key, $args, $value) {
+  public function country_field($field = '', $key, $args, $value)
+  {
 
     static $instance = 0;
 
@@ -250,7 +258,8 @@ class WOOCCM_Fields_Filter {
 
   //  State
   // ---------------------------------------------------------------------------
-  public function state_field($field = '', $key, $args, $value) {
+  public function state_field($field = '', $key, $args, $value)
+  {
 
     static $instance = 0;
 
@@ -273,7 +282,24 @@ class WOOCCM_Fields_Filter {
     return $field;
   }
 
-  public function init() {
+  public function hidden_field($field = '', $key, $args, $value)
+  {
+
+    static $instance = 0;
+
+    if ($instance) {
+      return $field;
+    }
+
+    $instance++;
+
+    $field .= '<input type="hidden" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" value="' . esc_html($value) . '" ' . implode(' ', $args['custom_attributes']) . ' readonly="readonly" />';
+
+    return $field;
+  }
+
+  public function init()
+  {
     add_filter('woocommerce_form_field_radio', array($this, 'custom_field'), 10, 4);
     add_filter('woocommerce_form_field_multicheckbox', array($this, 'custom_field'), 10, 4);
     add_filter('woocommerce_form_field_multiselect', array($this, 'custom_field'), 10, 4);
@@ -283,8 +309,8 @@ class WOOCCM_Fields_Filter {
     add_filter('woocommerce_form_field_colorpicker', array($this, 'colorpicker_field'), 10, 4);
     add_filter('woocommerce_form_field_country', array($this, 'country_field'), 10, 4);
     add_filter('woocommerce_form_field_state', array($this, 'state_field'), 10, 4);
+    add_filter('woocommerce_form_field_hidden', array($this, 'hidden_field'), 10, 4);
   }
-
 }
 
 WOOCCM_Fields_Filter::instance();

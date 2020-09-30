@@ -3,11 +3,11 @@
   <table class="woocommerce_order_items shop_table">
     <thead>
       <tr>
-        <th><?php _e('File', 'woocommerce-checkout-manager'); ?></th>
-        <th><?php _e('Filename', 'woocommerce-checkout-manager'); ?></th>
-        <th><?php _e('Dimensions', 'woocommerce-checkout-manager'); ?></th>
-        <th><?php _e('Extension', ' woocommerce-checkout-manager'); ?></th>
-        <th class="column-actions"><?php _e('Actions', 'woocommerce-checkout-manager'); ?></th>
+        <th><?php esc_html_e('File', 'woocommerce-checkout-manager'); ?></th>
+        <th><?php esc_html_e('Filename', 'woocommerce-checkout-manager'); ?></th>
+        <th><?php esc_html_e('Dimensions', 'woocommerce-checkout-manager'); ?></th>
+        <th><?php esc_html_e('Extension', ' woocommerce-checkout-manager'); ?></th>
+        <th class="column-actions"><?php esc_html_e('Actions', 'woocommerce-checkout-manager'); ?></th>
       </tr>
     </thead>
     <tbody class="product_images">
@@ -49,10 +49,10 @@
   <input type="hidden" id="all_attachments_ids" name="all_attachments_ids" value="<?php echo esc_attr(implode(',', $attachments)); ?>" />
   <p class="order-upload">
     <a style="float: left; margin: 0 10px 0 0;" class="button alt fileinput-button">
-      <span><?php _e('Upload Files', 'woocommerce-checkout-manager'); ?></span>
+      <span><?php esc_html_e('Upload Files', 'woocommerce-checkout-manager'); ?></span>
       <input data-order_id="<?php echo esc_attr($order->get_id()); ?>" type="file" name="wooccm_order_attachment_upload" id="wooccm_order_attachment_upload" multiple />
     </a>
-    <input type="button" id="wooccm_order_attachment_update" class="button button-secondary" value="<?php _e('Save Changes', 'woocommerce-checkout-manager'); ?>" disabled="disabled">
+    <input type="button" id="wooccm_order_attachment_update" class="button button-secondary" value="<?php esc_html_e('Save Changes', 'woocommerce-checkout-manager'); ?>" disabled="disabled">
     <span class="wooccm_upload_results"></span>
   </p>
 </div>

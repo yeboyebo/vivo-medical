@@ -82,7 +82,7 @@ abstract class AEH_View {
   }
 
   protected function get_tabs() {
-    return apply_filters( 'afh_admin_page_tabs_' . $this->slug, $this->tabs );
+    return apply_filters( 'aeh_admin_page_tabs_' . $this->slug, $this->tabs );
   }
 
 }

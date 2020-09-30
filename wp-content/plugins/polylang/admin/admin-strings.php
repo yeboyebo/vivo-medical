@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package Polylang
+ */
 
 /**
  * A fully static class to manage strings translations on admin side
@@ -118,7 +121,6 @@ class PLL_Admin_Strings {
 	 * @return string
 	 */
 	public static function sanitize_string_translation( $translation, $name ) {
-		$translation = wp_unslash( trim( $translation ) );
 
 		if ( false !== ( $option = array_search( $name, self::$default_strings['options'], true ) ) ) {
 			$translation = sanitize_option( $option, $translation );

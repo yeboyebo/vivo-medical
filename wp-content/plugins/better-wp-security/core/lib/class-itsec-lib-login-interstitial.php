@@ -570,7 +570,7 @@ class ITSEC_Lib_Login_Interstitial {
 		$session      = $this->get_and_verify_session();
 
 		if ( ! $interstitial->show_to_user( $session->get_user(), $session->is_current_requested() ) ) {
-			wp_safe_redirect( set_url_scheme( wp_login_url(), 'login_post' ) );
+			wp_safe_redirect( wp_login_url() );
 			die;
 		}
 
@@ -608,7 +608,9 @@ class ITSEC_Lib_Login_Interstitial {
 		wp_enqueue_script( 'itsec-login-interstitial-util' );
 		?>
 
-		<?php if ( $this->error ) : ?>
+		<?php if ( $this->error && $this->error->get_error_data() === 'message' ) : ?>
+			<p class="message"><?php echo $this->error->get_error_message(); ?></p>
+		<?php elseif ( $this->error ): ?>
 			<div id="login-error" class="message" style="border-left-color: #dc3232;">
 				<?php echo $this->error->get_error_message(); ?>
 			</div>
@@ -901,8 +903,9 @@ class ITSEC_Lib_Login_Interstitial {
 	private function get_base_wp_login_url() {
 		$wp_login_url = set_url_scheme( wp_login_url(), 'login_post' );
 
-		if ( isset( $_GET['wpe-login'] ) && ! preg_match( '/[&?]wpe-login=/', $wp_login_url ) ) {
-			$wp_login_url = add_query_arg( 'wpe-login', $_GET['wpe-login'], $wp_login_url );
+		if ( ( defined( 'WPE_PLUGIN_URL' ) || isset( $_GET['wpe-login'] ) ) && ! preg_match( '/[&?]wpe-login=/', $wp_login_url ) ) {
+			$wpe_login    = isset( $_GET['wpe-login'] ) ? $_GET['wpe-login'] : 'true';
+			$wp_login_url = add_query_arg( 'wpe-login', $wpe_login, $wp_login_url );
 		}
 
 		return $wp_login_url;

@@ -183,9 +183,17 @@ class SEED_CSP4_ADMIN
      */
     public function create_menus()
     {
+        // get notifications count
+        $notification = '';
+        $n = new SeedProd_Notifications();
+        $notifications_count = $n->get_count();
+        if(!empty( $notifications_count)){
+            $notification = ' <span class="update-plugins"><span class="plugin-count">'.$notifications_count.'</span></span>';
+        }
+
         add_menu_page(
-            __("SeedProd", 'coming-soon'),
-            __("SeedProd", 'coming-soon'),
+            "SeedProd",
+            "SeedProd".$notification,
             'manage_options',
             'seed_csp4',
             array( &$this , 'option_page' ),
@@ -423,6 +431,77 @@ class SEED_CSP4_ADMIN
             Coming Soon Page and Maintenance Mode Lite
             <span class="seed_csp4_version" style="font-size: 10px;"> Version <?php echo SEED_CSP4_VERSION; ?></span>
         </h1>
+<?php
+        // Get notifications
+$notifications = new SeedProd_Notifications();
+$notifications = $notifications->get();
+
+?>
+<?php foreach ($notifications as $v) { ?>
+<div
+id="sp-notification-<?php echo $v['id'] ?>"
+      style="display: flex;background: #fff2ee; margin:20px; border-radius:4px; border: 2px solid #f1460d; color:#f1460d; padding:20px; font-size:16px"
+    >
+
+      <div style="flex-grow:1">
+        <div 
+		style="font-weight:bold; margin-bottom:10px; display:flex; justify-content:space-between"
+		>
+          <?php echo $v['title'] ?>
+          <span
+			style="cursor:pointer; width: 20px"
+            id="sp-dismiss-<?php echo $v['id'] ?>"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              style="width:18px; fill:#999"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div style="margin-bottom:10px"><?php echo $v['content'] ?></div>
+        <div style="display:flex;justify-content:space-between">
+          <div>
+            <?php if(!empty($v['btns']['main'])){ ?>
+            <a
+              href="<?php echo $v['btns']['main']['url'] ?>"
+              class="button button-primary"
+			  style="margin-right:5px"
+              target="_blank"
+            ><?php echo $v['btns']['main']['text'] ?></a>
+            <?php } ?>
+            <?php if(!empty($v['btns']['alt'])){ ?>
+            <a
+        
+              href="<?php echo $v['btns']['alt']['url'] ?>"
+              class="button button-secondary"
+              target="_blank"
+            ><?php echo $v['btns']['alt']['text'] ?></a>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    <?php $ajax_url = html_entity_decode(wp_nonce_url('admin-ajax.php?action=seedprod_lite_notification_dismiss', 'seedprod_lite_notification_dismiss')); ?>
+    var seedprod_dismiss_<?php echo $v['id'] ?> = "<?php echo $ajax_url; ?>";
+    jQuery( "#sp-dismiss-<?php echo $v['id'] ?>" ).click(function() {
+
+    jQuery.get( seedprod_dismiss_<?php echo $v['id'] ?>+'&id=<?php echo $v['id'] ?>', function( data ) {
+        jQuery( "#sp-notification-<?php echo $v['id'] ?>" ).hide();
+} );
+    });
+    </script>
+<?php } ?>
+
+
+
 
 
 
