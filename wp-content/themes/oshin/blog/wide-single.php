@@ -73,7 +73,7 @@ if( empty( $hero_section_custom_height ) ) {
                                 if( 0 < $post_comments_count_obj->approved ) :
                             ?>
                                 <span class = "post-comments-wrap">
-                                    <?php echo ( 1 == $post_comments_count_obj->approved ) ? '1 comment' : ( $post_comments_count_obj->approved . ' comments' ); ?>
+                                    <?php echo ( comments_number('0','1','%') == 1 ) ? '1 comment' : ' comments'; ?>
                                 </span>
                             <?php
                                 endif;

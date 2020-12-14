@@ -2,6 +2,7 @@
 
 namespace Nextend\SmartSlider3\Slider\SliderType\Block;
 
+use Nextend\Framework\Asset\Js\Js;
 use Nextend\Framework\Form\Container\ContainerTable;
 use Nextend\Framework\Form\Element\Grouping;
 use Nextend\Framework\Form\Element\OnOff;

@@ -104,10 +104,14 @@ class Shortcode {
          * Remove sliders from the AMP version of the site
          * @url https://wordpress.org/plugins/amp/
          */
-        add_action('pre_amp_render_post', array(
-            self::class,
-            'shortcodeModeToNoop'
-        ), 0);
+        add_action('template_redirect', function () {
+            if (function_exists('amp_is_request') && amp_is_request()) {
+                add_action('wp_head', array(
+                    self::class,
+                    'shortcodeModeToNoop'
+                ), 10001);
+            }
+        });
 
         /**
          * Remove sliders from the AMP version of the site

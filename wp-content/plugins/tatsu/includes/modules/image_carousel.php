@@ -149,6 +149,8 @@ if( !function_exists( 'tatsu_img_slider' ) ) {
                                 }
                                 if( !empty( $id ) ) {
                                     $attachment_details = be_wp_get_attachment( $id );
+                                    $img_alt = $attachment_details[ 'alt' ];
+                                    $img_attr[] = sprintf('alt = "%s"', $img_alt);
                                     if( !empty( $attachment_details ) ) {
                                         $url = $attachment_details[ 'src' ];
                                         if( 'centered_ribbon' === $slider_type || 'ribbon' === $slider_type || !empty( $destroy_in_mobile ) ) {

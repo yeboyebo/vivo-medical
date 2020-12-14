@@ -3,9 +3,6 @@
 
 namespace Nextend\SmartSlider3\Application\Admin\Settings;
 
-
-use JEventDispatcher;
-use JPluginHelper;
 use Nextend\Framework\Form\Container\ContainerTable;
 use Nextend\Framework\Form\Element\Breakpoint;
 use Nextend\Framework\Form\Element\Hidden;
@@ -21,6 +18,7 @@ use Nextend\Framework\Form\Element\Token;
 use Nextend\Framework\Form\Form;
 use Nextend\SmartSlider3\Application\Admin\Layout\Block\Forms\Button\BlockButton;
 use Nextend\SmartSlider3\Application\Admin\TraitAdminUrl;
+use Nextend\SmartSlider3\Platform\Joomla\JoomlaShim;
 use Nextend\SmartSlider3\Settings;
 
 class ViewSettingsGeneral extends AbstractViewSettings {

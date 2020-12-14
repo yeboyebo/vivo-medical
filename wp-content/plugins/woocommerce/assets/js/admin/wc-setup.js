@@ -1,6 +1,7 @@
 /*global wc_setup_params */
 /*global wc_setup_currencies */
 /*global wc_base_state */
+/* @deprecated 4.6.0 */
 jQuery( function( $ ) {
 	function blockWizardUI() {
 		$('.wc-setup-content').block({
@@ -168,7 +169,10 @@ jQuery( function( $ ) {
 
 	$( '.wc-wizard-services' ).on( 'change', '.wc-wizard-shipping-method-enable', function() {
 		var checked = $( this ).is( ':checked' );
-		var selectedMethod = $( '.wc-wizard-shipping-method-select .method' ).val();
+		var selectedMethod = $( this )
+			.closest( '.wc-wizard-service-item' )
+			.find( '.wc-wizard-shipping-method-select .method' )
+			.val();
 
 		$( this )
 			.closest( '.wc-wizard-service-item' )

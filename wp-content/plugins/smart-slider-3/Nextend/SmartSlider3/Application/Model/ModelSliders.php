@@ -204,7 +204,9 @@ class ModelSliders extends AbstractModelTable {
 
                 if (!empty($groups)) {
                     foreach ($groups as $group) {
-                        $this->xref->add($group['group_id'], $sliderID);
+                        if ($groupID != $group['group_id']) {
+                            $this->xref->add($group['group_id'], $sliderID);
+                        }
                     }
                 }
 
@@ -275,8 +277,8 @@ class ModelSliders extends AbstractModelTable {
         if (empty($title)) $title = n2_('New slider');
 
         $this->table->update(array(
-            'title'     => $title,
-            'params'    => json_encode($params)
+            'title'  => $title,
+            'params' => json_encode($params)
         ), array(
             "id" => $id
         ));
@@ -460,26 +462,54 @@ class ModelSliders extends AbstractModelTable {
             return 'unlink';
         }
 
-        $helper = new HelperSliderChanged($this);
-        $helper->setSliderChanged($sliderID, 1);
-        $helper->setSliderChanged($groupID, 1);
-
         $this->table->update(array(
             'status' => 'trash'
         ), array(
             "id" => $sliderID
         ));
 
+        $helper = new HelperSliderChanged($this);
+        $helper->setSliderChanged($sliderID, 1);
+        $helper->setSliderChanged($groupID, 1);
+
+        $slider = $this->get($sliderID);
+        if ($slider['type'] == 'group') {
+            $subSliders = $this->xref->getSliders($sliderID, 'published');
+            foreach ($subSliders as $subSlider) {
+                if (!$this->xref->isSliderAvailableInAnyGroups($subSlider['slider_id'])) {
+                    $helper->setSliderChanged($subSlider['slider_id'], 1);
+                }
+            }
+        }
+
         return 'trash';
     }
 
     public function restore($id) {
+        $changedSliders = array();
+
+        $slider = $this->get($id);
+        if ($slider['type'] == 'group') {
+            $subSliders = $this->xref->getSliders($id, 'published');
+            foreach ($subSliders as $subSlider) {
+                if (!$this->xref->isSliderAvailableInAnyGroups($subSlider['slider_id'])) {
+                    $changedSliders[] = $subSlider['slider_id'];
+                }
+            }
+        }
 
         $this->table->update(array(
             'status' => 'published'
         ), array(
             "id" => $id
         ));
+
+        if (!empty($changedSliders)) {
+            $helper = new HelperSliderChanged($this);
+            foreach ($changedSliders as $sliderID) {
+                $helper->setSliderChanged($sliderID, 1);
+            }
+        }
     }
 
     /**

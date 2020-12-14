@@ -47,7 +47,7 @@ ul#mobile-menu ul.sub-menu .mobile-sub-menu-controller{
 .search-box-wrapper.style2-header-search-widget input[type="text"]{
   font-style: <?php echo be_extract_font_style( $typehub_data['sub_title']['font-variant'] ); ?>;
   font-weight: <?php echo be_extract_font_weight( $typehub_data['sub_title']['font-variant'] ); ?>;
-  font-family: <?php echo be_get_font_family( $typehub_data['sub_title']['font-family'] ); ?>;
+  font-family: <?php echo oshin_get_font_family( $typehub_data['sub_title']['font-family'] ); ?>;
 }
 
 .portfolio-share a.custom-share-button, 
@@ -101,7 +101,7 @@ ul#mobile-menu ul.sub-menu .mobile-sub-menu-controller{
 .shipping_calculator h2,
 #order_review_heading,
 .woocommerce .page-title {
-  font-family: <?php echo be_get_font_family( $typehub_data['shop_page_title']['font-family'] ); ?>;
+  font-family: <?php echo oshin_get_font_family( $typehub_data['shop_page_title']['font-family'] ); ?>;
   font-weight: <?php echo be_extract_font_weight( $typehub_data['shop_page_title']['font-variant'] ); ?>;
 }
 
@@ -138,11 +138,11 @@ ul#mobile-menu ul.sub-menu .mobile-sub-menu-controller{
 /*Event On Plugin*/
 
 .ajde_evcal_calendar .calendar_header p, .eventon_events_list .eventon_list_event .evcal_cblock {
-    font-family: <?php echo be_get_font_family( $typehub_data['h1']['font-family'] ); ?> !important;
+    font-family: <?php echo oshin_get_font_family( $typehub_data['h1']['font-family'] ); ?> !important;
 }
 
 .eventon_events_list .eventon_list_event .evcal_desc span.evcal_desc2, .evo_pop_body .evcal_desc span.evcal_desc2 {
-  font-family: <?php echo be_get_font_family( $typehub_data['h6']['font-family'] ); ?> !important;
+  font-family: <?php echo oshin_get_font_family( $typehub_data['h6']['font-family'] ); ?> !important;
   font-size: 14px !important;
   text-transform: none;
 }
@@ -150,7 +150,7 @@ ul#mobile-menu ul.sub-menu .mobile-sub-menu-controller{
 .eventon_events_list .eventon_list_event .evcal_desc span.evcal_event_subtitle, .evo_pop_body .evcal_desc span.evcal_event_subtitle,
 .evcal_evdata_row .evcal_evdata_cell p, #evcal_list .eventon_list_event p.no_events {
   text-transform: none !important;
-  font-family: <?php echo be_get_font_family( $typehub_data['body']['font-family'] ); ?> !important;
+  font-family: <?php echo oshin_get_font_family( $typehub_data['body']['font-family'] ); ?> !important;
   font-size: inherit !important;
 }
 

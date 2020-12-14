@@ -65,7 +65,8 @@ if (!function_exists('tatsu_text')) {
 		else{
 			$margin = ''; 
 		}
-
+		//rolling back Rinkesh's update. next update should be carefully checked.
+        //$custom_style_tag = str_replace( ".".$unique_class_name.".tatsu-text-block-wrap .tatsu-text-inner" , ".".$unique_class_name.".tatsu-text-block-wrap .tatsu-text-inner *" , $custom_style_tag);
 		$output .= '<div '.$css_id.' class="tatsu-module tatsu-text-block-wrap '.$unique_class_name.' '.$visibility_classes.' '.$css_classes.'"><div class="tatsu-text-inner '.$margin.' '.$animate.' clearfix" '.$data_animations.'>';
 		$output .= $custom_style_tag;
 		$output .= do_shortcode(  $content );

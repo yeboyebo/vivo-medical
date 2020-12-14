@@ -2,6 +2,7 @@
 
 namespace Nextend\Framework\Asset;
 
+use Nextend\Framework\Data\Data;
 use Nextend\Framework\PageFlow;
 use Nextend\Framework\Plugin;
 use Nextend\Framework\View\Html;
@@ -11,6 +12,13 @@ use Nextend\Framework\View\Html;
  *
  */
 class AssetManager {
+
+    /**
+     * Helper to safely store AssetManager related optimization data
+     *
+     * @var Data
+     */
+    public static $stateStorage;
 
     /**
      * @var CSS\Asset
@@ -65,6 +73,8 @@ class AssetManager {
 
     public static function createStack() {
 
+        self::$stateStorage = new Data();
+
         self::$css = new Css\Asset();
         array_unshift(self::$cssStack, self::$css);
 
@@ -83,6 +93,9 @@ class AssetManager {
 
     public static function removeStack() {
         if (count(self::$cssStack) > 0) {
+
+            self::$stateStorage = new Data();
+
             /**
              * @var $previousCSS          Css\Asset
              * @var $previousLESS         Css\Less\Asset

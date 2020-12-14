@@ -1063,4 +1063,27 @@ if ( ! function_exists( 'be_themes_is_woocommerce_activated' ) ) {
 	}
 }
 
+if( !function_exists( 'oshine_sticky_sections_fixed_wrapper_start' ) ) {
+    function oshine_sticky_sections_fixed_wrapper_start() {
+		global $be_themes_data;
+        $sticky_sections = get_post_meta( get_the_ID(), 'be_themes_sticky_sections', true );
+        if( $be_themes_data['opt-header-type'] == 'builder' && !empty( $sticky_sections ) ) :
+        ?>  
+            <div id = "be-sticky-section-fixed-wrap">
+        <?php
+        endif;
+    }
+    add_action( 'after_body', 'oshine_sticky_sections_fixed_wrapper_start' );
+}
+
+if( !function_exists('oshin_get_font_family')){
+	function oshin_get_font_family( $font ){
+		$family = be_get_font_family( $font );
+		if ( !empty( $family['value'] ) ){
+			return $family['value'];
+		}
+		return $family;
+	}
+}
+
 ?>

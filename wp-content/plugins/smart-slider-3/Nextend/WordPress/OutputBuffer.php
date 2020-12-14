@@ -5,7 +5,6 @@ namespace Nextend\WordPress;
 
 
 use Nextend\Framework\Pattern\SingletonTrait;
-use Nextend\SmartSlider3\Platform\WordPress\Shortcode\Shortcode;
 
 class OutputBuffer {
 
@@ -16,48 +15,16 @@ class OutputBuffer {
     protected $extraObStart = 0;
 
     protected function init() {
-        /**
-         * Borlabs cache
-         * @url https://borlabs.io/download/
-         */
-        if (defined('BORLABS_CACHE_SLUG') && !is_admin()) {
-            add_action('template_redirect', array(
-                $this,
-                'outputStart'
-            ), -1 * $this->priority);
-            add_action('shutdown', array(
-                $this,
-                'closeOutputBuffers'
-            ), -1 * $this->priority);
 
-        } else {
-            add_action('init', array(
-                $this,
-                'outputStart'
-            ), $this->priority);
-            add_action('shutdown', array(
-                $this,
-                'closeOutputBuffers'
-            ), -1 * $this->priority);
+        add_action('init', array(
+            $this,
+            'onInit'
+        ), $this->priority);
 
-            add_action('pp_end_html', array(
-                $this,
-                'closeOutputBuffers'
-            ), -10000); // ProPhoto 6 theme: we must close the buffer before the cache
-            add_action('headway_html_close', array(
-                $this,
-                'closeOutputBuffers'
-            ), $this->priority); // Headway theme
-        }
-
-        /**
-         * Fix for Gravity Forms MC Unique ID Generator Field
-         * @url https://wordpress.org/plugins/gf-mc-unique-id-generator-field/
-         */
-        if (defined('MCGFUIDGEN_PLUGIN_VERSION')) {
-            remove_action('init', 'mcgfuidgen_head', 0);
-            add_action('init', 'mcgfuidgen_head', 1000000);
-        }
+        add_action('shutdown', array(
+            $this,
+            'closeOutputBuffers'
+        ), -1 * $this->priority);
 
         /**
          * Fix for KeyCDN cache enabled
@@ -82,6 +49,77 @@ class OutputBuffer {
                 'prepareOutput'
             ));
         }
+
+        /**
+         * Fix for Speed booster Pack
+         * @url https://wordpress.org/plugins/speed-booster-pack/
+         */
+        if (defined('SBP_VERSION')) {
+            add_filter('sbp_output_buffer', array(
+                $this,
+                'prepareOutput'
+            ));
+        }
+
+        if (class_exists('PagespeedNinja')) {
+            /**
+             * @see SSDEV-2358
+             */
+            add_action('template_redirect', function () {
+                ob_start(array(
+                    $this,
+                    "outputCallback"
+                ));
+            });
+        }
+    }
+
+    /**
+     * Theme's functions.php loaded at this point.
+     */
+    public function onInit() {
+
+        /**
+         * Borlabs cache
+         * @url https://borlabs.io/download/
+         */
+        if (defined('BORLABS_CACHE_SLUG') && !is_admin()) {
+            add_action('template_redirect', array(
+                $this,
+                'outputStart'
+            ), -1 * $this->priority);
+
+            return;
+        }
+
+        if (defined('THEMIFY_VERSION') && !is_admin()) {
+
+            add_filter('template_include', array(
+                $this,
+                'templateIncludeOutputStart'
+            ), 1); // Themify use priority: 0
+
+            return;
+        }
+
+        add_action('pp_end_html', array(
+            $this,
+            'closeOutputBuffers'
+        ), -10000); // ProPhoto 6 theme: we must close the buffer before the cache
+
+        add_action('headway_html_close', array(
+            $this,
+            'closeOutputBuffers'
+        ), $this->priority); // Headway theme
+
+        $this->outputStart();
+    }
+
+    public function templateIncludeOutputStart($template) {
+
+        $this->outputStart();
+
+        return $template;
     }
 
     public function outputStart() {

@@ -222,12 +222,22 @@ class SVGFlip {
                 $points      = explode(',', $pathPart);
                 for ($j = 0; $j < count($points); $j = $j + 2) {
                     switch ($pathCommand) {
-                        case 'v':
-                        case 'V':
+                        case 'l':
+                        case 'm':
+                        case 'h':
                         case 'c':
+                        case 's':
+                        case 'q':
+                        case 't':
                             $points[$j] = -$points[$j];
                             break;
-                        default:
+                        case 'L':
+                        case 'M':
+                        case 'H':
+                        case 'C':
+                        case 'S':
+                        case 'Q':
+                        case 'T':
                             $points[$j] = self::$viewBoxX - $points[$j];
                             break;
                     }
@@ -262,22 +272,23 @@ class SVGFlip {
                             $points[$j] = -$points[$j];
                             break;
                         case 'V':
-                            $points[$j] = -($points[$j] - self::$viewBoxY);
+                            $points[$j] = self::$viewBoxY - $points[$j];
                             break;
+                        case 'l':
+                        case 'm':
                         case 'c':
-                            if (isset($points[$j + 1])) {
-                                $points[$j + 1] = -$points[$j + 1];
-                            }
+                        case 's':
+                        case 'q':
+                        case 't':
+                            $points[$j + 1] = -$points[$j + 1];
                             break;
+                        case 'L':
+                        case 'M':
                         case 'C':
-                            if (isset($points[$j + 1])) {
-                                $points[$j + 1] = -($points[$j + 1] - self::$viewBoxY);
-                            }
-                            break;
-                        default:
-                            if (isset($points[$j + 1])) {
-                                $points[$j + 1] = self::$viewBoxY - $points[$j + 1];
-                            }
+                        case 'S':
+                        case 'Q':
+                        case 'T':
+                            $points[$j + 1] = self::$viewBoxY - $points[$j + 1];
                             break;
                     }
                 }
@@ -308,28 +319,33 @@ class SVGFlip {
                 $points      = explode(',', $pathPart);
                 for ($j = 0; $j < count($points); $j = $j + 2) {
                     switch ($pathCommand) {
+                        case 'h':
                         case 'v':
+                            $points[$j] = -$points[$j];
+                            break;
+                        case 'H':
+                            $points[$j] = self::$viewBoxX - $points[$j];
                             break;
                         case 'V':
-                            $points[$j] = $points[$j] + self::$viewBoxY;
+                            $points[$j] = self::$viewBoxY - $points[$j];
                             break;
+                        case 'l':
+                        case 'm':
                         case 'c':
-                            $points[$j] = -$points[$j];
-                            if (isset($points[$j + 1])) {
-                                $points[$j + 1] = -$points[$j + 1];
-                            }
+                        case 's':
+                        case 'q':
+                        case 't':
+                            $points[$j]     = -$points[$j];
+                            $points[$j + 1] = -$points[$j + 1];
                             break;
+                        case 'L':
+                        case 'M':
                         case 'C':
-                            $points[$j] = self::$viewBoxX - $points[$j];
-                            if (isset($points[$j + 1])) {
-                                $points[$j + 1] = -($points[$j + 1] - self::$viewBoxY);
-                            }
-                            break;
-                        default:
-                            $points[$j] = self::$viewBoxX - $points[$j];
-                            if (isset($points[$j + 1])) {
-                                $points[$j + 1] = self::$viewBoxY - $points[$j + 1];
-                            }
+                        case 'S':
+                        case 'Q':
+                        case 'T':
+                            $points[$j]     = self::$viewBoxX - $points[$j];
+                            $points[$j + 1] = self::$viewBoxY - $points[$j + 1];
                             break;
                     }
                 }

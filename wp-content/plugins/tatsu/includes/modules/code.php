@@ -30,6 +30,8 @@ if (!function_exists('tatsu_code')) {
 }
 
 add_action('tatsu_register_modules', 'tatsu_register_code', 9);
+add_action( 'tatsu_register_header_modules', 'tatsu_register_code' );
+
 function tatsu_register_code()
 {
 	$controls = array(
@@ -116,6 +118,7 @@ function tatsu_register_code()
 		),
 	);
 	tatsu_register_module('tatsu_code', $controls);
+	tatsu_register_header_module( 'tatsu_code', $controls, 'tatsu_code' );
 }
 
 ?>

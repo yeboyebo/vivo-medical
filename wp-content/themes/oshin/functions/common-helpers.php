@@ -918,7 +918,10 @@ if( !function_exists( 'be_get_font_family' ) ) {
 		if( array_key_exists( $family, $standard_fonts ) ) {
 			$family = $standard_fonts[$family];
 		}
-		return $family;  
+		if( array_key_exists( $family, 'value' ) ) {
+			$family = $family['value'];
+		}
+		return $family['value'];  
 	}
 }
 

@@ -428,7 +428,7 @@ if( !function_exists( 'tatsu_get_global_sections' ) ) {
 	function tatsu_get_global_sections() {
 		$global_section_array = array();
 
-		$global_sections_posts = get_posts(array( 'post_type' => 'tatsu_gsections') );
+		$global_sections_posts = get_posts(array( 'post_type' => 'tatsu_gsections', 'numberposts' => '-1') );
 		if( $global_sections_posts ) {
 			foreach( $global_sections_posts as $section ) {
 				$global_section_array[ (string) $section->ID ] =  $section->post_title;
@@ -755,10 +755,18 @@ if ( ! function_exists( 'tatsu_get_gallery_image_from_source' ) ){
 						}
 					}else{
 						delete_transient( $transient_var );
-						$return['error'] = '<div class="be-notification error">'.esc_html__('Instagram Error : Access Token is not entered under Cutomizer > GLOBAL SITE SETTINGS. Access Token for your account can be generated from http://instagram.pixelunion.net/', 'exponent-modules').'</div>';
+						$return['error'] = '<div class="be-notification error">'.__('Instagram Error : Access Token is not entered under OSHINE OPTIONS > GLOBAL SITE LAYOUT AND SETTINGS. Access Token for your account can be generated from https://developers.facebook.com/docs/instagram-basic-display-api/getting-started/', 'oshine-modules').'</div>';
 						return $return;
 					}					
 				}
+                if($media && isset($media) && !empty($media)) {
+                    $images = json_decode($media["body"]);
+                    if($images->meta->code != '200'){
+                        delete_transient( $transient_var );
+						$return['error'] = '<b>'.__('Instagram Error :', 'oshine-modules').'</b>'.$images->meta->error_message;
+                        return $return;
+                    }
+                }
 
 				if($media && isset($media) && !empty($media)) {
 					$images = json_decode($media["body"]);

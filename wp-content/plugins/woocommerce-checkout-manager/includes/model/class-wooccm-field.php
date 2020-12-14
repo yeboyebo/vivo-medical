@@ -114,6 +114,8 @@ class WOOCCM_Field extends WOOCCM_Model
 
     return apply_filters('wooccm_fields_types', array(
       'heading' => 'Heading',
+      'email'   => 'Email',
+      'tel'   => 'Phone',
       'message' => 'Message',
       'button' => 'Button',
       'text' => 'Text',

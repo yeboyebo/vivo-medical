@@ -804,15 +804,15 @@ if( !function_exists( 'be_split_number_text' ) ) {
 		$i = $length-1;
 		$text = '';
 		$number = '';
-		while( $i >= 0 ) {
-			if( !is_numeric( $string[$i] ) ) {
-				$text = $string[$i].$text;
-			} else {
-				$number = substr( $string, 0, $i+1 );
-				break;
-			}
-			$i--;
-		} 
+        while( $i >= 0 ) {
+            if( isset($string[$i]) && !is_numeric( $string[$i] ) ) {
+                $text = $string[$i].$text;
+            } else {
+                $number = substr( $string, 0, $i+1 );
+                break;
+            }
+            $i--;
+        } 
 		return array(
 			$text,
 			$number

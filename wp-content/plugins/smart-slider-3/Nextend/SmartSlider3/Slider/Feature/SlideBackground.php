@@ -245,6 +245,16 @@ class SlideBackground {
                 "data-alt"   => $alt,
                 "data-title" => $title
             );
+
+        if (!$slide->getSlider()->features->lazyLoad->isEnabled && !empty($attributes['data-desktop']) && empty($attributes['data-tablet']) && empty($attributes['data-mobile'])) {
+            $style[] = 'background-image:url(\'' . $attributes['data-desktop'] . '\')';
+
+            /**
+             * Fix for Autoptimize lazy load images
+             */
+            $attributes['data-no-lazy'] = '';
+        }
+
         if (!empty($style)) {
             $attributes['style'] = implode(';', $style);
         }

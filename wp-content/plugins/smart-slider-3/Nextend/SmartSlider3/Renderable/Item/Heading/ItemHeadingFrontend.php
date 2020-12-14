@@ -44,11 +44,14 @@ class ItemHeadingFrontend extends AbstractItemFrontend {
 
         $linkAttributes['style'] = "display:" . ($this->data->get('fullwidth', 1) ? 'block' : 'inline-block') . ";";
 
+        $allowedTags  = '<a><span><sub><sup><em><i><var><cite><b><strong><small><bdo>';
+        $strippedHtml = strip_tags($owner->fill($this->data->get('heading', '')), $allowedTags);
+
         return $this->heading($this->data->get('priority', 'div'), $attributes + array(
                 "id"    => $this->id,
                 "class" => $font . $style . " " . $owner->fill($this->data->get('class', '')) . ' n2-ss-item-content n2-ow',
                 "style" => "display:" . ($this->data->get('fullwidth', 1) ? 'block' : 'inline-block') . ";" . ($this->data->get('nowrap', 0) ? 'white-space:nowrap;' : '')
-            ), $this->getLink(str_replace("\n", '<br />', strip_tags($owner->fill($this->data->get('heading', '')))), $linkAttributes));
+            ), $this->getLink(str_replace("\n", '<br />', $strippedHtml), $linkAttributes));
     }
 
     private function heading($type, $attributes, $content) {

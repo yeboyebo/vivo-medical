@@ -79,6 +79,9 @@ class ViewSlidesEdit extends AbstractView {
 
     public function display() {
 
+        $locale = setlocale(LC_NUMERIC, 0);
+        setlocale(LC_NUMERIC, "C");
+
         $this->layout = new LayoutEditor($this);
 
         $this->editorOverlay = new BlockEditorOverlay($this);
@@ -139,6 +142,8 @@ class ViewSlidesEdit extends AbstractView {
         $this->layout->addContent($this->render('Edit'));
 
         $this->renderLayout();
+
+        setlocale(LC_NUMERIC, $locale);
     }
 
     protected function renderLayout() {

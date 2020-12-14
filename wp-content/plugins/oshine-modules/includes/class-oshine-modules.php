@@ -69,7 +69,7 @@ class Oshine_Modules {
 	public function __construct() {
 
 		$this->plugin_name = 'oshine-modules';
-		$this->version = '3.0.9';
+		$this->version = '3.2';
 
 		$this->load_dependencies();
 		$this->set_locale();

@@ -8,7 +8,7 @@
               <th class="sort" style="width:1%"></th>
               <th class="required" style="width:1%"><?php esc_html_e('Required', 'woocommerce-checkout-manager'); ?></th>
               <th class="position" style="width:1%;min-width: 100px;"><?php esc_html_e('Position', 'woocommerce-checkout-manager'); ?></th>
-              <th class="clear" style="width:1%"><?php esc_html_e('Clear', 'woocommerce-checkout-manager'); ?></th>
+              <th class="clear"><?php esc_html_e('Clear', 'woocommerce-checkout-manager'); ?><span class="woocommerce-help-tip" data-tip="<?php esc_html_e('Disallow floating elements on the left and right side of this field.', 'woocommerce-checkout-manager'); ?>"></span></th>
               <th class="type" style="width:1%"><?php esc_html_e('Type', 'woocommerce-checkout-manager'); ?></th>
               <th class="label" style="width:1%;min-width: 100px;"><?php esc_html_e('Label', 'woocommerce-checkout-manager'); ?></th>
               <th class="placeholder"><?php esc_html_e('Placeholder', 'woocommerce-checkout-manager'); ?></th>

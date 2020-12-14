@@ -651,10 +651,18 @@ function oshine_register_gallery() {
 			)
 		),
 	);
-	if( function_exists( 'tatsu_remap_modules' ) ) {
-		tatsu_remap_modules( [ 'oshine_gallery', 'tatsu_gallery', 'gallery' ], $controls, 'be_gallery' );
-	}else {
-		tatsu_register_module( 'oshine_gallery', $controls );
-		tatsu_register_module( 'gallery', $controls );	
+	if ( ! in_array( 'wplr-sync/wplr-sync.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		if( function_exists( 'tatsu_remap_modules' ) ) {
+			tatsu_remap_modules( [ 'oshine_gallery', 'tatsu_gallery', 'gallery' ], $controls, 'be_gallery' );
+		}else {
+			tatsu_register_module( 'oshine_gallery', $controls );
+			tatsu_register_module( 'gallery', $controls );	
+		}
+	}else{
+		if( function_exists( 'tatsu_remap_modules' ) ) {
+			tatsu_remap_modules( [ 'oshine_gallery', 'tatsu_gallery' ], $controls, 'be_gallery' );
+		}else {
+			tatsu_register_module( 'oshine_gallery', $controls );
+		}
 	}
 }

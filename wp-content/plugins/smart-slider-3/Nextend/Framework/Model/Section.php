@@ -91,11 +91,12 @@ class Section {
 
     public static function add($application, $section, $referenceKey, $value, $system = 0, $editable = 1) {
         $row = array(
-            "application" => $application,
-            "section"     => $section,
-            "value"       => $value,
-            "system"      => $system,
-            "editable"    => $editable
+            "application"  => $application,
+            "section"      => $section,
+            "referencekey" => '',
+            "value"        => $value,
+            "system"       => $system,
+            "editable"     => $editable
         );
 
         if ($referenceKey !== null) {

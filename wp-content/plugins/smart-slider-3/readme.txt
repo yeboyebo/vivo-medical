@@ -3,8 +3,8 @@ Contributors: nextendweb
 Tags: slider, wordpress slider, image slider, layer slider, responsive slider, slideshow, fullwidth slider, post slider, horizontal slider, vertical slider, photo slider, video slider
 Donate link: https://sites.fastspring.com/nextend/product/smartslider3donate
 Requires at least: 4.9
-Tested up to: 5.5
-Stable tag: 3.4.1.9
+Tested up to: 5.6
+Stable tag: 3.4.1.13
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -151,19 +151,21 @@ Smart Slider 3 is a community-driven project that would not be the same without 
 == Frequently Asked Questions ==
 
 = 1. How do I add the slider to my site? =
-You can add your slider by shortcode or via the widget control panel or PHP shortcode.
+You can add your slider by shortcode or via the widget control panel or PHP shortcode. Watch the [🎥 Publishing tutorial video](https://www.youtube.com/watch?v=0_ohk997NG8&list=PLSawiBnEUNfvVeY7M8Yx7UdyOpBEmoH7Z&index=9&ab_channel=NEXTEND) to learn more about the topic.
 
 = 2. Where can I reach the documentation? =
-[https://smartslider.helpscoutdocs.com//](https://smartslider.helpscoutdocs.com//)
+[https://smartslider.helpscoutdocs.com/](https://smartslider.helpscoutdocs.com/)
 
 = 3. Where is Canvas mode? =
 Canvas mode was renamed to [Absolute](
-https://smartslider.helpscoutdocs.com/article/1916-slide-editing-in-smart-slider-3#absolute). You can add Absolute layers using the toggle at the Add panel, and [switch a Default layer to Absolute](https://smartslider.helpscoutdocs.com/article/1916-slide-editing-in-smart-slider-3#faq) at layer window > Style tab > Position.
+https://smartslider.helpscoutdocs.com/article/1916-slide-editing-in-smart-slider-3#absolute). You can add Absolute positioned layers using the toggle at the Add panel, and [switch a Default layer to Absolute](https://smartslider.helpscoutdocs.com/article/1916-slide-editing-in-smart-slider-3#faq) at layer window > Style tab > Position.
 
-But we recommend working with [Default layers](
-https://smartslider.helpscoutdocs.com/article/1916-slide-editing-in-smart-slider-3#default) because the responsive behavior is better, and the slide building is much faster. Most layouts people want to create can be done with Default layers only. Absolute mode should only be used for decoration.
+But we recommend working with [Default positioned layers](
+https://smartslider.helpscoutdocs.com/article/1916-slide-editing-in-smart-slider-3#default) because the responsive behavior is better, and the slide building is much faster. Most layouts people want to create can be done with Default positioned layers only. Absolute positioned layers should only be used for decoration.
 
-= 4. What should I do when I see blank area where the slider should show or the slider doesn't work? =
+Want to learn more about Absolute positioned layers? [🎥 Check out the tutorial video!](https://www.youtube.com/watch?v=_3Knh5hMGrs&list=PLSawiBnEUNfvVeY7M8Yx7UdyOpBEmoH7Z&index=10&ab_channel=NEXTEND)
+
+= 4. Why is there an empty space where the slider should be? =
 It means that there is a JavaScript error on your site which blocks other scripts(for example Smart Slider's scripts). You can open up the browser debugger window with F12 button and check the console if it shows error or not. If you solve these errors Smart Slider should work fine.
 
 Usual problem is that you have the latest WordPress version, but your theme loads very old jQuery version (1.7 or older) and the WordPress admin bar throws a JavaScript error. In this case, you have to remove the old jQuery from your theme's functions.php.
@@ -176,11 +178,13 @@ If you are unable to solve these problems, feel free to [contact us!](https://sm
 = 6. Is Smart Slider 3 is totally responsive? =
 Smart Slider 3 is 100% responsive with each items, so it will fit perfectly into your page, regardless of the size of your desktop screen or device.
 
+Be sure you check out the tutorial video about the [🎥 Responsive Settings](https://www.youtube.com/watch?v=GUMeRd4W_bM&list=PLSawiBnEUNfvVeY7M8Yx7UdyOpBEmoH7Z&index=8&ab_channel=NEXTEND).
+
 = 7. Can I customize the fonts of the slider? =
-Yes you can customize everything for every state. (hover, active, opened) The slider comes with Google Web Font support, allowing you to pick from over a dozen font families. To make using Google Fonts even easier, we have created a font manager interface that simplifies the process and preview it.
+Yes you can customize everything for every state. (Hover, normal) The slider comes with Google Web Font support, allowing you to pick from over a dozen font families.  You can also use your own font by simply writing its name to the font family field. [Check out our tutorial video](https://youtu.be/wKFxC97lFIs?t=248) to learn how to use custom fonts.
 
 = 8. Can I show multiple instances of slider on one page? =
-Yes you can use multiple slider widgets and slider shortcodes.
+Yes, you can use as many sliders on a page as you want. But you can only use one slider once.
 
 = 9. How to include a slider in a post or a page? =
 `[smartslider3 slider=Here comes the slider id]`
@@ -204,6 +208,30 @@ Of course! Smart Slider use protocol relative urls which works fine on http:// a
 9. Layer slider with layers styles. Made with FREE version.
 
 == Changelog ==
+
+= 3.4.1.13 - 11. November 2020 =
+* Fix: Themify themes output buffer issue
+
+= 3.4.1.12 - 11. November 2020 =
+* Fix: Layer duplication
+* Fix: Themify themes output buffer issue
+* Fix: Remove sliders from AMP pages
+* Other: Black Friday sale notice added
+
+= 3.4.1.11 - 28. October 2020 =
+* Fix: Autoptimize lazy loading cause flickering background image
+
+= 3.4.1.10 - 27. October 2020 =
+* Feature: Certain HTML tags are enabled in the Heading layer. [See the full list](https://smartslider.helpscoutdocs.com/article/1814-heading-layer#supported-tags) of supported tags. 
+* Feature: Post slug variable for WordPress Post generator
+* Fix: WP Rocket compatibility 
+* Fix: Alias switching 
+* Fix: Rename in layer list and Breakpoint value change in Safari 
+* Fix: Nested Absolute layers in column 
+* Fix: Output buffer for Speed Booster Pack cache 
+* Fix: Slider loading optimization 
+* Fix: Simply Exclude plugin added to conflict list.
+* Fix: PageSpeed ninja plugin compatibility (enabled Gzip caused missing files.)
 
 = 3.4.1.9 - 26. August 2020. =
 * Feature: Placeholder uses Min height when its set

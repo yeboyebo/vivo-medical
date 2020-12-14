@@ -16,6 +16,7 @@ class WordPressConflict extends Conflict {
         $this->testPluginWPHideAndSecurity();
         $this->testPluginNetbaseWidgetsForSiteOrigin();
         $this->testPluginNavMenuAddonForElementor();
+        $this->testPluginSimplyExclude();
     }
 
     /**
@@ -67,6 +68,17 @@ class WordPressConflict extends Conflict {
         if (defined('ELEMENTOR_MENUS_VERSION')) {
             $this->displayConflict('NavMenu Addon For Elementor', n2_('This plugin has a JavaScript error which might break Smart Slider.'), 'https://wordpress.org/support/topic/plugin-causes-javascript-error-and-breaks-others/');
 
+        }
+    }
+
+
+    /**
+     * Simply Exclude
+     * @url https://wordpress.org/plugins/simply-exclude/
+     */
+    private function testPluginSimplyExclude() {
+        if (defined('SIMPLY_EXCLUDE_I18N_DOMAIN')) {
+            $this->displayConflict('Simply Exclude', sprintf(n2_('This plugin breaks the filtering options of the dynamic slide generators when %1$s is set to %2$s. Also it has not received any updates since WordPress 3.9.'), 'Query Filtering', 'All Loops'));
         }
     }
 }

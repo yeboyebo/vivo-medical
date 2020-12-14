@@ -90,7 +90,7 @@ if ( !function_exists( 'tatsu_vimeo' ) ) {
 		if( ! empty( $url ) ) {
 			sscanf(parse_url($url, PHP_URL_PATH), '/%d', $video_id);
 			if( !function_exists( 'be_gdpr_privacy_ok' ) ){
-				$result .= '<div class = "be-video-embed be-embed-placeholder"><div class = "be-vimeo-embed" data-video-id = "' . $video_id . '"></div></div>';
+				$result .= '<div class = "be-video-embed be-embed-placeholder"><div class = "be-vimeo-embed" data-video-id = "' . $video_id . '" data-autoplay = "' . $autoplay . '" data-loop = "' . $loop_video . '"></div></div>';
 			} else {
 				if( !empty( $_COOKIE ) ){
 					if( !( be_gdpr_privacy_ok( 'vimeo' ) )  ){

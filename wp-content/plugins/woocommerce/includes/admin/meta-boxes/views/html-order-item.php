@@ -2,7 +2,7 @@
 /**
  * Shows an order item
  *
- * @package WooCommerce/Admin
+ * @package WooCommerce\Admin
  * @var object $item The item being displayed
  * @var int $item_id The id of the item being displayed
  */
@@ -41,7 +41,7 @@ $row_class    = apply_filters( 'woocommerce_admin_html_order_item_class', ! empt
 		<input type="hidden" name="order_item_tax_class[<?php echo absint( $item_id ); ?>]" value="<?php echo esc_attr( $item->get_tax_class() ); ?>" />
 
 		<?php do_action( 'woocommerce_before_order_itemmeta', $item_id, $item, $product ); ?>
-		<?php require 'html-order-item-meta.php'; ?>
+		<?php require __DIR__ . '/html-order-item-meta.php'; ?>
 		<?php do_action( 'woocommerce_after_order_itemmeta', $item_id, $item, $product ); ?>
 	</td>
 
@@ -50,7 +50,7 @@ $row_class    = apply_filters( 'woocommerce_admin_html_order_item_class', ! empt
 	<td class="item_cost" width="1%" data-sort-value="<?php echo esc_attr( $order->get_item_subtotal( $item, false, true ) ); ?>">
 		<div class="view">
 			<?php
-			echo wc_price( $order->get_item_total( $item, false, true ), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_currency() ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			?>
 		</div>
 	</td>

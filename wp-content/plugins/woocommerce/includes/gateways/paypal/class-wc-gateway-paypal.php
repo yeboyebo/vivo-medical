@@ -7,8 +7,10 @@
  * @class       WC_Gateway_Paypal
  * @extends     WC_Payment_Gateway
  * @version     2.3.0
- * @package     WooCommerce/Classes/Payment
+ * @package     WooCommerce\Classes\Payment
  */
+
+use Automattic\Jetpack\Constants;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -40,7 +42,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 		$this->id                = 'paypal';
 		$this->has_fields        = false;
 		$this->order_button_text = __( 'Proceed to PayPal', 'woocommerce' );
-		$this->method_title      = __( 'PayPal', 'woocommerce' );
+		$this->method_title      = __( 'PayPal Standard', 'woocommerce' );
 		/* translators: %s: Link to WC system status page */
 		$this->method_description = __( 'PayPal Standard redirects customers to PayPal to enter their payment information.', 'woocommerce' );
 		$this->supports           = array(
@@ -281,7 +283,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 			?>
 			<div class="inline error">
 				<p>
-					<strong><?php esc_html_e( 'Gateway disabled', 'woocommerce' ); ?></strong>: <?php esc_html_e( 'PayPal does not support your store currency.', 'woocommerce' ); ?>
+					<strong><?php esc_html_e( 'Gateway disabled', 'woocommerce' ); ?></strong>: <?php esc_html_e( 'PayPal Standard does not support your store currency.', 'woocommerce' ); ?>
 				</p>
 			</div>
 			<?php
@@ -292,7 +294,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	 * Initialise Gateway Settings Form Fields.
 	 */
 	public function init_form_fields() {
-		$this->form_fields = include 'includes/settings-paypal.php';
+		$this->form_fields = include __DIR__ . '/includes/settings-paypal.php';
 	}
 
 	/**
@@ -450,9 +452,10 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 			return;
 		}
 
-		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		$suffix  = Constants::is_true( 'SCRIPT_DEBUG' ) ? '' : '.min';
+		$version = Constants::get_constant( 'WC_VERSION' );
 
-		wp_enqueue_script( 'woocommerce_paypal_admin', WC()->plugin_url() . '/includes/gateways/paypal/assets/js/paypal-admin' . $suffix . '.js', array(), WC_VERSION, true );
+		wp_enqueue_script( 'woocommerce_paypal_admin', WC()->plugin_url() . '/includes/gateways/paypal/assets/js/paypal-admin' . $suffix . '.js', array(), $version, true );
 	}
 
 	/**

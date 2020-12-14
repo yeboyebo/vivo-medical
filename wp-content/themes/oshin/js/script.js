@@ -26,7 +26,8 @@
 	var scrollbarWidth = 0;
 	$.getScrollbarWidth = function() {
 		if ( !scrollbarWidth ) {
-			if ( $.browser.msie ) {
+			// if ( $.browser.msie ) {
+			if (navigator.userAgent.match(/MSIE ([0-9]+)\./)){
 				var $textarea1 = $('<textarea cols="10" rows="2"></textarea>')
 						.css({ position: 'absolute', top: -1000, left: -1000 }).appendTo('body'),
 					$textarea2 = $('<textarea cols="10" rows="2" style="overflow: hidden;"></textarea>')
@@ -795,8 +796,13 @@
 							$win = jQuery(window),
 							globalSections = jQuery('.tatsu-global-section'),
 							sectionsContainer = jQuery('#content .tatsu-section').parent(),
-							defaultHeaderHeight = jQuery( '#header' ).outerHeight() + ( jQuery( '#wpadminbar' ).length ? jQuery( '#wpadminbar' ).height() : 0 ),
-							transparentHeaderDynamicColorChange = function() {
+							stickyContainer = '#main-wrapper',
+							defaultHeaderHeight = jQuery( '#header'  ).outerHeight() + ( jQuery( '#wpadminbar' ).length ? jQuery( '#wpadminbar' ).height() : 0 );
+						if( jQuery( '#tatsu-header-wrap'  ).outerHeight() > 0 ){
+							stickyContainer = '#be-sticky-section-fixed-wrap'
+							defaultHeaderHeight = jQuery( '#tatsu-header-wrap'  ).outerHeight() + ( jQuery( '#wpadminbar' ).length ? jQuery( '#wpadminbar' ).height() : 0 );
+						}							
+						var	transparentHeaderDynamicColorChange = function() {
 								var curSection = jQuery( this ),
 									headerInnerWrap = jQuery( '#header-inner-wrap' ),
 									headerScheme,
@@ -869,7 +875,7 @@
 							enableOverlay = jQuery( '.be-sections-wrap' ).attr( 'data-sticky-overlay' ),
 							stickyOptions = {
 								autoScroll : 'auto_scroll' == stickyScrollType ? true : false,
-								fixedParent : '#main-wrapper',
+								fixedParent : stickyContainer,
 								scrollCallback : function( secIndex ) {
 									triggerTatsuAnimation.call(this);
 									triggerPortfolio.call(this);
@@ -1313,7 +1319,13 @@
                             var offsetHeight = 0;
                             if( $('.ps-fade-nav').outerHeight() < $('.ps-fade-gallery-inner').outerHeight() ) {
                                 offsetHeight += $('#header').outerHeight();
-                            }
+							}
+							if( jQuery('#tatsu-header-container').length > 0 ){
+								offsetHeight += jQuery('#tatsu-header-container').height();
+							}
+							if( jQuery('#tatsu-footer-container').length > 0 ){
+								offsetHeight += jQuery('#tatsu-footer-container').height();
+							}
                             if(body.hasClass('admin-bar')) {
                                 offsetHeight += 32;
                             }
@@ -2308,7 +2320,7 @@
 				    	asyncloader.require( 'flickity', function() {
 							carousel_thumb_call();  		
 				    	});
-				    }									
+					}	
 		    	});
 
 		    	// On Window Load Event

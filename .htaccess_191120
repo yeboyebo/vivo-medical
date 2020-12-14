@@ -1,0 +1,49 @@
+
+# BEGIN Add Expires Headers Plugin
+# Disable ETags
+<IfModule mod_headers.c>
+Header unset ETag
+</IfModule>
+FileETag None
+# Disable ETags
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresByType image/gif "access plus 30 days"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/jpg "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/ico "access plus 30 days"
+ExpiresByType image/tiff "access plus 30 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType audio/mp3 "access plus 30 days"
+ExpiresByType audio/wav "access plus 30 days"
+ExpiresByType audio/ogg "access plus 30 days"
+ExpiresByType audio/gsm "access plus 30 days"
+ExpiresByType audio/dct "access plus 30 days"
+ExpiresByType audio/vox "access plus 30 days"
+ExpiresByType audio/raw "access plus 30 days"
+ExpiresByType video/mp4 "access plus 30 days"
+ExpiresByType video/mkv "access plus 30 days"
+ExpiresByType video/avi "access plus 30 days"
+ExpiresByType video/3gp "access plus 30 days"
+ExpiresByType video/wmv "access plus 30 days"
+ExpiresByType video/webm "access plus 30 days"
+ExpiresByType text/css "access plus 30 days"
+ExpiresByType application/javascript "access plus 30 days"
+</IfModule>
+# END Add Expires Headers Plugin
+
+# BEGIN WordPress
+# Las directivas (líneas) entre `BEGIN WordPress` y `END WordPress` se generan dinámicamente
+# , y solo se deberían modificar mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores se sobreescribirán.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

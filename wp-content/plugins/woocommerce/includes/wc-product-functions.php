@@ -4,9 +4,12 @@
  *
  * Functions for product specific things.
  *
- * @package WooCommerce/Functions
+ * @package WooCommerce\Functions
  * @version 3.0.0
  */
+
+use Automattic\Jetpack\Constants;
+use Automattic\WooCommerce\Utilities\NumberUtil;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -980,7 +983,7 @@ function wc_get_price_including_tax( $product, $args = array() ) {
 				$taxes_total = array_sum( array_map( 'wc_round_tax_total', $taxes ) );
 			}
 
-			$return_price = round( $line_price + $taxes_total, wc_get_price_decimals() );
+			$return_price = NumberUtil::round( $line_price + $taxes_total, wc_get_price_decimals() );
 		} else {
 			$tax_rates      = WC_Tax::get_rates( $product->get_tax_class() );
 			$base_tax_rates = WC_Tax::get_base_tax_rates( $product->get_tax_class( 'unfiltered' ) );
@@ -998,7 +1001,7 @@ function wc_get_price_including_tax( $product, $args = array() ) {
 					$remove_taxes_total = array_sum( array_map( 'wc_round_tax_total', $remove_taxes ) );
 				}
 
-				$return_price = round( $line_price - $remove_taxes_total, wc_get_price_decimals() );
+				$return_price = NumberUtil::round( $line_price - $remove_taxes_total, wc_get_price_decimals() );
 
 				/**
 			 * The woocommerce_adjust_non_base_location_prices filter can stop base taxes being taken off when dealing with out of base locations.
@@ -1017,7 +1020,7 @@ function wc_get_price_including_tax( $product, $args = array() ) {
 					$modded_taxes_total = array_sum( array_map( 'wc_round_tax_total', $modded_taxes ) );
 				}
 
-				$return_price = round( $line_price - $base_taxes_total + $modded_taxes_total, wc_get_price_decimals() );
+				$return_price = NumberUtil::round( $line_price - $base_taxes_total + $modded_taxes_total, wc_get_price_decimals() );
 			}
 		}
 	}
@@ -1334,7 +1337,7 @@ function wc_update_product_lookup_tables_is_running() {
 function wc_update_product_lookup_tables() {
 	global $wpdb;
 
-	$is_cli = defined( 'WP_CLI' ) && WP_CLI;
+	$is_cli = Constants::is_true( 'WP_CLI' );
 
 	if ( ! $is_cli ) {
 		WC_Admin_Notices::add_notice( 'regenerating_lookup_table' );
@@ -1365,7 +1368,9 @@ function wc_update_product_lookup_tables() {
 		'total_sales',
 		'downloadable',
 		'virtual',
-		'onsale', // When last column is updated, woocommerce_product_lookup_table_is_generating is updated.
+		'onsale',
+		'tax_class',
+		'tax_status', // When last column is updated, woocommerce_product_lookup_table_is_generating is updated.
 	);
 
 	foreach ( $columns as $index => $column ) {
@@ -1457,6 +1462,8 @@ function wc_update_product_lookup_tables_column( $column ) {
 		case 'stock_status':
 		case 'average_rating':
 		case 'total_sales':
+		case 'tax_class':
+		case 'tax_status':
 			if ( 'total_sales' === $column ) {
 				$meta_key = 'total_sales';
 			} elseif ( 'average_rating' === $column ) {
@@ -1523,9 +1530,12 @@ function wc_update_product_lookup_tables_column( $column ) {
 				)
 			);
 			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
-
-			delete_option( 'woocommerce_product_lookup_table_is_generating' ); // Complete.
 			break;
+	}
+
+	// Final column - mark complete.
+	if ( 'tax_status' === $column ) {
+		delete_option( 'woocommerce_product_lookup_table_is_generating' );
 	}
 }
 add_action( 'wc_update_product_lookup_tables_column', 'wc_update_product_lookup_tables_column' );

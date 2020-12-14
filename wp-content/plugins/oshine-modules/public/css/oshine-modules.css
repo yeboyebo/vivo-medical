@@ -3213,7 +3213,9 @@
       margin: 0px;
       line-height: 7px !important;
   }
-  
+  .oshine-mc-wrap .field_consent {
+      margin-bottom: 20px;
+    }
   
   /*********************************************************************
               PRICING TABLE

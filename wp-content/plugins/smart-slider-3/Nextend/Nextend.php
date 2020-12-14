@@ -4,10 +4,9 @@
 namespace Nextend;
 
 
-use JEventDispatcher;
-use JFactory;
 use Nextend\Framework\Pattern\GetPathTrait;
 use Nextend\Framework\Pattern\SingletonTrait;
+use Nextend\SmartSlider3\Platform\Joomla\JoomlaShim;
 
 class Nextend {
 

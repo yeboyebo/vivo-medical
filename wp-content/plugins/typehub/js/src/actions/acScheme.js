@@ -31,6 +31,9 @@ export default{
                     security: window.typehubAjax.nonce,
                     store:JSON.stringify(processedState)
                 },
+                beforeSend : function ( xhr ) {
+                    xhr.setRequestHeader( 'X-WP-Nonce', window.typehubAjax.nonce )
+                },
 				type:'POST'}) 
 				.done((data)=>{
 					if(data.trim() === 'success'){

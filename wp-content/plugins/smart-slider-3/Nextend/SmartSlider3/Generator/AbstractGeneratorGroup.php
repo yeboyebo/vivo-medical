@@ -2,12 +2,12 @@
 
 namespace Nextend\SmartSlider3\Generator;
 
-use Nextend\Framework\Pattern\GetPathTrait;
+use Nextend\Framework\Pattern\GetAssetsPathTrait;
 use Nextend\Framework\Url\Url;
 
 abstract class AbstractGeneratorGroup {
 
-    use GetPathTrait;
+    use GetAssetsPathTrait;
 
     protected $name = '';
 
@@ -116,7 +116,7 @@ abstract class AbstractGeneratorGroup {
 
     public function getImageUrl() {
 
-        return Url::pathToUri(self::getPath() . '/dynamic.png');
+        return Url::pathToUri(self::getAssetsPath() . '/dynamic.png');
     }
 
     /**

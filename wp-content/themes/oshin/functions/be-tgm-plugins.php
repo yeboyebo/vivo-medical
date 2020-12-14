@@ -147,7 +147,7 @@ function my_theme_register_required_plugins() {
 			'slug'     				=> 'meta-box-conditional-logic', // The plugin slug (typically the folder name)
 			'source'   				=> 'https://brandexponents.ams3.cdn.digitaloceanspaces.com/oshine/plugins/meta-box-conditional-logic.zip', // The plugin source
 			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.6.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '1.6.13', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -169,7 +169,7 @@ function my_theme_register_required_plugins() {
 			'slug'     				=> 'meta-box-tabs', // The plugin slug (typically the folder name)
 			'source'   				=> 'https://brandexponents.ams3.cdn.digitaloceanspaces.com/oshine/plugins/meta-box-tabs.zip', // The plugin source
 			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.1.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'version' 				=> '1.1.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
@@ -186,10 +186,13 @@ function my_theme_register_required_plugins() {
 		// 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		// ),	
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
+		// array(
+		// 	'name' 		=> 'Contact Form 7',
+		// 	'slug' 		=> 'contact-form-7',
+		// ),
 		array(
-			'name' 		=> 'Contact Form 7',
-			'slug' 		=> 'contact-form-7',
-			
+			'name' 		=> 'WPForms Lite',
+			'slug' 		=> 'wpforms-lite',				
 		),
 		// array(
 		// 	'name' 		=> 'Sidekick - Voice Guided Training',

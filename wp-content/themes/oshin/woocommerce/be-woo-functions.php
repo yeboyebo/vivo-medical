@@ -204,7 +204,7 @@ if( class_exists('Woocommerce') ) {
 			$fragments['a.cart-contents'] = ob_get_clean();
 			return $fragments;
 		}
-		add_filter('add_to_cart_fragments', 'be_woo_ajax_fragment');
+		add_filter('woocommerce_add_to_cart_fragments', 'be_woo_ajax_fragment');
 	}
 	if (!function_exists('be_themes_number_of_products_per_page')) {
 		function be_themes_number_of_products_per_page( $count ) {

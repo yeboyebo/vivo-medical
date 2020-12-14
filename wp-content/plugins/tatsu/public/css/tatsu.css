@@ -246,6 +246,8 @@ body {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
+    position:relative;
+    z-index:1;
 }
 
 .tatsu-eq-cols > .tatsu-row {

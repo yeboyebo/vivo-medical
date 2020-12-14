@@ -47,7 +47,7 @@ if(($post_format == 'quote' || $post_format == 'link') && !is_single() ){
                         <a href = "<?php echo ( ( isset($be_themes_data['open_to_lightbox']) && 1 == $be_themes_data['open_to_lightbox'] ) ? ( $post_thumb_img[ 0 ] ) : ( is_single() ? '#' : get_permalink( get_the_ID() ) ) ); ?>" class = "thumb-wrap <?php echo ( (isset($be_themes_data['open_to_lightbox']) && 1 == $be_themes_data['open_to_lightbox'] ) ? 'image-popup-vertical-fit mfp-image' : '' ); ?>" >
                             <?php if($post_format == 'audio' || $post_format == 'video'){
                                 get_template_part( 'content', $post_format ); 
-                            }else if( !is_single() && !is_category() && !is_search() ){?>
+                            }else if( !is_single() && !is_category() && !is_search() && !is_tag() && !is_date() ){?>
                                 <img data-src = "<?php echo $post_thumb_img[0];?>"></img>
                             <?php 
                             }else{
@@ -126,7 +126,7 @@ if(($post_format == 'quote' || $post_format == 'link') && !is_single() ){
                 <div class = "post-content-outer-wrap be-image-post"> 
                     <div class="post-content-wrap">
                         <div class = "post-thumb">
-                            <a <?php echo ( !empty( $post_thumb_img ) ? ( 'style = "background : url(' . $post_thumb_img[0] . ') 50% no-repeat/cover"' ) : '' ) ?> href = "<?php echo ( ( isset( $be_themes_data['open_to_lightbox'] ) && 1 == $be_themes_data[ 'open_to_lightbox' ] ) ? $post_thumb_img[0] : get_permalink( get_the_ID() ) ); ?>" class = "thumb-wrap <?php echo ( ( isset($be_themes_data['open_to_lightbox']) && 1 == $be_themes_data['open_to_lightbox'] ) ? 'image-popup-vertical-fit mfp-image' : '' ); ?>">
+                            <a <?php echo ( !empty( $post_thumb_img ) ? ( 'style = "background : url(' . $post_thumb_img[0] . ') 50% no-repeat; background-size: cover;"' ) : '' ) ?> href = "<?php echo ( ( isset( $be_themes_data['open_to_lightbox'] ) && 1 == $be_themes_data[ 'open_to_lightbox' ] ) ? $post_thumb_img[0] : get_permalink( get_the_ID() ) ); ?>" class = "thumb-wrap <?php echo ( ( isset($be_themes_data['open_to_lightbox']) && 1 == $be_themes_data['open_to_lightbox'] ) ? 'image-popup-vertical-fit mfp-image' : '' ); ?>">
                             </a>
                             <div class="post-thumb-wrap-overlay">
                             </div>

@@ -1,10 +1,10 @@
 <?php
 
-// BEGIN iThemes Security - Do not modify or remove this line
+// BEGIN iThemes Security - No modifiques ni borres esta línea
 // iThemes Security Config Details: 2
-define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
-define( 'FORCE_SSL_ADMIN', true ); // Force SSL for Dashboard - Security > Settings > Secure Socket Layers (SSL) > SSL for Dashboard
-// END iThemes Security - Do not modify or remove this line
+define( 'DISALLOW_FILE_EDIT', true ); // Desactivar editor de archivos - Seguridad > Ajustes > Ajustes WordPress > Editor de archivos
+define( 'FORCE_SSL_ADMIN', true ); // Fuerza SSL en el escritorio - Securidad > Ajustes > Capas de Conexión Segura (SSL) > SSL en el escritorio
+// END iThemes Security - No modifiques ni borres esta línea
 
 /**
  * Configuración básica de WordPress.
@@ -49,14 +49,23 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+/*define('AUTH_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
 define('SECURE_AUTH_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
 define('LOGGED_IN_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
 define('NONCE_KEY', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
 define('AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
 define('SECURE_AUTH_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
 define('LOGGED_IN_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
-define('NONCE_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.
+define('NONCE_SALT', 'pon aquí tu frase aleatoria'); // Cambia esto por tu frase aleatoria.*/
+
+define('AUTH_KEY',         'Py- ?g[Ny7Ao3lQyLI$OV+6&dIXT3$q6mB|>xVQNS|-1+a(Y>7Z|:-(bc:kxcLCQ');
+define('SECURE_AUTH_KEY',  'yHpG`?Q+>D?V(>ObkebiT6A1w1&1rHeT:l6ai,iT]SerNyaoz}%q2g<cTanN758$');
+define('LOGGED_IN_KEY',    '_+/};|l+bXjm3TDVmImfu 7dzwwy(&eh_J<=9e+SUWs&9(mrv-Zl_C*89%<We5R]');
+define('NONCE_KEY',        '~/A<EXa[n gCDmj2TQ5@7C.`>Z5%ihsJ-3-M=bh]9^b|HUSJs +iS.ggB*`e`^6n');
+define('AUTH_SALT',        '5`L9n:/WJ. 9T}I6{}aH0=POD#pH[wjU`5NHw~z02tXNYX)O(gk})R8{p>Pac[b@');
+define('SECURE_AUTH_SALT', 'QI8bgRG7}+%f!pw?Ql> .-Fhvk@k  /&+AX/G{7lA@RKYA9V%AwlmwH*#yg~JO1g');
+define('LOGGED_IN_SALT',   'I]%c.&LRO-+P1uAnYytssp^Ieb-*vUcaE0Iz}hMc_6BMKqU6TD1EgLi,NYyy$@=6');
+define('NONCE_SALT',       'uzl4xmg{0VA!|v^u:De{0A50;c:M1iyNu@dFK[[FaoiF(+:&%Ofv|(x$I&Q~qVht');
 
 /**#@-*/
 
@@ -88,4 +97,6 @@ if ( !defined('ABSPATH') )
 require_once(ABSPATH . 'wp-settings.php');
 
 define('FS_METHOD','direct');
+define('ALLOW_UNFILTERED_UPLOADS', true);
+
 

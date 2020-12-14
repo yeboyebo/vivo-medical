@@ -274,10 +274,10 @@ function typehub_get_exposed_selectors() {
     $options = !empty( $store['optionConfig'] ) && is_array( $store['optionConfig'] ) ? $store['optionConfig'] : array();
     $exposed_selectors = array();
     foreach( $options as $option => $config ) {
-        if( array_key_exists( 'expose', $config ) && !empty( $config[ 'expose' ] ) ) {
+        if( ( array_key_exists( 'expose', $config ) && !empty( $config[ 'expose' ] ) ) || ( array_key_exists( 'category', $config ) && $config[ 'category' ] == 'Custom' ) )  {
             $exposed_selectors[ $option ] = $config[ 'label' ];
         }
-    }
+    }     
     return $exposed_selectors;
 }
 

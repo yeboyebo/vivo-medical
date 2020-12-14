@@ -1,12 +1,10 @@
 <?php
 global $be_themes_data;
 // Tatsu Footer Builder
-
+do_action( 'tatsu_footer' );
 if( isset( $be_themes_data['enable_footer_builder'] ) && $be_themes_data['enable_footer_builder'] == 1 ){
 	do_action( 'tatsu_print_footer' );
 }else{
-
-	do_action( 'tatsu_footer' );
 	$post_id = be_get_page_id();
 	$fixed_footer = ( isset( $be_themes_data['fixed-footer'] ) && !empty( $be_themes_data['fixed-footer'] ) && be_is_fixed_footer_possible() ) ? true : false;
 	$show_bottom_widgets = get_post_meta($post_id, 'be_themes_bottom_widgets', true);

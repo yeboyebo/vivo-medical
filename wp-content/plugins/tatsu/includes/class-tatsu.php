@@ -72,7 +72,7 @@ class Tatsu {
 		if( defined( 'TATSU_VERSION' ) ) {
 			$this->version = TATSU_VERSION;
 		}else {
-			$this->version = '3.2';
+			$this->version = '3.2.2';
 		}
 		$this->load_dependencies();
 		$this->set_locale();
@@ -361,7 +361,7 @@ class Tatsu {
 	//	$this->loader->add_action( 'wp_restore_post_revision', $this, 'restore_revision' );
 
 		$this->loader->add_action( 'edit_form_after_title', $plugin_admin, 'edit_with_tatsu_button' );
-		$this->loader->add_filter( 'admin_body_class', $plugin_admin, 'add_body_class' );	
+		$this->loader->add_filter( 'admin_body_class', $plugin_admin, 'add_body_class' , 11);	
 
 		//double width, height option in gallery
 		$this->loader->add_filter( 'attachment_fields_to_edit', $plugin_admin, 'add_media_edit_options', 10, 2 );

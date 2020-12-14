@@ -89,6 +89,9 @@ class ViewPreviewFull extends AbstractView {
 
     public function renderSlider() {
 
+        $locale = setlocale(LC_NUMERIC, 0);
+        setlocale(LC_NUMERIC, "C");
+
         $sliderManager = new SliderManager($this, $this->sliderID, true, array(
             'sliderData'    => $this->sliderData,
             'slidesData'    => $this->slidesData,
@@ -96,6 +99,10 @@ class ViewPreviewFull extends AbstractView {
         ));
         $sliderManager->allowDisplayWhenEmpty();
 
-        return $sliderManager->render();
+        $sliderHTML = $sliderManager->render();
+
+        setlocale(LC_NUMERIC, $locale);
+
+        return $sliderHTML;
     }
 }

@@ -150,15 +150,15 @@ class Slider extends AbstractRenderable {
             $slidersModel = new ModelSliders($this->MVCHelper);
             $sliderRow    = $slidersModel->get($this->sliderId);
 
-            if (!$this->isAdminArea && $sliderRow['status'] != 'published') {
-                $this->hasError = true;
-                throw new Exception('Slider is not published!');
-            }
-
             if (empty($sliderRow)) {
                 $this->hasError = true;
                 throw new Exception('Slider does not exists!');
             } else {
+
+                if (!$this->isAdminArea && $sliderRow['status'] != 'published') {
+                    $this->hasError = true;
+                    throw new Exception('Slider is not published!');
+                }
 
                 if (!empty($this->parameters['sliderData'])) {
                     $sliderData         = $this->parameters['sliderData'];

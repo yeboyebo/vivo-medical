@@ -357,7 +357,7 @@ jQuery( function( $ ) {
 							}
 						}
 					});
-					
+
 					// Always update the fragments
 					if ( data && data.fragments ) {
 						$.each( data.fragments, function ( key, value ) {
@@ -514,7 +514,7 @@ jQuery( function( $ ) {
 						wc_checkout_form.detachUnloadEventsOnSubmit();
 
 						try {
-							if ( 'success' === result.result ) {
+							if ( 'success' === result.result && $form.triggerHandler( 'checkout_place_order_success' ) !== false ) {
 								if ( -1 === result.redirect.indexOf( 'https://' ) || -1 === result.redirect.indexOf( 'http://' ) ) {
 									window.location = result.redirect;
 								} else {
@@ -657,6 +657,7 @@ jQuery( function( $ ) {
 					if ( code ) {
 						$( 'form.woocommerce-checkout' ).before( code );
 
+						$( document.body ).trigger( 'removed_coupon_in_checkout', [ data.coupon_code ] );
 						$( document.body ).trigger( 'update_checkout', { update_shipping_method: false } );
 
 						// Remove coupon code from coupon field

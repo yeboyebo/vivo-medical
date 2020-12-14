@@ -2,9 +2,11 @@
 /**
  * Discount calculation
  *
- * @package WooCommerce/Classes
+ * @package WooCommerce\Classes
  * @since   3.2.0
  */
+
+use Automattic\WooCommerce\Utilities\NumberUtil;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -159,7 +161,7 @@ class WC_Discounts {
 	 * @since  3.2.0
 	 * @param  string $key name of discount row to return.
 	 * @param  bool   $in_cents Should the totals be returned in cents, or without precision.
-	 * @return array
+	 * @return float
 	 */
 	public function get_discount( $key, $in_cents = false ) {
 		$item_discount_totals = $this->get_discounts_by_item( $in_cents );
@@ -230,7 +232,7 @@ class WC_Discounts {
 	 * @return int
 	 */
 	public function get_discounted_price_in_cents( $item ) {
-		return absint( round( $item->price - $this->get_discount( $item->key, true ) ) );
+		return absint( NumberUtil::round( $item->price - $this->get_discount( $item->key, true ) ) );
 	}
 
 	/**
@@ -359,7 +361,7 @@ class WC_Discounts {
 			$discounted_price = $this->get_discounted_price_in_cents( $item );
 
 			// Get the price we actually want to discount, based on settings.
-			$price_to_discount = ( 'yes' === get_option( 'woocommerce_calc_discounts_sequentially', 'no' ) ) ? $discounted_price : round( $item->price );
+			$price_to_discount = ( 'yes' === get_option( 'woocommerce_calc_discounts_sequentially', 'no' ) ) ? $discounted_price : NumberUtil::round( $item->price );
 
 			// See how many and what price to apply to.
 			$apply_quantity    = $limit_usage_qty && ( $limit_usage_qty - $applied_count ) < $item->quantity ? $limit_usage_qty - $applied_count : $item->quantity;
@@ -549,10 +551,7 @@ class WC_Discounts {
 		foreach ( $items_to_apply as $item ) {
 			for ( $i = 0; $i < $item->quantity; $i ++ ) {
 				// Find out how much price is available to discount for the item.
-				$discounted_price = $this->get_discounted_price_in_cents( $item );
-
-				// Get the price we actually want to discount, based on settings.
-				$price_to_discount = ( 'yes' === get_option( 'woocommerce_calc_discounts_sequentially', 'no' ) ) ? $discounted_price : $item->price;
+				$price_to_discount = $this->get_discounted_price_in_cents( $item );
 
 				// Run coupon calculations.
 				$discount = min( $price_to_discount, 1 );
@@ -585,7 +584,7 @@ class WC_Discounts {
 	protected function validate_coupon_exists( $coupon ) {
 		if ( ! $coupon->get_id() && ! $coupon->get_virtual() ) {
 			/* translators: %s: coupon code */
-			throw new Exception( sprintf( __( 'Coupon "%s" does not exist!', 'woocommerce' ), $coupon->get_code() ), 105 );
+			throw new Exception( sprintf( __( 'Coupon "%s" does not exist!', 'woocommerce' ), esc_html( $coupon->get_code() ) ), 105 );
 		}
 
 		return true;
@@ -913,7 +912,7 @@ class WC_Discounts {
 
 			if ( $this->object->get_prices_include_tax() ) {
 				// Add tax to tax-exclusive subtotal.
-				$subtotal = $subtotal + wc_add_number_precision( round( $this->object->get_total_tax(), wc_get_price_decimals() ) );
+				$subtotal = $subtotal + wc_add_number_precision( NumberUtil::round( $this->object->get_total_tax(), wc_get_price_decimals() ) );
 			}
 
 			return $subtotal;

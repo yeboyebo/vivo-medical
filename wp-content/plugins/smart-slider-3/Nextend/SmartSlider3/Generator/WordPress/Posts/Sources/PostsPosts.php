@@ -96,7 +96,7 @@ class PostsPosts extends AbstractGenerator {
 
     private function translate($from, $translate) {
         if (!empty($translate) && !empty($from)) {
-            foreach ($translate AS $key => $value) {
+            foreach ($translate as $key => $value) {
                 $from = str_replace($key, $value, $from);
             }
         }
@@ -108,7 +108,7 @@ class PostsPosts extends AbstractGenerator {
         $value = preg_split('/$\R?^/m', $lines);
         $data  = array();
         if (!empty($value)) {
-            foreach ($value AS $v) {
+            foreach ($value as $v) {
                 $array = explode('||', $v);
                 if (!empty($array) && count($array) == 2) {
                     $data[$array[0]] = trim($array[1]);
@@ -332,6 +332,7 @@ class PostsPosts extends AbstractGenerator {
                     }
                 }
             }
+            $record['slug']          = $post->post_name;
             $record['author_name']   = $record['author'] = get_the_author();
             $userID                  = get_the_author_meta('ID');
             $record['author_url']    = get_author_posts_url($userID);
@@ -351,7 +352,7 @@ class PostsPosts extends AbstractGenerator {
             }
             $j = 0;
             if (is_array($category) && count($category) > 1) {
-                foreach ($category AS $cat) {
+                foreach ($category as $cat) {
                     $record['category_name_' . $j] = $cat->name;
                     $record['category_link_' . $j] = get_category_link($cat->cat_ID);
                     $record['category_slug_' . $j] = $cat->slug;
@@ -391,7 +392,7 @@ class PostsPosts extends AbstractGenerator {
             if (class_exists('acf')) {
                 $fields = get_fields($post->ID);
                 if (is_array($fields) && !empty($fields) && count($fields)) {
-                    foreach ($fields AS $k => $v) {
+                    foreach ($fields as $k => $v) {
                         $type = $this->getACFType($k, $post->ID);
                         $k    = str_replace('-', '', $k);
 
@@ -409,7 +410,7 @@ class PostsPosts extends AbstractGenerator {
                             if (isset($v['url'])) {
                                 $record[$k] = $v['url'];
                             } else if (is_array($v)) {
-                                foreach ($v AS $v_v => $k_k) {
+                                foreach ($v as $v_v => $k_k) {
                                     if (is_array($k_k) && isset($k_k['url'])) {
                                         $record[$k . $v_v] = $k_k['url'];
                                     }
@@ -436,16 +437,16 @@ class PostsPosts extends AbstractGenerator {
                 'techline-sidebar'
             );
 
-            foreach ($excluded_metas AS $excluded_meta) {
+            foreach ($excluded_metas as $excluded_meta) {
                 if (isset($post_meta[$excluded_meta])) {
                     unset($post_meta[$excluded_meta]);
                 }
             }
 
             if (count($post_meta) && is_array($post_meta) && !empty($post_meta)) {
-                foreach ($post_meta AS $key => $value) {
+                foreach ($post_meta as $key => $value) {
                     if (count($value) && is_array($value) && !empty($value)) {
-                        foreach ($value AS $v) {
+                        foreach ($value as $v) {
                             if (!empty($v) && !is_array($v) && !is_object($v)) {
                                 $key = str_replace(array(
                                     '_',
@@ -461,12 +462,12 @@ class PostsPosts extends AbstractGenerator {
                                     $unserialize_values = unserialize($v);
                                     $unserialize_count  = 1;
                                     if (!empty($unserialize_values) && is_array($unserialize_values)) {
-                                        foreach ($unserialize_values AS $unserialize_value) {
+                                        foreach ($unserialize_values as $unserialize_value) {
                                             if (!empty($unserialize_value) && is_string($unserialize_value)) {
                                                 $record['us_' . $key . $unserialize_count] = $unserialize_value;
                                                 $unserialize_count++;
                                             } else if (is_array($unserialize_value)) {
-                                                foreach ($unserialize_value AS $u_v) {
+                                                foreach ($unserialize_value as $u_v) {
                                                     if (is_string($u_v)) {
                                                         $record['us_' . $key . $unserialize_count] = $u_v;
                                                         $unserialize_count++;
@@ -484,8 +485,8 @@ class PostsPosts extends AbstractGenerator {
                 }
                 if (!empty($record['elementordata'])) {
                     $elementordatas = json_decode($record['elementordata']);
-                    foreach ($elementordatas AS $elementordata) {
-                        foreach ($this->getElementorTextEditors($elementordata) AS $elementorKey => $elementorVal) {
+                    foreach ($elementordatas as $elementordata) {
+                        foreach ($this->getElementorTextEditors($elementordata) as $elementorKey => $elementorVal) {
                             $record[$elementorKey] = $elementorVal;
                         }
                     }
@@ -501,7 +502,7 @@ class PostsPosts extends AbstractGenerator {
             $record['guid']          = $post->guid;
 
             if (!empty($custom_dates)) {
-                foreach ($custom_dates AS $custom_date_key => $custom_date_format) {
+                foreach ($custom_dates as $custom_date_key => $custom_date_format) {
                     if (array_key_exists($custom_date_key, $record)) {
                         if ($this->isTimeStamp($record[$custom_date_key])) {
                             $date = $record[$custom_date_key];
@@ -519,7 +520,7 @@ class PostsPosts extends AbstractGenerator {
             }
 
             if (!empty($remove_shortcode)) {
-                foreach ($remove_shortcode AS $variable) {
+                foreach ($remove_shortcode as $variable) {
                     if (isset($record[$variable])) {
                         $record[$variable] = $this->removeShortcodes($record[$variable]);
                     }
@@ -549,7 +550,7 @@ class PostsPosts extends AbstractGenerator {
         } else {
             $prefix = $prefix . "_";
         }
-        foreach ($sizes AS $size => $image) {
+        foreach ($sizes as $size => $image) {
             $imageSrc                                               = wp_get_attachment_image_src($thumbnail_id, $size);
             $data[$prefix . 'image_' . $this->clearSizeName($size)] = $imageSrc[0];
         }

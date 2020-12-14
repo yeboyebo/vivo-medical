@@ -7,3 +7,43 @@ Version: 1.0
 */
 
 @import url("../oshin/style.css");
+
+#navigation a {
+	padding: 0 15px !important;
+}
+
+.carrito-icono>a {
+    
+    position: relative;
+    margin-left: -20px !important;
+    text-align: left;
+}
+
+.carrito-icono>a:after {
+    content: "";
+    background-image: url("cesta-blanco.png");
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    float: left;
+    /*padding-right: 5px;*/
+    margin-top: -5px;
+}
+
+.top-animate .carrito-icono>a:after { /* Cuando baja el header cambia de color a azul */ 
+    background-image: url("cesta-azul.png") !important;
+}
+
+@media (max-width: 955px) { /* Para moviles */ 
+
+   .carrito-icono>a:after {
+       margin-top: 5px !important;
+   }
+
+   .carrito-icono>a {
+        margin-left: 0px !important;
+   }
+
+}
+

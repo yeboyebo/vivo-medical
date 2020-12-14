@@ -6,6 +6,7 @@ namespace Nextend\SmartSlider3\Platform\WordPress\Admin;
 
 use Nextend\Framework\PageFlow;
 use Nextend\SmartSlider3\Application\ApplicationSmartSlider3;
+use Nextend\SmartSlider3\Application\Model\ModelLicense;
 use Nextend\SmartSlider3\Application\Model\ModelSliders;
 use Nextend\SmartSlider3\Platform\SmartSlider3Platform;
 use Nextend\SmartSlider3\Platform\WordPress\HelperTinyMCE;
@@ -15,6 +16,11 @@ use WP_Admin_Bar;
 class AdminHelper {
 
     public function __construct() {
+
+        add_action('admin_init', function () {
+            require_once dirname(__FILE__) . '/free/notice.php';
+        
+        });
 
         add_action('init', array(
             $this,

@@ -2,14 +2,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-05-13 11:04+0200\n"
+"POT-Creation-Date: 2020-10-16 07:49+0200\n"
 "PO-Revision-Date: 2020-03-10 19:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: n2_;n2_e;n2_n:1,2;n2_en:1,2;n2_x:1,2c;n2_ex:1,2c\n"
@@ -121,24 +121,28 @@ msgstr ""
 msgid "If you see this message after the repair database process, please %1$scontact us%2$s with the log:"
 msgstr ""
 
+#: Framework/Font/Block/FontManager/Index.php:14
+msgid "Font manager"
+msgstr ""
+
 #: Framework/Font/FontRenderer.php:103 Framework/Font/FontRenderer.php:105
 #: Framework/Font/FontRenderer.php:117 Framework/Font/FontRenderer.php:119
 #: Framework/Font/FontRenderer.php:133 Framework/Font/FontRenderer.php:152
 #: Framework/Font/FontRenderer.php:187 Framework/Font/FontRenderer.php:205
 #: Framework/Font/FontRenderer.php:221 Framework/Font/FontRenderer.php:237
 #: Framework/Font/FontRenderer.php:255 Framework/Style/StyleRenderer.php:80
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:28
 #: SmartSlider3/Renderable/Item/Heading/ItemHeading.php:148
 #: SmartSlider3/Renderable/Item/Text/Assets/text.js:20
 #: SmartSlider3/Renderable/Item/Text/ItemText.php:53
 #: SmartSlider3/Renderable/Item/Text/ItemText.php:134
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:244
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:248
 #: SmartSlider3Pro/Renderable/Item/Input/ItemInput.php:149
 #: SmartSlider3Pro/SplitText/SplitTextRenderer.php:142
 #: SmartSlider3Pro/Widget/Arrow/ArrowGrow/ArrowGrow.php:64
 #: SmartSlider3Pro/Widget/Arrow/ArrowText/ArrowText.php:51
 #: SmartSlider3Pro/Widget/Bullet/BulletNumbers/BulletNumbers.php:58
 #: SmartSlider3Pro/Widget/Bullet/BulletText/BulletText.php:58
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:28
 msgid "Text"
 msgstr ""
 
@@ -163,17 +167,17 @@ msgid "Hover"
 msgstr ""
 
 #: Framework/Font/FontRenderer.php:139 Framework/Style/StyleRenderer.php:141
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:27
 #: SmartSlider3/Renderable/Item/Heading/Assets/heading.js:20
 #: SmartSlider3/Renderable/Item/Heading/ItemHeading.php:53
 #: SmartSlider3/Renderable/Item/Heading/ItemHeading.php:148
 #: SmartSlider3/Storage.php:65
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:302
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:306
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:99
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:245
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:260
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:100
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:249
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:264
 #: SmartSlider3Pro/SplitText/SplitTextRenderer.php:203
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:27
 msgid "Heading"
 msgstr ""
 
@@ -185,6 +189,8 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:87
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:75
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:77
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:112
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:54
 #: SmartSlider3/Renderable/Item/Button/ItemButton.php:157
 #: SmartSlider3/Renderable/Item/Button/ItemButton.php:158
 #: SmartSlider3/Renderable/Item/Heading/ItemHeading.php:170
@@ -202,12 +208,12 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:181
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:218
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:219
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:114
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:115
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:114
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:115
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:136
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:137
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:276
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:277
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:280
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:281
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:138
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:139
 msgid "Link"
@@ -215,6 +221,7 @@ msgstr ""
 
 #: Framework/Font/FontRenderer.php:158 Framework/Font/FontRenderer.php:262
 #: Framework/Style/StyleRenderer.php:122 Framework/Style/StyleRenderer.php:201
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:30
 #: SmartSlider3/Renderable/Item/Button/Assets/button.js:20
 #: SmartSlider3/Renderable/Item/Button/ItemButton.php:50
 #: SmartSlider3/Renderable/Item/Button/ItemButton.php:141
@@ -226,7 +233,6 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Input/ItemInput.php:220
 #: SmartSlider3Pro/SplitText/SplitTextRenderer.php:184
 #: SmartSlider3Pro/SplitText/SplitTextRenderer.php:263
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:30
 msgid "Button"
 msgstr ""
 
@@ -235,15 +241,15 @@ msgid "Accordion slide title"
 msgstr ""
 
 #: Framework/Font/FontRenderer.php:171
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:71
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:72
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:73
 #: Framework/Form/Element/Select/FontWeight.php:13
 #: Framework/Form/Element/Select/FontWeight.php:18
 #: Framework/Style/StyleRenderer.php:94 Framework/Style/StyleRenderer.php:108
 #: Framework/Style/StyleRenderer.php:124 Framework/Style/StyleRenderer.php:143
 #: Framework/Style/StyleRenderer.php:162 Framework/Style/StyleRenderer.php:178
 #: Framework/Style/StyleRenderer.php:194
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:140
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:148
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderOptimize.php:62
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSlides.php:149
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:61
@@ -284,6 +290,8 @@ msgstr ""
 
 #: Framework/Font/FontRenderer.php:177
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:57
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:92
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:31
 #: SmartSlider3Pro/Widget/Arrow/ArrowReveal/ArrowReveal.php:79
 #: SmartSlider3Pro/Widget/Arrow/ArrowReveal/Assets/Admin/arrow.js:11
 msgid "Slide title"
@@ -341,10 +349,10 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:170
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsItemCommon.php:54
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:197
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:302
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:304
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:438
 #: SmartSlider3/Form/Element/BackgroundImage.php:31
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:201
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:222
 #: SmartSlider3/Widget/Arrow/ArrowImage/ArrowImage.php:71
 #: SmartSlider3/Widget/Arrow/ArrowImage/ArrowImage.php:105
 #: SmartSlider3/Widget/Autoplay/AutoplayImage/AutoplayImage.php:53
@@ -356,8 +364,8 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Area/ItemArea.php:158
 #: SmartSlider3Pro/Renderable/Item/CircleCounter/ItemCircleCounter.php:137
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:245
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:94
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:240
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:94
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:242
 #: SmartSlider3Pro/Renderable/Item/ProgressBar/ItemProgressBar.php:138
 #: SmartSlider3Pro/Widget/Arrow/ArrowGrow/ArrowGrow.php:40
 #: SmartSlider3Pro/Widget/Arrow/ArrowGrow/ArrowGrow.php:54
@@ -392,8 +400,8 @@ msgstr ""
 #: SmartSlider3/Widget/Thumbnail/Basic/ThumbnailBasic.php:204
 #: SmartSlider3Pro/Renderable/Item/Area/ItemArea.php:174
 #: SmartSlider3Pro/Renderable/Item/CircleCounter/ItemCircleCounter.php:143
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:101
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:232
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:101
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:234
 #: SmartSlider3Pro/Slider/SliderType/Carousel/SliderTypeCarouselAdmin.php:191
 #: SmartSlider3Pro/Slider/SliderType/Showcase/SliderTypeShowcaseAdmin.php:92
 #: SmartSlider3Pro/Widget/Indicator/IndicatorPie/IndicatorPie.php:31
@@ -484,7 +492,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Elements/JoomshoppingLabels.php:28
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:63
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:62
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:61
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:63
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:51
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:45
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:56
@@ -528,7 +536,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Generator/ViewGeneratorEdit.php:77
 #: SmartSlider3/Application/Admin/Preview/ViewPreviewIndex.php:38
 #: SmartSlider3/Application/Admin/Slider/ViewSliderEdit.php:115
-#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:213
+#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:218
 #: SmartSlider3/BackgroundAnimation/ModelBackgroundAnimation.php:41
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderEditGroup.php:78
 #: SmartSlider3Pro/PostBackgroundAnimation/ModelPostBackgroundAnimation.php:45
@@ -536,25 +544,25 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:54
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:55
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:56
 msgid "Frontend"
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:56
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:57
 msgid "You can load Google Fonts on the frontend."
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:58
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:59
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:60
 msgid "Backend"
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:60
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:61
 msgid "You can load Google Fonts in the backend."
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:63
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:64
 #: Framework/Form/Element/Style.php:50
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:161
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:188
@@ -569,76 +577,85 @@ msgstr ""
 msgid "Style"
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:66
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:68
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:70
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:72
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:74
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:76
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:78
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:80
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:82
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:67
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:69
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:71
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:73
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:75
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:77
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:79
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:81
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:83
 msgctxt "Font style"
 msgid "Italic"
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:85
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:86
 msgid "Character set"
-msgstr ""
-
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:87
-msgctxt "Character set"
-msgid "Latin"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:88
 msgctxt "Character set"
-msgid "Latin Extended"
+msgid "Latin"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:89
 msgctxt "Character set"
-msgid "Greek"
+msgid "Latin Extended"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:90
 msgctxt "Character set"
-msgid "Greek Extended"
+msgid "Greek"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:91
 msgctxt "Character set"
-msgid "Cyrillic"
+msgid "Greek Extended"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:92
 msgctxt "Character set"
-msgid "Devanagari"
+msgid "Cyrillic"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:93
 msgctxt "Character set"
-msgid "Arabic"
+msgid "Devanagari"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:94
 msgctxt "Character set"
-msgid "Khmer"
+msgid "Arabic"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:95
 msgctxt "Character set"
-msgid "Telugu"
+msgid "Khmer"
 msgstr ""
 
 #: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:96
 msgctxt "Character set"
+msgid "Telugu"
+msgstr ""
+
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:97
+msgctxt "Character set"
 msgid "Vietnamese"
 msgstr ""
 
-#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:101
+#: Framework/Font/Sources/GoogleFonts/GoogleFonts.php:102
 msgctxt "Default font sets"
 msgid "latin"
+msgstr ""
+
+#: Framework/Form/Element/AbstractChooserText.php:71
+#: Framework/Form/Element/Select/SelectFile.php:36
+#: Framework/Form/Element/Select/Skin.php:27
+#: Framework/Form/Element/Text/Folder.php:37
+#: SmartSlider3/Application/Admin/Generator/Template/CreateStep1Groups.php:43
+#: SmartSlider3/Application/Admin/Generator/Template/CreateStep3Sources.php:23
+msgid "Choose"
 msgstr ""
 
 #: Framework/Form/Element/Breakpoint.php:39
@@ -653,7 +670,7 @@ msgstr ""
 
 #: Framework/Form/Element/Breakpoint.php:41
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:411
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:209
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:230
 msgid "Portrait"
 msgstr ""
 
@@ -672,9 +689,9 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/slide/edit.js:181
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderAnimations.php:112
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:97
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:224
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:296
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:517
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:229
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:302
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:523
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSlides.php:156
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/BlockSlideBox.php:167
 #: SmartSlider3/Renderable/Item/Text/ItemText.php:157
@@ -689,9 +706,9 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:21
 #: SmartSlider3/Application/Admin/Assets/js/slide/edit.js:177
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:101
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:208
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:288
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:492
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:212
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:294
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:498
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/BlockSlideBox.php:163
 #: SmartSlider3/Widget/Group/AbstractWidgetGroup.php:103
 msgid "Large mobile"
@@ -705,9 +722,9 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:163
 #: SmartSlider3/Application/Admin/Assets/js/slide/edit.js:172
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:106
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:191
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:281
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:467
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:194
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:287
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:473
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSlides.php:155
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/BlockSlideBox.php:159
 #: SmartSlider3/Renderable/Item/Text/ItemText.php:145
@@ -722,9 +739,9 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:19
 #: SmartSlider3/Application/Admin/Assets/js/slide/edit.js:168
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:110
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:176
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:273
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:442
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:178
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:279
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:448
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/BlockSlideBox.php:155
 #: SmartSlider3/Widget/Group/AbstractWidgetGroup.php:118
 msgid "Large tablet"
@@ -737,11 +754,11 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:16
 #: SmartSlider3/Application/Admin/Assets/js/slide/edit.js:163
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:115
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:158
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:159
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/BlockSlideBox.php:151
+#: SmartSlider3/Application/Admin/Preview/Template/Index.php:29
 #: SmartSlider3/Widget/Group/AbstractWidgetGroup.php:127
 #: SmartSlider3Pro/Slider/SliderType/Carousel/SliderTypeCarouselAdmin.php:102
-#: SmartSlider3/Application/Admin/Preview/Template/Index.phtml:29
 msgid "Desktop"
 msgstr ""
 
@@ -751,8 +768,8 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/slide/edit.js:159
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:119
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:143
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:266
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:416
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:272
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:422
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/BlockSlideBox.php:147
 #: SmartSlider3/Widget/Group/AbstractWidgetGroup.php:133
 msgid "Large desktop"
@@ -872,7 +889,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialVideos.php:52
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:59
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:58
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:57
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:59
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:47
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:41
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:52
@@ -920,7 +937,7 @@ msgstr ""
 msgid "On"
 msgstr ""
 
-#: Framework/Form/Element/Select.php:48
+#: Framework/Form/Element/Select.php:49
 msgid "Hold down the ctrl (Windows) or command (MAC) button to select multiple options."
 msgstr ""
 
@@ -955,7 +972,7 @@ msgstr ""
 #: Framework/Form/Element/Select/FillMode.php:19
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:81
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:102
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:142
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:150
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:241
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:109
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:242
@@ -964,7 +981,7 @@ msgstr ""
 #: SmartSlider3/Widget/Bullet/BulletTransition/BulletTransition.php:71
 #: SmartSlider3/Widget/Thumbnail/Basic/ThumbnailBasic.php:71
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:235
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:333
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:337
 #: SmartSlider3Pro/Slider/SliderType/Carousel/SliderTypeCarouselAdmin.php:307
 #: SmartSlider3Pro/SplitText/ModelSplitText.php:67
 #: SmartSlider3Pro/Widget/Bullet/BulletNumbers/BulletNumbers.php:76
@@ -1128,22 +1145,15 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Settings/ViewSettingsGeneral.php:238
 #: SmartSlider3/Form/Element/Group/WidgetPosition.php:106
 #: SmartSlider3/Storage.php:979
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:140
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:138
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderShapeDivider.php:73
 #: SmartSlider3Pro/LayerAnimation/LayerAnimationStorage.php:199
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:217
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:234
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:295
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:332
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:299
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:336
 #: SmartSlider3Pro/Slider/ResponsiveType/FullPage/ResponsiveTypeFullPageAdmin.php:105
 msgid "Top"
-msgstr ""
-
-#: Framework/Form/Element/Select/SelectFile.php:36
-#: Framework/Form/Element/Select/Skin.php:27
-#: SmartSlider3/Application/Admin/Generator/Template/CreateStep1Groups.phtml:43
-#: SmartSlider3/Application/Admin/Generator/Template/CreateStep3Sources.phtml:23
-msgid "Choose"
 msgstr ""
 
 #: Framework/Form/Element/Text/FieldImageResponsive.php:27
@@ -1164,13 +1174,16 @@ msgid "Reset to normal state"
 msgstr ""
 
 #: Framework/Form/Joomla/Element/Select/MenuItems.php:18
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:119
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:61
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:150
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:132
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:507
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:169
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:216
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:175
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:107
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:49
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:190
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:237
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:196
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:58
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:69
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:170
@@ -1192,7 +1205,6 @@ msgstr ""
 #: SmartSlider3Pro/Generator/WordPress/TheEventsCalendar/Sources/TheEventsCalendarEvents.php:80
 #: SmartSlider3Pro/Generator/WordPress/WooCommerce/Sources/WooCommerceProductsByFilter.php:86
 #: SmartSlider3Pro/Slider/SliderType/Showcase/SliderTypeShowcaseAdmin.php:218
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:119
 msgid "Default"
 msgstr ""
 
@@ -1214,6 +1226,10 @@ msgstr ""
 msgid "Empty"
 msgstr ""
 
+#: Framework/Image/Block/ImageManager/Index.php:14
+msgid "Image manager"
+msgstr ""
+
 #: Framework/Image/Joomla/JoomlaImage.php:12
 msgid "behavior.modal"
 msgstr ""
@@ -1231,21 +1247,21 @@ msgid "Mobile retina"
 msgstr ""
 
 #: Framework/Image/ModelImage.php:55
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:29
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.php:19
 #: SmartSlider3/Form/Element/BackgroundImage.php:29
 #: SmartSlider3/Renderable/Item/Image/Assets/image.js:20
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:43
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:129
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:189
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:232
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:241
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:253
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:262
 #: SmartSlider3/Widget/Group/Bullet.php:64
 #: SmartSlider3/Widget/Group/Thumbnail.php:63
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:161
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:110
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:209
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:214
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:29
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.phtml:19
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:211
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:216
 msgid "Image"
 msgstr ""
 
@@ -1259,12 +1275,16 @@ msgstr ""
 msgid "%s is not readable"
 msgstr ""
 
+#: Framework/Style/Block/StyleManager/Index.php:14
+msgid "Style manager"
+msgstr ""
+
 #: Framework/Style/ModelStyle.php:25
 msgid "Style settings"
 msgstr ""
 
 #: Framework/Style/ModelStyle.php:35
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:182
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:165
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:112
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsContent.php:97
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsItemCommon.php:139
@@ -1278,7 +1298,7 @@ msgstr ""
 #: Framework/Style/ModelStyle.php:39
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsItemCommon.php:143
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:223
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:286
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:288
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:196
 #: SmartSlider3Pro/Slider/SliderType/Showcase/SliderTypeShowcaseAdmin.php:335
 #: SmartSlider3Pro/SplitText/ModelSplitText.php:131
@@ -1292,7 +1312,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:221
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:150
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:262
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:313
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:317
 msgid "Padding"
 msgstr ""
 
@@ -1352,8 +1372,8 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/ApplicationTypeAdmin.php:55
 #: SmartSlider3/Application/Admin/Assets/js/slider/manage.js:301
-#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:109
-#: SmartSlider3/Application/Model/ModelSlidersXRef.php:147
+#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:112
+#: SmartSlider3/Application/Model/ModelSlidersXRef.php:150
 #: SmartSlider3/Platform/WordPress/Admin/AdminHelper.php:85
 msgid "Dashboard"
 msgstr ""
@@ -1431,6 +1451,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/common/visuals/manager/core.js:222
 #: SmartSlider3/Application/Admin/Assets/js/slider/create.js:207
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:73
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:49
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderEditGroup.php:208
 #: SmartSlider3Pro/Generator/Joomla/Djclassifieds/Sources/DjclassifiedsItems.php:85
 #: SmartSlider3Pro/Generator/Joomla/Easysocial/Sources/EasysocialUsers.php:84
@@ -1470,10 +1491,10 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/common/element/image-list.js:198
 #: SmartSlider3/Application/Admin/Assets/js/element/animationmanagerelement.js:69
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderControls.php:51
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/particlemanager.js:144
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/particlemanager.js:147
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:144
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:147
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/particlemanager.js:142
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/particlemanager.js:145
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:142
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:145
 #: SmartSlider3Pro/Application/Admin/Assets/js/element/splittextanimationmanagerelement.js:98
 #: SmartSlider3Pro/Form/Element/ParticleSkin.php:31
 #: SmartSlider3Pro/Form/Element/Select/ShapeDividerSelect.php:56
@@ -1505,12 +1526,12 @@ msgid "Icons"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/common/icons.js:90
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:72
 #: SmartSlider3Pro/Generator/Common/Flickr/GeneratorGroupFlickr.php:36
 #: SmartSlider3Pro/Generator/Common/YouTube/GeneratorGroupYouTube.php:31
 #: SmartSlider3Pro/Generator/Common/YouTube/Sources/YouTubeBySearch.php:23
 #: SmartSlider3Pro/Generator/Common/YouTube/Sources/YouTubeBySearch.php:32
 #: SmartSlider3Pro/Renderable/Item/Input/ItemInput.php:110
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:72
 msgid "Search"
 msgstr ""
 
@@ -1534,8 +1555,8 @@ msgid "Delete"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/common/modal/ModalLightbox.js:36
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.php:95
 #: SmartSlider3/Application/Admin/Preview/ViewPreviewIndex.php:47
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.phtml:95
 msgid "Close"
 msgstr ""
 
@@ -1591,10 +1612,10 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:204
 #: SmartSlider3Pro/Renderable/Item/Html/ItemHtml.php:61
 #: SmartSlider3Pro/Renderable/Item/HtmlList/ItemHtmlList.php:125
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:92
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:92
 #: SmartSlider3Pro/Renderable/Item/Iframe/ItemIframe.php:64
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:108
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:179
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:181
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:119
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:114
 #: SmartSlider3Pro/Renderable/Joomla/Item/JoomlaModule/ItemJoomlaModule.php:50
@@ -1614,7 +1635,7 @@ msgid "Animation tab"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/common/modal/modals/hotkey.js:73
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:24
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:24
 msgid "Add Layer"
 msgstr ""
 
@@ -1625,7 +1646,7 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/common/modal/modals/hotkey.js:78
 #: SmartSlider3/Application/Admin/Assets/js/fragment/ui/layerNavigation.js:50
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:50
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:50
 msgid "Timeline"
 msgstr ""
 
@@ -1679,7 +1700,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/slider/slider.js:79
 #: SmartSlider3/Application/Admin/Assets/js/slides/slide.js:54
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/ActionBar/BlockActionBar.php:43
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:125
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:127
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderEditGroup.php:148
 msgid "Duplicate"
 msgstr ""
@@ -1688,7 +1709,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/fragment/components/ComponentAbstract.js:1131
 #: SmartSlider3/Application/Admin/Assets/js/slides/slide.js:60
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/ActionBar/BlockActionBar.php:44
-#: SmartSlider3/Application/Model/ModelSliders.php:530
+#: SmartSlider3/Application/Model/ModelSliders.php:573
 msgid "Copy"
 msgstr ""
 
@@ -1698,12 +1719,12 @@ msgid "Paste"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/common/modal/modals/hotkey.js:103
-#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:195
+#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:200
 msgid "Undo"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/common/modal/modals/hotkey.js:104
-#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:186
+#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:191
 msgid "Redo"
 msgstr ""
 
@@ -1713,7 +1734,7 @@ msgid "Save"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/common/modal/modals/hotkey.js:109
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:42
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:42
 msgid "Play animations"
 msgstr ""
 
@@ -1975,7 +1996,7 @@ msgid "Saved."
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/element/animationmanagerelement.js:71
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/particlemanager.js:142
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/particlemanager.js:140
 #: SmartSlider3Pro/Application/Admin/Assets/js/element/splittextanimationmanagerelement.js:100
 msgid "Enabled"
 msgstr ""
@@ -2028,7 +2049,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:87
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:90
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:99
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:141
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:149
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:169
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:471
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:475
@@ -2045,7 +2066,7 @@ msgstr ""
 #: SmartSlider3/Widget/Bullet/BulletTransition/BulletTransition.php:70
 #: SmartSlider3Pro/LayerAnimation/LayerAnimationStorage.php:181
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:220
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:296
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:300
 #: SmartSlider3Pro/Widget/Bullet/BulletNumbers/BulletNumbers.php:75
 #: SmartSlider3Pro/Widget/Bullet/BulletText/BulletText.php:75
 msgid "Left"
@@ -2055,7 +2076,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:93
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:96
 #: SmartSlider3/Application/Admin/Assets/js/element/widgetposition.js:105
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:143
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:151
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:469
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:473
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:482
@@ -2071,7 +2092,7 @@ msgstr ""
 #: SmartSlider3/Widget/Bullet/BulletTransition/BulletTransition.php:72
 #: SmartSlider3Pro/LayerAnimation/LayerAnimationStorage.php:190
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:218
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:297
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:301
 #: SmartSlider3Pro/Widget/Bullet/BulletNumbers/BulletNumbers.php:77
 #: SmartSlider3Pro/Widget/Bullet/BulletText/BulletText.php:77
 msgid "Right"
@@ -2097,13 +2118,13 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Settings/ViewSettingsGeneral.php:242
 #: SmartSlider3/Form/Element/Group/WidgetPosition.php:107
 #: SmartSlider3/Storage.php:994
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:142
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:140
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderShapeDivider.php:74
 #: SmartSlider3Pro/LayerAnimation/LayerAnimationStorage.php:208
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:219
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:236
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:298
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:334
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:302
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:338
 #: SmartSlider3Pro/Slider/ResponsiveType/FullPage/ResponsiveTypeFullPageAdmin.php:108
 msgid "Bottom"
 msgstr ""
@@ -2226,8 +2247,8 @@ msgid "Layer"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/fragment/components/row.js:14
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:31
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/BlockAddLayer.php:25
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:31
 msgid "Row"
 msgstr ""
 
@@ -2237,34 +2258,35 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/fragment/components/section-slide.js:678
 #: SmartSlider3/Application/Admin/Generator/ViewGeneratorEdit.php:56
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:57
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:82
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:329
 msgid "Slide"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:168
+#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:176
 msgid "Theme"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:292
+#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:256
 #, javascript-format
 msgid "%s or newer required for this feature."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:330
+#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:294
 msgid "This section requires activated Pro version."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:333
+#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:297
 #, javascript-format
 msgid "This block is not available in the free version. %s"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:333
+#: SmartSlider3/Application/Admin/Assets/js/fragment/ui/addLayer.js:297
 #: SmartSlider3/Application/Admin/GoPro/ViewGoProIndex.php:24
 #: SmartSlider3/Application/Admin/Layout/AbstractLayoutMenu.php:37
 #: SmartSlider3/Application/Admin/Layout/AbstractLayoutMenu.php:51
+#: SmartSlider3/Application/Admin/Layout/Block/Core/FreeNeedMore/FreeNeedMore.php:23
 #: SmartSlider3/Platform/WordPress/Admin/AdminHelper.php:96
-#: SmartSlider3/Application/Admin/Layout/Block/Core/FreeNeedMore/FreeNeedMore.phtml:23
 msgid "Go Pro"
 msgstr ""
 
@@ -2273,7 +2295,7 @@ msgid "Editor settings"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/fragment/ui/settings.js:45
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:53
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:53
 msgid "Upgrade to Pro"
 msgstr ""
 
@@ -2299,7 +2321,7 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/license.js:101
 #: SmartSlider3/Application/Admin/Layout/Block/Core/Banner/BlockBannerActivate.php:14
-#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.phtml:13
+#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.php:13
 msgid "Activate Smart Slider 3 Pro"
 msgstr ""
 
@@ -2310,7 +2332,7 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/license.js:108
 #: SmartSlider3/Application/Admin/Layout/Block/Core/Banner/BlockBannerActivate.php:15
-#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.phtml:16
+#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.php:16
 msgid "Register Smart Slider 3 Pro on this domain to enable auto update, slider templates and slide library."
 msgstr ""
 
@@ -2320,8 +2342,8 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/license.js:124
 #: SmartSlider3/Application/Admin/Layout/Block/Core/Banner/BlockBannerActivate.php:17
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.phtml:85
-#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.phtml:27
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.php:85
+#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.php:27
 msgid "Activate"
 msgstr ""
 
@@ -2341,19 +2363,21 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:191
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:199
 #: SmartSlider3/Application/Admin/Assets/js/slider/create.js:210
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:153
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:136
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderOptimize.php:134
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:65
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:423
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:449
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:474
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:499
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:524
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:429
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:455
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:480
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:505
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:530
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:221
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:152
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:154
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:223
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:232
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:148
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:244
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:149
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:253
 #: SmartSlider3/Widget/Bar/BarHorizontal/BarHorizontal.php:89
 #: SmartSlider3/Widget/Group/Bullet.php:73
 #: SmartSlider3/Widget/Group/Thumbnail.php:66
@@ -2364,7 +2388,7 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Area/ItemArea.php:178
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:248
 #: SmartSlider3Pro/Renderable/Item/Iframe/ItemIframe.php:82
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:219
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:221
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:154
 #: SmartSlider3Pro/Widget/Arrow/ArrowImageBar/ArrowImageBar.php:34
 #: SmartSlider3Pro/Widget/Bar/BarVertical/BarVertical.php:58
@@ -2375,21 +2399,23 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:227
 #: SmartSlider3/Application/Admin/Assets/js/preview.js:235
 #: SmartSlider3/Application/Admin/Assets/js/slider/create.js:215
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:163
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:146
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderOptimize.php:139
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:78
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:427
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:453
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:478
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:503
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:528
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:433
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:459
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:484
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:509
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:534
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:99
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:105
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:228
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:157
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:159
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:227
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:236
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:153
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:248
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:154
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:257
 #: SmartSlider3/Widget/Group/Bullet.php:84
 #: SmartSlider3/Widget/Group/Thumbnail.php:77
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderShapeDivider.php:125
@@ -2420,7 +2446,7 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/slide/edit.js:187
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/BlockSlideBox.php:171
-#, php-format, javascript-format
+#, javascript-format, php-format
 msgid "This slide is hidden on the following devices: %s"
 msgstr ""
 
@@ -2482,7 +2508,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialVideos.php:33
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:35
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:35
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:35
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:37
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:31
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:27
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:31
@@ -2562,8 +2588,10 @@ msgid "To help you get started with the new version, we've put together the most
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/slide/popup34.js:30
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:259
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:263
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:261
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:265
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:100
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:39
 msgid "Slide background"
 msgstr ""
 
@@ -2644,6 +2672,8 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Assets/js/slider/create.js:126
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:73
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:81
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:49
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:53
 #: SmartSlider3/Application/Admin/Slider/ViewSliderEdit.php:183
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:114
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:322
@@ -2700,12 +2730,13 @@ msgstr ""
 #: SmartSlider3/Slider/ResponsiveType/FullWidth/ResponsiveTypeFullWidthAdmin.php:17
 #: SmartSlider3/Widget/Bar/BarHorizontal/BarHorizontal.php:91
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:148
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:246
 msgid "Full width"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/slider/create.js:226
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:370
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:293
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:376
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:297
 msgid "Layout"
 msgstr ""
 
@@ -2730,12 +2761,12 @@ msgid "Join The Smart Slider 3 Community"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/slider/create.js:377
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardNewsletter.phtml:22
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardNewsletter.php:22
 msgid "Join more than 120,000 subscribers and get access to the latest slider templates, tips, tutorials and other exclusive contents directly to your inbox."
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/slider/create.js:391
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardNewsletter.phtml:32
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardNewsletter.php:32
 msgid "Subscribe"
 msgstr ""
 
@@ -2767,17 +2798,15 @@ msgid "Insert group"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/slider/select-modal.js:93
-#: SmartSlider3/Platform/WordPress/Integration/Divi/V31ge/includes/modules/SmartSlider3/SmartSlider3.php:76
-#: SmartSlider3/Platform/WordPress/Integration/Divi/V31ge/includes/modules/SmartSlider3/SmartSlider3.php:78
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderBox/SliderBox.php:59
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderEditGroup.php:134
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderEditGroup.php:208
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:42
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderBox/SliderBox.phtml:59
 msgid "Group"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Assets/js/slider/slider.js:86
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:132
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:134
 #: SmartSlider3/Application/Admin/Slider/ViewSliderEdit.php:207
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderEditGroup.php:158
 msgid "Move to trash"
@@ -3022,8 +3051,8 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderAutoplay.php:48
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderAutoplay.php:53
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:143
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:145
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:164
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:166
 #: SmartSlider3/Widget/Group/Autoplay.php:35
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:127
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:170
@@ -3091,7 +3120,7 @@ msgid "Resume on media"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderControls.php:38
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:203
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:224
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:149
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:213
 msgid "Controls"
@@ -3240,10 +3269,13 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:81
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:83
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:53
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:55
 msgid "ARIA label"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:84
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:56
 msgid "It allows you to label your slider for screen readers."
 msgstr ""
 
@@ -3269,7 +3301,7 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:113
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:114
-msgid "Smooth scroll to this element"
+msgid "Smooth scroll"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:115
@@ -3278,7 +3310,7 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:122
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:123
-msgid "Allow slide switching for anchor"
+msgid "Switch slide"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:124
@@ -3286,10 +3318,19 @@ msgid "Use #your-alias-2 as an anchor to jump to the slider and switch to the 2n
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:131
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:132
+msgid "Scroll to slide"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:133
+msgid "The \"Switch slide\" option won't scroll you to the slider. Only the slides will switch."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:139
 msgid "Slider design"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:138
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:146
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:69
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:74
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:155
@@ -3301,18 +3342,18 @@ msgstr ""
 msgid "Align"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:150
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:152
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:158
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:160
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:109
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:113
 msgid "Margin"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:153
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:161
 msgid "Puts a fix margin around your slider."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:163
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderGeneral.php:171
 #: SmartSlider3Pro/Slider/SliderType/Showcase/SliderTypeShowcaseAdmin.php:315
 msgid "Perspective"
 msgstr ""
@@ -3335,67 +3376,52 @@ msgstr ""
 msgid "After delay"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:61
-msgid "After slider"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:83
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:84
-msgid "Load after"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:85
-msgid "The current slider will not start loading until the set slider is loaded completely."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:88
-msgid "Slider ID"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:91
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:74
 msgid "Load delay"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:98
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:102
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:81
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:85
 msgid "Play when visible"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:103
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:86
 msgid "Makes sure that the autoplay and layer animations only start when your slider is visible."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:105
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:88
 msgid "At"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:113
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:96
 msgid "Fade on load"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:121
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:104
 msgid "Fade on scroll"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:124
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:107
 msgid "Delayed (for lightbox/tabs)"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:128
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:111
 msgid "If you turn off <b>Fade On Load</b>, the slider loading will be visible as the browser builds up the slider. In most cases this looks bad, so we don't suggest turning <b>Fade On Load</b> off."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:135
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:140
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:118
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:123
 msgid "Loading animation"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:139
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:122
 msgid "Spinner"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:145
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:128
 #: SmartSlider3/Generator/WordPress/Posts/GeneratorGroupPosts.php:38
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:124
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:125
 #: SmartSlider3/Widget/Autoplay/AutoplayImage/AutoplayImage.php:46
 #: SmartSlider3/Widget/Autoplay/AutoplayImage/AutoplayImage.php:76
 #: SmartSlider3/Widget/Shadow/ShadowImage/ShadowImage.php:35
@@ -3407,16 +3433,16 @@ msgstr ""
 msgid "Custom"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:173
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:174
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:156
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:157
 msgid "Hide until complete load"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:175
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:158
 msgid "When an image is used as the loading spinner, it takes time to load. This can be visible, as the image being built up by the browser and moves to the slider's center. You can hide the spinner during this image loading part."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:181
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderLoading.php:164
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:82
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:83
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsContent.php:67
@@ -3477,7 +3503,7 @@ msgid "Your current memory limit is %s."
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderOptimize.php:105
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:210
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:231
 msgid "Quality"
 msgstr ""
 
@@ -3554,26 +3580,26 @@ msgid "Limits the width of the slide and prevents the slider from getting too ta
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:148
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:163
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:181
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:196
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:214
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:229
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:164
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:183
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:199
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:218
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:234
 msgid "Max"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:242
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:248
 #: SmartSlider3/Application/Admin/Settings/ViewSettingsGeneral.php:177
 msgid "Breakpoints"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:305
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:311
 #: SmartSlider3/Application/Admin/Settings/ViewSettingsGeneral.php:180
 msgid "Breakpoints define the browser width in pixel when the slider switches to a different device."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:307
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:394
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:313
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:400
 #: SmartSlider3/Application/Admin/Settings/ViewSettingsFonts.php:46
 #: SmartSlider3/Application/Admin/Settings/ViewSettingsGeneral.php:181
 #: SmartSlider3/Application/Admin/Settings/ViewSettingsGeneral.php:229
@@ -3588,28 +3614,28 @@ msgstr ""
 msgid "Instruction"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:311
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:312
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:317
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:318
 msgid "Global breakpoints"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:313
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:319
 #, php-format
 msgid "You can use the global breakpoints, or adjust them locally here. You can configure the Global breakpoints at <a href=\"%1$s\" target=\"_blank\">Global settings</a> > General > Breakpoints"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:384
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:390
 msgid "Custom size"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:393
+#: SmartSlider3/Application/Admin/FormManager/Slider/SliderSize.php:399
 #, php-format
 msgid "Use this option to customize the aspect ratio for each device. %1$s Read more in the documentation%2$s. <b>Beware:</b> This option is rarely needed and might be hard to set properly!"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/FormManager/Slider/SliderSlides.php:41
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:97
-#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:151
+#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:156
 #: SmartSlider3/Application/Model/ModelGenerator.php:400
 msgid "Slides"
 msgstr ""
@@ -3760,6 +3786,14 @@ msgstr ""
 msgid "Authentication successful."
 msgstr ""
 
+#: SmartSlider3/Application/Admin/Generator/Template/CreateStep1Groups.php:61
+msgid "Not installed"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Generator/Template/CreateStep1Groups.php:69
+msgid "Visit"
+msgstr ""
+
 #: SmartSlider3/Application/Admin/Generator/ViewGeneratorCreateStep1Groups.php:36
 #: SmartSlider3/Application/Admin/Generator/ViewGeneratorCreateStep1Groups.php:39
 #: SmartSlider3/Application/Admin/Generator/ViewGeneratorCreateStep2Configure.php:126
@@ -3782,8 +3816,41 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Generator/ViewGeneratorEdit.php:58
 #: SmartSlider3/Application/Admin/Generator/ViewGeneratorEdit.php:84
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:96
-#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:120
+#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:123
 msgid "Generator"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.php:18
+msgid "How to upgrade to Smart Slider 3 Pro?"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.php:22
+#, php-format
+msgid "After making your purchase, %1$slog in to your account%3$s and download the Pro installer. To get started with Smart Slider 3 Pro, simply %2$sinstall it on your website%3$s."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.php:26
+msgid "Download Pro"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.php:30
+msgid "Feel free to remove the Free version, as you no longer need it. Your sliders will stay!"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/Template/Index.php:18
+msgid "Ready to go Pro?"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/Template/Index.php:22
+msgid "Supercharge Smart Slider 3 with powerful functionality!"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/Template/Index.php:34
+msgid "Already purchased?"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/GoPro/Template/Index.php:38
+msgid "Get started with the Pro version now!"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Help/ControllerHelp.php:75
@@ -3798,6 +3865,70 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Help/ControllerHelp.php:77
 msgid "Successful connection with the API."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:22
+msgid "Welcome to Help Center"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:25
+#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.php:15
+msgid "To help you get started, we've put together a super tutorial video that shows you the basic settings."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:40
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:128
+msgid "Possible conflicts"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:44
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:132
+msgid "Test connection"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:48
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:136
+msgid "No conflicts detected."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:66
+msgid "Hello! How can we help you today?"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:71
+msgid "Search in the knowledge base"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:83
+msgid "Documentation"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:84
+msgid "To get started with Smart Slider 3, please refer to this guide for downloading, installing, and using."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:90
+msgid "Email support"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:91
+msgid "Need one-to-one assistance? Get in touch with our Support team! We'd love the opportunity to help you."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:98
+msgid "Tutorial videos"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:99
+msgid "Check our video tutorials which cover everything you need to know about Smart Slider 3."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:104
+msgid "Selected articles"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Help/Template/Index.php:166
+msgid "Debug information"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Help/ViewHelpBrowserIncompatible.php:16
@@ -3827,6 +3958,107 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
+#: SmartSlider3/Application/Admin/Layout/Block/Core/AdminError/AdminError.php:22
+#: SmartSlider3/Application/Model/ModelSlides.php:129
+msgid "Read more"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Core/FreeNeedMore/FreeNeedMore.php:17
+msgid "Need more?"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Core/FreeNeedMore/FreeNeedMore.php:20
+msgid "Unlock all the pro features by upgrading to Smart Slider 3 Pro."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.php:42
+msgid "Changelog"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.php:57
+msgid "Check for update"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.php:60
+msgid "Check"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.php:71
+msgid "Your license is active"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.php:74
+msgid "Deactivate license"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.php:82
+msgid "Activate your license"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardNewsletter.php:18
+msgid "Don’t miss any update"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:25
+msgid "Let us know how we're doing"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:29
+msgid "If you are happy with Smart Slider 3 and can take a minute please leave a review. This will help to spread its popularity and to make this plugin a better one."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:59
+msgid "Rate your experience"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:60
+msgid "Hated it"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:61
+msgid "Disliked it"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:62
+msgid "It was ok"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:63
+msgid "Liked it"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.php:64
+msgid "Loved it"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:18
+msgid "Why upgrade to Smart Slider 3 Pro?"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:25
+msgid "180+ slider templates"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:29
+msgid "14 new layers"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:33
+msgid "New animations & effects"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:39
+msgid "Full slide library access"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:43
+msgid "Extra advanced options"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.php:47
+msgid "Lifetime update & support"
+msgstr ""
+
 #: SmartSlider3/Application/Admin/Layout/Block/Forms/Button/BlockButtonApply.php:12
 #: SmartSlider3Pro/SplitText/Block/SplitTextManager/BlockSplitTextManager.php:40
 msgid "Apply"
@@ -3838,6 +4070,20 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Forms/Button/BlockButtonImport.php:12
 msgid "Import"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:64
+msgid "Layers"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:72
+msgid "Library"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.php:129
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:62
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:151
+msgid "Absolute"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/BlockAddLayer.php:23
@@ -3853,7 +4099,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsContent.php:41
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:45
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:49
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:329
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:333
 msgid "Inner align"
 msgstr ""
 
@@ -3870,8 +4116,8 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsContent.php:48
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:232
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:238
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:330
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:336
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:334
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:340
 msgid "Vertical align"
 msgstr ""
 
@@ -3883,6 +4129,8 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:66
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:93
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:83
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:113
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:55
 #: SmartSlider3/Renderable/Item/Button/ItemButton.php:165
 #: SmartSlider3/Renderable/Item/Heading/ItemHeading.php:178
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:143
@@ -3890,9 +4138,9 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Area/ItemArea.php:196
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:188
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:227
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:123
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:123
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:144
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:284
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:288
 #: SmartSlider3Pro/Renderable/Item/Input/ItemInput.php:171
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:146
 msgid "Target window"
@@ -3904,7 +4152,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsContent.php:80
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:121
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:122
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:265
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:267
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:121
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:122
 msgid "Focus"
@@ -3928,7 +4176,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:116
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsContent.php:101
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:143
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:306
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:308
 #: SmartSlider3Pro/Renderable/Item/Area/ItemArea.php:116
 msgid "Gradient"
 msgstr ""
@@ -3936,7 +4184,7 @@ msgstr ""
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsColumn.php:122
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsContent.php:107
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsRow.php:149
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:312
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:314
 #: SmartSlider3Pro/Renderable/Item/Area/ItemArea.php:121
 msgid "Color end"
 msgstr ""
@@ -3967,12 +4215,6 @@ msgstr ""
 #: SmartSlider3Pro/Widget/Indicator/IndicatorPie/IndicatorPie.php:29
 #: SmartSlider3Pro/Widget/Indicator/IndicatorStripe/IndicatorStripe.php:29
 msgid "Position"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:62
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:151
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:129
-msgid "Absolute"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsCommon.php:65
@@ -4142,14 +4384,16 @@ msgid "Makes the row fill the available vertical space"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:60
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:96
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:35
 #: SmartSlider3/Widget/Bar/BarHorizontal/BarHorizontal.php:67
 #: SmartSlider3/Widget/Thumbnail/Basic/ThumbnailBasic.php:109
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:78
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:173
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:176
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:169
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:264
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:171
 #: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:268
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:272
 #: SmartSlider3Pro/Widget/Bar/BarVertical/BarVertical.php:50
 msgid "Description"
 msgstr ""
@@ -4159,10 +4403,10 @@ msgid "Custom lightbox image"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:112
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.php:72
 #: SmartSlider3Pro/Generator/Joomla/Cobalt/Sources/CobaltRecords.php:56
 #: SmartSlider3Pro/Generator/Joomla/Eventsbooking/Sources/EventsbookingEvents.php:56
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsEvents.php:73
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.phtml:72
 msgid "Published"
 msgstr ""
 
@@ -4176,10 +4420,14 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:130
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:135
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:105
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:47
 msgid "Thumbnail type"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:133
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:108
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:50
 #: SmartSlider3/Form/Element/BackgroundImage.php:30
 #: SmartSlider3Pro/Renderable/Item/Video/Assets/video.js:22
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:36
@@ -4191,8 +4439,8 @@ msgid "If you have a video on your slide, you can put a play icon on the thumbna
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:216
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:141
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:143
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:162
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:164
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:168
 #, php-format
 msgid "Video autoplaying has a lot of limitations made by browsers. %1$sLearn about them.%2$s"
@@ -4209,8 +4457,8 @@ msgid "Muted"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:231
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:184
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:189
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:205
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:210
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:104
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:237
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:132
@@ -4221,10 +4469,10 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:232
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:233
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:194
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:195
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:196
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:197
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:215
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:216
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:217
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:218
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:142
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:143
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:199
@@ -4233,14 +4481,14 @@ msgid "Restart on slide change"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:234
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:196
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:198
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:217
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:219
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:201
 msgid "Starts the video from the beginning when the slide is viewed again."
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:237
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:282
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:284
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:105
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:238
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:128
@@ -4248,46 +4496,46 @@ msgstr ""
 msgid "Fill mode"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:260
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:262
 msgid "Select a background image for the slide. By clicking the small screen icon, you can pick different images for different devices."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:280
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:282
 #, php-format
 msgid "Please read %1$sour detailed guide%2$s about setting your own slide background correctly."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:293
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:295
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Tab/TabAnimation.php:202
 #: SmartSlider3Pro/LayerAnimation/LayerAnimationStorage.php:100
 #: SmartSlider3Pro/LayerAnimation/LayerAnimationStorage.php:1070
 msgid "Blur"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:316
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:317
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:318
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:319
 #: SmartSlider3/Widget/Thumbnail/Basic/ThumbnailBasic.php:124
 #: SmartSlider3Pro/Widget/Bullet/BulletNumbers/BulletNumbers.php:87
 #: SmartSlider3Pro/Widget/Bullet/BulletText/BulletText.php:87
 msgid "Overlay"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:318
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:320
 msgid "Puts the color in front of the image."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:322
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:324
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:163
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:242
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:153
 msgid "SEO"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:323
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:325
 msgid "Image alt"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:326
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/LayerWindow/Settings/LayerWindowSettingsSlide.php:328
 msgid "Image title"
 msgstr ""
 
@@ -4562,18 +4810,38 @@ msgstr ""
 msgid "Scale down"
 msgstr ""
 
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.php:22
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderBox/SliderBox.php:40
+msgid "Edit"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.php:38
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.php:46
+#: SmartSlider3/Application/Model/ModelSlides.php:77
+msgid "Static overlay"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.php:68
+msgid "First slide"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.php:76
+#: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsEvents.php:74
+msgid "Unpublished"
+msgstr ""
+
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/ActionBar/BlockActionBar.php:32
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:118
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:120
 msgid "Bulk actions"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/ActionBar/BlockActionBar.php:58
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:147
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:149
 msgid "Select all"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/ActionBar/BlockActionBar.php:59
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:153
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:155
 msgid "Select none"
 msgstr ""
 
@@ -4585,38 +4853,173 @@ msgstr ""
 msgid "Select unpublished"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:56
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.php:26
+msgid "Blank"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.php:36
+#: SmartSlider3Pro/Renderable/Item/CircleCounter/ItemCircleCounter.php:175
+#: SmartSlider3Pro/Renderable/Item/Counter/ItemCounter.php:121
+#: SmartSlider3Pro/Renderable/Item/ProgressBar/ItemProgressBar.php:159
+msgid "Post"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.php:53
+msgid "Dynamic slides"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.php:92
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:21
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:27
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:63
+#: SmartSlider3/Application/Admin/Slider/ViewSliderSimpleEdit.php:99
+#: SmartSlider3/Application/Admin/Slider/ViewSliderSimpleEditAddSlide.php:65
+msgid "Add slide"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.php:105
+msgid "Block must contain only one slide. Need more?"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.php:108
+msgid "Convert to slider"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.php:136
+msgid "Slide one"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.php:143
+msgid "Slide two"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.php:150
+msgid "Drop images here"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderBox/SliderBox.php:106
+msgid "Edit slider"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:57
 msgid "View trash"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:71
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:73
 msgid "Order by"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:77
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:79
 msgid "Manual order"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:83
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:85
 msgid "A-Z"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:89
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:91
 msgid "Z-A"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:95
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:97
 msgid "Newest first"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:101
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:103
 msgid "Oldest first"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:138
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/ActionBar/BlockActionBar.php:140
 #: SmartSlider3/Application/Admin/Slider/ViewSliderEdit.php:189
 #: SmartSlider3Pro/Application/Admin/Slider/ViewSliderEditGroup.php:140
 msgid "Export"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/SliderManager.php:32
+msgid "New project"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:21
+msgid "Module"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:23
+msgid "Displays the slider in a template module position."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:25
+msgid "Create module"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:30
+msgid "Related modules"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:40
+msgid "Articles"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:42
+msgid "Paste the code into article:"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:50
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.php:48
+msgid "PHP code"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.php:52
+msgid "Paste the PHP code into source code:"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.php:17
+msgid "Shortcode"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.php:19
+msgid "Copy and paste this shortcode into your posts or pages:"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.php:31
+msgid "Pages and Posts"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.php:44
+#, php-format
+msgid "Smart Slider 3 has integration with %s."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.php:50
+msgid "Paste the PHP code into your theme's file:"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderTrash/SliderTrash.php:16
+msgid "Trash is empty."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderTrash/SliderTrashBox.php:38
+#: SmartSlider3/Application/Admin/Sliders/ViewSlidersImport.php:122
+msgid "Restore"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Preview/Block/PreviewToolbar/PreviewToolbar.php:38
+msgid "Toggle orientation"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Preview/Block/PreviewToolbar/PreviewToolbar.php:49
+msgid "Reload preview"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Preview/Block/PreviewToolbar/PreviewToolbar.php:56
+msgid "Open preview in full"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Preview/Template/Index.php:28
+msgid "State"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Preview/Template/Index.php:30
+msgid "Reason"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Settings/AbstractViewSettings.php:64
@@ -4648,7 +5051,7 @@ msgid "Saved and slider cache invalidated."
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Settings/ControllerSettings.php:98
-#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:40
+#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:43
 msgid "Cache cleared."
 msgstr ""
 
@@ -4706,70 +5109,66 @@ msgstr ""
 msgid "Keeps the clicked element (like a button) in focus unless the focus is changed by clicking away."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:59
-msgid "Show Joomla admin footer"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:67
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:63
 msgid "Load jQuery on frontend"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:69
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:65
 msgid "Load GSAP on frontend"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:71
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:91
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:67
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:87
 msgid "Async"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:72
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:68
 msgid "Combine"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:73
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:69
 msgid "Script attributes"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:75
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:71
 msgid "Slider's inline JavaScript"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:77
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:73
 msgid "Head"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:78
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:74
 msgid "Into the slider"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:87
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:83
 msgid "CSS mode"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:89
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:85
 msgid "Inline"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:90
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:86
 msgid "Inline at head"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:96
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:92
 msgid "Load Font Awesome 4"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:99
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:95
 msgid "API requests"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:103
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:99
 #, php-format
 msgctxt "Curl"
 msgid "Use %s"
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:105
+#: SmartSlider3/Application/Admin/Settings/ViewSettingsFramework.php:101
 #, php-format
 msgctxt "curl proxy"
 msgid "Clean %s"
@@ -4960,16 +5359,56 @@ msgstr ""
 msgid "%s slider type is not available."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:86
+#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:195
 msgid "Slider moved to the trash."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:89
+#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:198
 msgid "Slider removed from the group."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:106
+#: SmartSlider3/Application/Admin/Slider/ControllerSlider.php:215
 msgid "Slider duplicated."
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:35
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:43
+msgid "Slider settings"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:47
+msgid "Delete slider"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:75
+msgid "Edit slide"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:86
+msgid "Delete slide"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEdit.php:88
+#: SmartSlider3/Generator/Joomla/JoomlaContent/Sources/JoomlaContentArticle.php:96
+#: SmartSlider3/Generator/Joomla/JoomlaContent/Sources/JoomlaContentCategory.php:48
+#: SmartSlider3Pro/Generator/Joomla/Cobalt/Sources/CobaltRecords.php:65
+#: SmartSlider3Pro/Generator/Joomla/Easyblog/Sources/EasyblogPosts.php:55
+#: SmartSlider3Pro/Generator/Joomla/Easydiscuss/Sources/EasydiscussDiscussions.php:49
+#: SmartSlider3Pro/Generator/Joomla/Eshop/Sources/EshopProducts.php:79
+#: SmartSlider3Pro/Generator/Joomla/Flexicontent/Sources/FlexicontentItems.php:59
+#: SmartSlider3Pro/Generator/Joomla/Ignitegallery/Sources/IgnitegalleryImages.php:41
+#: SmartSlider3Pro/Generator/Joomla/Jcart/Sources/JcartProducts.php:120
+#: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:66
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:68
+#: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:53
+#: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:48
+#: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:58
+#: SmartSlider3Pro/Generator/Joomla/Virtuemart/Sources/VirtuemartProducts.php:70
+msgid "Ordering"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Slider/Template/SimpleEditAddSlide.php:43
+msgid "Video url"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Slider/ViewSliderEdit.php:161
@@ -4985,6 +5424,11 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Slider/ViewSliderEdit.php:197
 msgid "Duplicate slider"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Slider/ViewSliderSimpleEdit.php:61
+#: SmartSlider3/Application/Admin/Slider/ViewSliderSimpleEditAddSlide.php:59
+msgid "Simple edit"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Sliders/ControllerAjaxSliders.php:76
@@ -5018,6 +5462,19 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Sliders/ControllerAjaxSliders.php:222
 msgid "The imported file is not readable!"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.php:24
+#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.php:26
+msgid "Go to dashboard"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.php:12
+msgid "Welcome to Smart Slider 3"
+msgstr ""
+
+#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.php:23
+msgid "Don't show again"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Sliders/ViewSlidersImport.php:41
@@ -5062,11 +5519,6 @@ msgstr ""
 
 #: SmartSlider3/Application/Admin/Sliders/ViewSlidersImport.php:121
 msgid "Restore slider"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Sliders/ViewSlidersImport.php:122
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderTrash/SliderTrashBox.phtml:38
-msgid "Restore"
 msgstr ""
 
 #: SmartSlider3/Application/Admin/Sliders/ViewSlidersImport.php:123
@@ -5152,7 +5604,7 @@ msgstr ""
 msgid "Failed to create slides."
 msgstr ""
 
-#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:173
+#: SmartSlider3/Application/Admin/Slides/ViewSlidesEdit.php:178
 msgid "Static save"
 msgstr ""
 
@@ -5184,33 +5636,31 @@ msgstr ""
 msgid "Smart Slider 3 deactivated on this site!"
 msgstr ""
 
-#: SmartSlider3/Application/Model/ModelSliders.php:237
+#: SmartSlider3/Application/Model/ModelSliders.php:239
 #: SmartSlider3/Application/Model/ModelSliders.php:277
+#: SmartSlider3/Application/Model/ModelSliders.php:292
 msgid "New slider"
 msgstr ""
 
-#: SmartSlider3/Application/Model/ModelSliders.php:305
+#: SmartSlider3/Application/Model/ModelSliders.php:320
 msgid "Alias removed"
 msgstr ""
 
-#: SmartSlider3/Application/Model/ModelSliders.php:308
+#: SmartSlider3/Application/Model/ModelSliders.php:323
 msgid "Alias must contain one or more letters"
 msgstr ""
 
-#: SmartSlider3/Application/Model/ModelSliders.php:311
+#: SmartSlider3/Application/Model/ModelSliders.php:326
 #, php-format
 msgid "Alias updated to: %s"
 msgstr ""
 
-#: SmartSlider3/Application/Model/ModelSlides.php:77
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.phtml:38
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.phtml:46
-msgid "Static overlay"
-msgstr ""
-
-#: SmartSlider3/Application/Model/ModelSlides.php:129
-#: SmartSlider3/Application/Admin/Layout/Block/Core/AdminError/AdminError.phtml:22
-msgid "Read more"
+#: SmartSlider3/BackgroundAnimation/Block/BackgroundAnimationManager/Index.php:14
+#: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:45
+#: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:136
+#: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:140
+#: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:353
+msgid "Background animation"
 msgstr ""
 
 #: SmartSlider3/BackgroundAnimation/ModelBackgroundAnimation.php:32
@@ -5257,20 +5707,25 @@ msgstr ""
 msgid "Your theme uses an outdated MooTools library which is not compatible."
 msgstr ""
 
-#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:27
+#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:28
 msgid "This plugin breaks JavaScript in the admin area, deactivate it and use alternative plugin."
 msgstr ""
 
-#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:43
+#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:44
 msgid "This plugin breaks Smart Slider 3 ajax calls if custom admin url enabled."
 msgstr ""
 
-#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:57
+#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:58
 msgid "This plugin adds a background image to every SVG and breaks SSL."
 msgstr ""
 
-#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:68
+#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:69
 msgid "This plugin has a JavaScript error which might break Smart Slider."
+msgstr ""
+
+#: SmartSlider3/Conflict/WordPress/WordPressConflict.php:81
+#, php-format
+msgid "This plugin breaks the filtering options of the dynamic slide generators when %1$s is set to %2$s. Also it has not received any updates since WordPress 3.9."
 msgstr ""
 
 #: SmartSlider3/Form/Element/Columns.php:29
@@ -5381,8 +5836,8 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:38
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:65
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:38
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:38
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:63
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:40
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:65
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:34
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:30
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:34
@@ -5431,8 +5886,8 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Flexicontent/Sources/FlexicontentItems.php:58
 #: SmartSlider3Pro/Generator/Joomla/Jauction/Sources/JauctionAuctions.php:41
 #: SmartSlider3Pro/Generator/Joomla/Jmarket/Sources/JmarketProducts.php:41
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:47
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:65
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:49
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:67
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:46
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:56
 #: SmartSlider3Pro/Generator/Joomla/Virtuemart/Sources/VirtuemartProducts.php:56
@@ -5448,7 +5903,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialActivities.php:64
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialEvents.php:58
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialVideos.php:50
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:48
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:50
 msgid "User ID"
 msgstr ""
 
@@ -5461,7 +5916,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jmarket/Sources/JmarketProducts.php:44
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:51
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:52
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:49
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:51
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:45
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:39
 #: SmartSlider3Pro/Generator/Joomla/Virtuemart/Sources/VirtuemartProducts.php:58
@@ -5485,7 +5940,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsEvents.php:54
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsRepeatingevents.php:51
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialEvents.php:49
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:54
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:56
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:62
 #: SmartSlider3Pro/Generator/WordPress/WooCommerce/Sources/WooCommerceProductsByFilter.php:76
 #: SmartSlider3Pro/Generator/WordPress/WooCommerce/Sources/WooCommerceProductsByFilter.php:77
@@ -5498,7 +5953,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Eventsbooking/Sources/EventsbookingEvents.php:70
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsEvents.php:54
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsRepeatingevents.php:51
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:54
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:56
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:62
 msgid "m-d-Y"
 msgstr ""
@@ -5509,7 +5964,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsEvents.php:55
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsRepeatingevents.php:52
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialEvents.php:50
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:55
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:57
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:63
 msgid "Time format"
 msgstr ""
@@ -5528,7 +5983,7 @@ msgstr ""
 #: SmartSlider3/Generator/WordPress/Posts/Sources/PostsPosts.php:88
 #: SmartSlider3/Renderable/Item/Heading/ItemHeading.php:277
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:167
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:207
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:228
 #: SmartSlider3/Widget/Bar/BarHorizontal/BarHorizontal.php:53
 #: SmartSlider3/Widget/Thumbnail/Basic/ThumbnailBasic.php:98
 #: SmartSlider3Pro/Generator/Joomla/Cobalt/Sources/CobaltRecords.php:63
@@ -5546,7 +6001,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialEvents.php:70
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialEvents.php:74
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialVideos.php:57
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:62
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:64
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:46
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:88
 #: SmartSlider3Pro/Generator/WordPress/AllInOneEventCalendar/Sources/AllinOneEventCalendarEvents.php:77
@@ -5557,33 +6012,15 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:74
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:166
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:169
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:165
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:167
 #: SmartSlider3Pro/Slider/SliderType/Accordion/SliderTypeAccordionAdmin.php:177
 #: SmartSlider3Pro/Widget/Bar/BarVertical/BarVertical.php:44
 msgid "Title"
 msgstr ""
 
 #: SmartSlider3/Generator/Joomla/JoomlaContent/Sources/JoomlaContentArticle.php:94
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:64
-msgid "User name"
-msgstr ""
-
-#: SmartSlider3/Generator/Joomla/JoomlaContent/Sources/JoomlaContentArticle.php:96
-#: SmartSlider3/Generator/Joomla/JoomlaContent/Sources/JoomlaContentCategory.php:48
-#: SmartSlider3Pro/Generator/Joomla/Cobalt/Sources/CobaltRecords.php:65
-#: SmartSlider3Pro/Generator/Joomla/Easyblog/Sources/EasyblogPosts.php:55
-#: SmartSlider3Pro/Generator/Joomla/Easydiscuss/Sources/EasydiscussDiscussions.php:49
-#: SmartSlider3Pro/Generator/Joomla/Eshop/Sources/EshopProducts.php:79
-#: SmartSlider3Pro/Generator/Joomla/Flexicontent/Sources/FlexicontentItems.php:59
-#: SmartSlider3Pro/Generator/Joomla/Ignitegallery/Sources/IgnitegalleryImages.php:41
-#: SmartSlider3Pro/Generator/Joomla/Jcart/Sources/JcartProducts.php:120
-#: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:66
 #: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:66
-#: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:53
-#: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:48
-#: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:58
-#: SmartSlider3Pro/Generator/Joomla/Virtuemart/Sources/VirtuemartProducts.php:70
-msgid "Ordering"
+msgid "User name"
 msgstr ""
 
 #: SmartSlider3/Generator/Joomla/JoomlaContent/Sources/JoomlaContentArticle.php:97
@@ -5601,7 +6038,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialVideos.php:59
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:67
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:68
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:67
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:69
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:49
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:61
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:89
@@ -5635,7 +6072,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialVideos.php:58
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:68
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:63
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:68
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:70
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:56
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:59
 #: SmartSlider3Pro/Generator/Joomla/Virtuemart/Sources/VirtuemartProducts.php:72
@@ -5658,7 +6095,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialActivities.php:80
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:69
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:64
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:69
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:71
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:57
 #: SmartSlider3Pro/Generator/Joomla/Redshop/Sources/RedshopProducts.php:60
 #: SmartSlider3Pro/Generator/Joomla/Virtuemart/Sources/VirtuemartProducts.php:73
@@ -6097,6 +6534,8 @@ msgstr ""
 #: SmartSlider3/Platform/WordPress/Integration/ACF/AcfFieldSmartSlider3.php:75
 #: SmartSlider3/Platform/WordPress/Integration/BeaverBuilder/BeaverBuilder.php:144
 #: SmartSlider3/Platform/WordPress/Integration/BeaverBuilder/BeaverBuilder.php:146
+#: SmartSlider3/Platform/WordPress/Integration/Divi/V31ge/includes/modules/SmartSlider3/SmartSlider3.php:79
+#: SmartSlider3/Platform/WordPress/Integration/Divi/V31ge/includes/modules/SmartSlider3/SmartSlider3.php:81
 #: SmartSlider3/Platform/WordPress/Integration/Unyson/smartslider/options/option-types.php:33
 #: SmartSlider3/Platform/WordPress/Integration/Unyson/smartslider/options/option-types.php:35
 #: SmartSlider3/Platform/WordPress/Widget/WidgetSmartSlider3.php:99
@@ -6168,12 +6607,12 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:191
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:228
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:230
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:124
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:126
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:124
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:126
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:145
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:147
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:285
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:287
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:289
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:291
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:147
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:149
 msgid "Rel"
@@ -6186,9 +6625,9 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Area/ItemArea.php:200
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:192
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:231
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:127
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:127
 #: SmartSlider3Pro/Renderable/Item/ImageArea/ItemImageArea.php:148
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:288
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:292
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:150
 #, php-format
 msgid "Enter the %1$s rel attribute %2$s that represents the relationship between the current document and the linked document. Multiple rel attributes can be separated with space. E.g. nofollow noopener noreferrer"
@@ -6196,11 +6635,11 @@ msgstr ""
 
 #: SmartSlider3/Renderable/Item/Button/ItemButton.php:173
 #: SmartSlider3/Renderable/Item/Button/ItemButton.php:174
-#: SmartSlider3Pro/Renderable/Item/Icon2/Assets/icon2.js:20
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:31
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:93
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:210
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:229
+#: SmartSlider3Pro/Renderable/Item/Icon/Assets/icon2.js:20
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:31
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:93
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:212
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:231
 msgid "Icon"
 msgstr ""
 
@@ -6225,7 +6664,7 @@ msgid "Heading layer"
 msgstr ""
 
 #: SmartSlider3/Renderable/Item/Heading/ItemHeading.php:193
-#: SmartSlider3Pro/SplitText/Block/SplitTextManager/Index.phtml:14
+#: SmartSlider3Pro/SplitText/Block/SplitTextManager/Index.php:14
 msgid "Text animation"
 msgstr ""
 
@@ -6256,7 +6695,7 @@ msgstr ""
 #: SmartSlider3/Renderable/Item/Image/ItemImage.php:164
 #: SmartSlider3Pro/Generator/WordPress/WebdoradoPhotoGallery/Sources/WebdoradoPhotoGalleryImages.php:39
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:243
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:224
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:226
 msgid "Alt tag"
 msgstr ""
 
@@ -6281,7 +6720,7 @@ msgstr ""
 #: SmartSlider3Pro/Renderable/Item/Counter/ItemCounter.php:48
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:61
 #: SmartSlider3Pro/Renderable/Item/HtmlList/ItemHtmlList.php:64
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:71
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:72
 #: SmartSlider3Pro/Renderable/Item/ProgressBar/ItemProgressBar.php:53
 #: SmartSlider3Pro/Renderable/Item/Transition/ItemTransition.php:41
 msgctxt "Layer group"
@@ -6350,127 +6789,127 @@ msgstr ""
 msgid "Aspect ratio"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:124
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:137
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:125
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:138
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:125
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:158
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:126
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:159
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:130
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:164
 msgid "Fill layer height"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:137
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:138
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:158
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:159
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:164
 msgid "Set on Style tab."
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:139
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:141
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:160
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:162
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:166
 msgid "Video settings"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:149
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:151
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:170
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:172
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:176
 msgid "When ended"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:151
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:153
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:172
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:174
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:178
 msgid "Do nothing"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:152
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:154
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:173
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:175
 msgid "Go to next slide"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:156
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:158
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:177
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:179
 #: SmartSlider3Pro/Generator/Joomla/Easysocial/Sources/EasysocialEvents.php:67
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialEvents.php:72
 msgid "Start time"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:162
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:168
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:183
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:189
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:133
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:152
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:189
 msgid "Volume"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:164
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:170
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:185
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:191
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:135
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:191
 msgid "Mute"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:173
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:179
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:179
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:185
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:194
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:200
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:200
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:206
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:227
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:233
 msgid "Pause on scroll"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:175
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:181
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:196
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:202
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:229
 msgid "Never"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:176
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:182
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:197
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:203
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:230
 msgid "When partly visible"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:177
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:183
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:198
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:204
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:231
 msgid "When not visible"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:180
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:186
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:201
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:207
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:234
 msgid "You can pause the video when the visitor scrolls away from the slider"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:191
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:212
 msgid "Private video"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:200
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:202
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:221
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:223
 #: SmartSlider3Pro/Renderable/Item/Audio/ItemAudio.php:147
 #: SmartSlider3Pro/Renderable/Item/Caption/ItemCaption.php:228
 #: SmartSlider3Pro/Renderable/Item/CircleCounter/ItemCircleCounter.php:136
 #: SmartSlider3Pro/Renderable/Item/Iframe/ItemIframe.php:71
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:291
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:295
 #: SmartSlider3Pro/Renderable/Item/ProgressBar/ItemProgressBar.php:137
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:204
 msgid "Display"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:204
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:225
 msgid "Remove controls"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:208
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:229
 msgid "Users byline"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:221
-#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:222
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:224
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:225
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:242
+#: SmartSlider3/Renderable/Item/Vimeo/ItemVimeo.php:243
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:245
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:246
 msgid "Play button"
 msgstr ""
 
@@ -6478,40 +6917,40 @@ msgstr ""
 msgid "YouTube URL or Video ID"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:163
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:184
 #: SmartSlider3Pro/Generator/Joomla/Easysocial/Sources/EasysocialEvents.php:68
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialEvents.php:73
 msgid "End time"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:205
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:226
 msgid "Hide YouTube logo"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:207
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:208
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:228
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:229
 #: SmartSlider3Pro/Renderable/Item/Video/ItemVideo.php:215
 msgid "Centered"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:209
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:230
 msgid "Scales up and crops the video to cover the whole layer."
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:213
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:218
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:234
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:239
 msgid "Show related videos"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:215
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:236
 msgid "Anywhere"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:216
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:237
 msgid "Same channel"
 msgstr ""
 
-#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:219
+#: SmartSlider3/Renderable/Item/YouTube/ItemYouTube.php:240
 msgid "YouTube no longer allows hiding the related videos at the end of the video. This setting defines whether the videos should come from the same channel as the video that was just played or from any other channel."
 msgstr ""
 
@@ -6601,19 +7040,11 @@ msgstr ""
 msgid "Slider size is too small!"
 msgstr ""
 
-#: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:45
-#: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:136
-#: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:140
-#: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:353
-#: SmartSlider3/BackgroundAnimation/Block/BackgroundAnimationManager/Index.phtml:14
-msgid "Background animation"
-msgstr ""
-
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:49
 #: SmartSlider3/Slider/SliderType/Block/SliderTypeBlockAdmin.php:161
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:174
 #: SmartSlider3/Slider/SliderType/Simple/SliderTypeSimpleAdmin.php:394
-#: SmartSlider3Pro/PostBackgroundAnimation/Block/PostBackgroundAnimationManager/Index.phtml:15
+#: SmartSlider3Pro/PostBackgroundAnimation/Block/PostBackgroundAnimationManager/Index.php:15
 msgid "Ken Burns effect"
 msgstr ""
 
@@ -6799,7 +7230,7 @@ msgstr ""
 msgid "Photo rounded"
 msgstr ""
 
-#: SmartSlider3/SmartSlider3Info.php:203
+#: SmartSlider3/SmartSlider3Info.php:209
 #, php-format
 msgid "Demo slider is not available with the following ID: %s"
 msgstr ""
@@ -7365,7 +7796,7 @@ msgstr ""
 
 #: SmartSlider3/Widget/Arrow/ArrowImage/ArrowImage.php:79
 #: SmartSlider3/Widget/Arrow/ArrowImage/ArrowImage.php:113
-#: SmartSlider3Pro/Renderable/Item/Icon2/ItemIcon2.php:97
+#: SmartSlider3Pro/Renderable/Item/Icon/ItemIcon.php:97
 msgid "Hover color"
 msgstr ""
 
@@ -7494,10 +7925,10 @@ msgstr ""
 
 #: SmartSlider3/Widget/Group/Arrow.php:75
 #: SmartSlider3/Widget/Group/Autoplay.php:65
-#: SmartSlider3/Widget/Group/Bar.php:61
+#: SmartSlider3/Widget/Group/Bar.php:68
 #: SmartSlider3/Widget/Group/Bullet.php:109
 #: SmartSlider3/Widget/Group/Thumbnail.php:95
-#: SmartSlider3Pro/Widget/Group/FullScreen.php:59
+#: SmartSlider3Pro/Widget/Group/FullScreen.php:64
 #: SmartSlider3Pro/Widget/Group/Html.php:57
 #: SmartSlider3Pro/Widget/Group/Indicator.php:56
 msgid "Shows on hover"
@@ -7507,15 +7938,15 @@ msgstr ""
 #: SmartSlider3/Widget/Group/Arrow.php:82
 #: SmartSlider3/Widget/Group/Autoplay.php:71
 #: SmartSlider3/Widget/Group/Autoplay.php:72
-#: SmartSlider3/Widget/Group/Bar.php:67 SmartSlider3/Widget/Group/Bar.php:68
+#: SmartSlider3/Widget/Group/Bar.php:74 SmartSlider3/Widget/Group/Bar.php:75
 #: SmartSlider3/Widget/Group/Bullet.php:115
 #: SmartSlider3/Widget/Group/Bullet.php:116
 #: SmartSlider3/Widget/Group/Shadow.php:59
 #: SmartSlider3/Widget/Group/Shadow.php:60
 #: SmartSlider3/Widget/Group/Thumbnail.php:101
 #: SmartSlider3/Widget/Group/Thumbnail.php:102
-#: SmartSlider3Pro/Widget/Group/FullScreen.php:63
-#: SmartSlider3Pro/Widget/Group/FullScreen.php:64
+#: SmartSlider3Pro/Widget/Group/FullScreen.php:68
+#: SmartSlider3Pro/Widget/Group/FullScreen.php:69
 #: SmartSlider3Pro/Widget/Group/Html.php:61
 #: SmartSlider3Pro/Widget/Group/Html.php:62
 #: SmartSlider3Pro/Widget/Group/Indicator.php:60
@@ -7525,17 +7956,17 @@ msgstr ""
 
 #: SmartSlider3/Widget/Group/Arrow.php:83
 #: SmartSlider3/Widget/Group/Autoplay.php:73
-#: SmartSlider3/Widget/Group/Bar.php:69
+#: SmartSlider3/Widget/Group/Bar.php:76
 #: SmartSlider3/Widget/Group/Bullet.php:117
 #: SmartSlider3/Widget/Group/Shadow.php:61
 #: SmartSlider3/Widget/Group/Thumbnail.php:103
-#: SmartSlider3Pro/Widget/Group/FullScreen.php:65
+#: SmartSlider3Pro/Widget/Group/FullScreen.php:70
 #: SmartSlider3Pro/Widget/Group/Html.php:63
 #: SmartSlider3Pro/Widget/Group/Indicator.php:62
 msgid "List the slides separated by commas on which you want the controls to be hidden."
 msgstr ""
 
-#: SmartSlider3/Widget/Group/Bar.php:33 SmartSlider3/Widget/Group/Bar.php:45
+#: SmartSlider3/Widget/Group/Bar.php:40 SmartSlider3/Widget/Group/Bar.php:52
 msgid "Text bar"
 msgstr ""
 
@@ -7697,7 +8128,7 @@ msgstr ""
 msgid "Switches to the %s. slide."
 msgstr ""
 
-#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:138
+#: SmartSlider3Pro/Application/Admin/Assets/js/element/shapedividermanager.js:136
 msgid "Top and bottom"
 msgstr ""
 
@@ -7761,7 +8192,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jomsocial/Sources/JomsocialVideos.php:48
 #: SmartSlider3Pro/Renderable/Item/AnimatedHeading/ItemAnimatedHeading.php:187
 #: SmartSlider3Pro/Renderable/Item/HighlightedHeading/ItemHighlightedHeading.php:236
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:181
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:183
 #: SmartSlider3Pro/Renderable/Joomla/Item/JoomlaModule/ItemJoomlaModule.php:54
 msgid "Type"
 msgstr ""
@@ -8014,18 +8445,20 @@ msgid "%1$s allows HTTPS Redirect URIs only! You must move your site to HTTPS in
 msgstr ""
 
 #: SmartSlider3Pro/Generator/Common/Facebook/ConfigurationFacebook.php:131
-msgid "manage pages"
+msgctxt "Facebook app permission"
+msgid "pages read engagement"
 msgstr ""
 
 #: SmartSlider3Pro/Generator/Common/Facebook/ConfigurationFacebook.php:132
-msgid "Manage pages permission"
+msgid "Pages read engagement permission"
 msgstr ""
 
 #: SmartSlider3Pro/Generator/Common/Facebook/ConfigurationFacebook.php:133
-msgid "You need \"manage_pages\" permission if you want to access datas of Facebook pages, where you are an administrator. For other pages you still need to turn this option on, but request access to \"Page Public Content Access\" within your App."
+msgid "You need \"pages_read_engagement\" permission if you want to access datas of Facebook pages, where you are an administrator. For other pages you still need to turn this option on, but request access to \"Page Public Content Access\" within your App."
 msgstr ""
 
 #: SmartSlider3Pro/Generator/Common/Facebook/ConfigurationFacebook.php:135
+msgctxt "Facebook app permission"
 msgid "user photos"
 msgstr ""
 
@@ -8037,7 +8470,7 @@ msgstr ""
 msgid "You need \"user_photos\" permission to access photos of users, except your own user."
 msgstr ""
 
-#: SmartSlider3Pro/Generator/Common/Facebook/ConfigurationFacebook.php:162
+#: SmartSlider3Pro/Generator/Common/Facebook/ConfigurationFacebook.php:164
 msgid "The token expired. Please request new token! "
 msgstr ""
 
@@ -8336,7 +8769,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/GeneratorGroupJreviews.php:23
 #: SmartSlider3Pro/Generator/Joomla/Jreviews/Sources/JreviewsComments.php:26
 #: SmartSlider3Pro/Generator/Joomla/K2/GeneratorGroupK2.php:21
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:29
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:31
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/GeneratorGroupMijoshop.php:21
 #: SmartSlider3Pro/Generator/Joomla/Mijoshop/Sources/MijoshopProducts.php:25
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/GeneratorGroupPhocagallery.php:21
@@ -8360,7 +8793,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Djclassifieds/GeneratorGroupDjclassifieds.php:31
 #: SmartSlider3Pro/Generator/Joomla/K2/GeneratorGroupK2.php:21
 #: SmartSlider3Pro/Generator/Joomla/K2/GeneratorGroupK2.php:29
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:29
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:31
 #: SmartSlider3Pro/Renderable/Item/HtmlList/ItemHtmlList.php:127
 msgid "Items"
 msgstr ""
@@ -8420,7 +8853,7 @@ msgstr ""
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsRepeatingevents.php:60
 #: SmartSlider3Pro/Generator/Joomla/Jmarket/Sources/JmarketProducts.php:45
 #: SmartSlider3Pro/Generator/Joomla/Joomshopping/Sources/JoomshoppingProducts.php:50
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:50
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:52
 msgid "Menu item (item ID)"
 msgstr ""
 
@@ -8816,13 +9249,13 @@ msgid "Brand"
 msgstr ""
 
 #: SmartSlider3Pro/Generator/Joomla/Hikashop/Sources/HikashopProducts.php:39
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:41
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:43
 #: SmartSlider3Pro/Generator/Joomla/Phocagallery/Sources/PhocagalleryImages.php:33
 #: SmartSlider3Pro/Generator/Joomla/Rseventspro/Sources/RseventsproEvents.php:48
 #: SmartSlider3Pro/Generator/Joomla/Zoo/Sources/ZooItems.php:45
 #: SmartSlider3Pro/Generator/WordPress/AllInOneEventCalendar/Sources/AllinOneEventCalendarEvents.php:33
 #: SmartSlider3Pro/Generator/WordPress/WooCommerce/Sources/WooCommerceProductsByFilter.php:34
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:248
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:252
 msgid "Tag"
 msgstr ""
 
@@ -8911,11 +9344,6 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsEvents.php:74
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.phtml:76
-msgid "Unpublished"
-msgstr ""
-
 #: SmartSlider3Pro/Generator/Joomla/Jevents/Sources/JeventsEvents.php:75
 msgid "Trashed"
 msgstr ""
@@ -8948,7 +9376,7 @@ msgstr ""
 msgid "Ask down all product images"
 msgstr ""
 
-#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:232
+#: SmartSlider3Pro/Generator/Joomla/K2/Sources/K2Items.php:240
 msgid "View item"
 msgstr ""
 
@@ -9643,13 +10071,6 @@ msgstr ""
 msgid "Pre"
 msgstr ""
 
-#: SmartSlider3Pro/Renderable/Item/CircleCounter/ItemCircleCounter.php:175
-#: SmartSlider3Pro/Renderable/Item/Counter/ItemCounter.php:121
-#: SmartSlider3Pro/Renderable/Item/ProgressBar/ItemProgressBar.php:159
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.phtml:36
-msgid "Post"
-msgstr ""
-
 #: SmartSlider3Pro/Renderable/Item/CircleCounter/ItemCircleCounter.php:180
 #: SmartSlider3Pro/Renderable/Item/Counter/ItemCounter.php:135
 #: SmartSlider3Pro/Renderable/Item/ProgressBar/ItemProgressBar.php:164
@@ -9888,7 +10309,7 @@ msgctxt "List layer type"
 msgid "Upper-roman"
 msgstr ""
 
-#: SmartSlider3Pro/Renderable/Item/Icon2/Assets/icon2.js:36
+#: SmartSlider3Pro/Renderable/Item/Icon/Assets/icon2.js:36
 msgid "Icon not found"
 msgstr ""
 
@@ -9926,12 +10347,12 @@ msgid "Image area"
 msgstr ""
 
 #: SmartSlider3Pro/Renderable/Item/ImageBox/Assets/imagebox.js:21
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:63
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:173
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:64
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:175
 msgid "Image box"
 msgstr ""
 
-#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:337
+#: SmartSlider3Pro/Renderable/Item/ImageBox/ItemImageBox.php:341
 msgid "Positions the text inside the layer. Only works with left and right layout."
 msgstr ""
 
@@ -10323,6 +10744,10 @@ msgstr ""
 msgid "Clicking on any slide that's not in the middle will make the slider switch to that slide. With this option you can disable this behavior, for example, to allow clicking on buttons on the visible slides."
 msgstr ""
 
+#: SmartSlider3Pro/SplitText/Block/SplitTextManager/Sidebar.php:16
+msgid "Save as new animation"
+msgstr ""
+
 #: SmartSlider3Pro/SplitText/ModelSplitText.php:38
 msgid "Sets"
 msgstr ""
@@ -10384,9 +10809,14 @@ msgid "To fullscreen"
 msgstr ""
 
 #: SmartSlider3Pro/Widget/FullScreen/FullScreenImage/FullScreenImage.php:82
-#: SmartSlider3Pro/Widget/Group/FullScreen.php:31
-#: SmartSlider3Pro/Widget/Group/FullScreen.php:43
+#: SmartSlider3Pro/Widget/Group/FullScreen.php:32
+#: SmartSlider3Pro/Widget/Group/FullScreen.php:44
 msgid "Fullscreen"
+msgstr ""
+
+#: SmartSlider3Pro/Widget/Group/FullScreen.php:53
+#, php-format
+msgid "%1$s %2$s does not support the full screen API %3$s so other elements of the page may overlap the slider in Fullscreen mode. To avoid such problems, we suggest hiding the Fullscreen control from mobile view!"
 msgstr ""
 
 #: SmartSlider3Pro/Widget/Group/Indicator.php:31
@@ -10406,361 +10836,4 @@ msgstr ""
 #: SmartSlider3Pro/Widget/Indicator/IndicatorPie/IndicatorPie.php:43
 #: SmartSlider3Pro/Widget/Indicator/IndicatorStripe/IndicatorStripe.php:44
 msgid "Bar color"
-msgstr ""
-
-#: Framework/Font/Block/FontManager/Index.phtml:14
-msgid "Font manager"
-msgstr ""
-
-#: Framework/Image/Block/ImageManager/Index.phtml:14
-msgid "Image manager"
-msgstr ""
-
-#: Framework/Style/Block/StyleManager/Index.phtml:14
-msgid "Style manager"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Generator/Template/CreateStep1Groups.phtml:61
-msgid "Not installed"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Generator/Template/CreateStep1Groups.phtml:69
-msgid "Visit"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.phtml:18
-msgid "How to upgrade to Smart Slider 3 Pro?"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.phtml:22
-#, php-format
-msgid "After making your purchase, %1$slog in to your account%3$s and download the Pro installer. To get started with Smart Slider 3 Pro, simply %2$sinstall it on your website%3$s."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.phtml:26
-msgid "Download Pro"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/BlockAlreadyPurchased/AlreadyPurchased.phtml:30
-msgid "Feel free to remove the Free version, as you no longer need it. Your sliders will stay!"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/Template/Index.phtml:18
-msgid "Ready to go Pro?"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/Template/Index.phtml:22
-msgid "Supercharge Smart Slider 3 with powerful functionality!"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/Template/Index.phtml:34
-msgid "Already purchased?"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/GoPro/Template/Index.phtml:38
-msgid "Get started with the Pro version now!"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:22
-msgid "Welcome to Help Center"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:25
-#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.phtml:15
-msgid "To help you get started, we've put together a super tutorial video that shows you the basic settings."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:40
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:128
-msgid "Possible conflicts"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:44
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:132
-msgid "Test connection"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:48
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:136
-msgid "No conflicts detected."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:66
-msgid "Hello! How can we help you today?"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:71
-msgid "Search in the knowledge base"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:83
-msgid "Documentation"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:84
-msgid "To get started with Smart Slider 3, please refer to this guide for downloading, installing, and using."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:90
-msgid "Email support"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:91
-msgid "Need one-to-one assistance? Get in touch with our Support team! We'd love the opportunity to help you."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:98
-msgid "Tutorial videos"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:99
-msgid "Check our video tutorials which cover everything you need to know about Smart Slider 3."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:104
-msgid "Selected articles"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Help/Template/Index.phtml:166
-msgid "Debug information"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Core/FreeNeedMore/FreeNeedMore.phtml:17
-msgid "Need more?"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Core/FreeNeedMore/FreeNeedMore.phtml:20
-msgid "Unlock all the pro features by upgrading to Smart Slider 3 Pro."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.phtml:42
-msgid "Changelog"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.phtml:57
-msgid "Check for update"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.phtml:60
-msgid "Check"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.phtml:71
-msgid "Your license is active"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.phtml:74
-msgid "Deactivate license"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardInfo/DashboardInfo.phtml:82
-msgid "Activate your license"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardNewsletter.phtml:18
-msgid "Don’t miss any update"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:25
-msgid "Let us know how we're doing"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:29
-msgid "If you are happy with Smart Slider 3 and can take a minute please leave a review. This will help to spread its popularity and to make this plugin a better one."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:59
-msgid "Rate your experience"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:60
-msgid "Hated it"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:61
-msgid "Disliked it"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:62
-msgid "It was ok"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:63
-msgid "Liked it"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardReview.phtml:64
-msgid "Loved it"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:18
-msgid "Why upgrade to Smart Slider 3 Pro?"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:25
-msgid "180+ slider templates"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:29
-msgid "14 new layers"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:33
-msgid "New animations & effects"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:39
-msgid "Full slide library access"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:43
-msgid "Extra advanced options"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Dashboard/DashboardManager/Boxes/DashboardUpgradePro.phtml:47
-msgid "Lifetime update & support"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:64
-msgid "Layers"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/AddLayer/AddLayer.phtml:72
-msgid "Library"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.phtml:22
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderBox/SliderBox.phtml:40
-msgid "Edit"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideBox/SlideBox.phtml:68
-msgid "First slide"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.phtml:26
-msgid "Blank"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/AddSlide/AddSlide.phtml:53
-msgid "Dynamic slides"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.phtml:92
-msgid "Add slide"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.phtml:105
-msgid "Block must contain only one slide. Need more?"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.phtml:108
-msgid "Convert to slider"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.phtml:136
-msgid "Slide one"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.phtml:143
-msgid "Slide two"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slide/SlideManager/SlideManager.phtml:150
-msgid "Drop images here"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderManager/SliderManager.phtml:32
-msgid "New project"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.phtml:21
-msgid "Module"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.phtml:23
-msgid "Displays the slider in a template module position."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.phtml:30
-msgid "Related modules"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.phtml:40
-msgid "Articles"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.phtml:42
-msgid "Paste the code into article:"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.phtml:50
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.phtml:48
-msgid "PHP code"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/Joomla.phtml:52
-msgid "Paste the PHP code into source code:"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.phtml:17
-msgid "Shortcode"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.phtml:19
-msgid "Copy and paste this shortcode into your posts or pages:"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.phtml:31
-msgid "Pages and Posts"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.phtml:44
-#, php-format
-msgid "Smart Slider 3 has integration with %s."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderPublish/WordPress.phtml:50
-msgid "Paste the PHP code into your theme's file:"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Layout/Block/Slider/SliderTrash/SliderTrash.phtml:16
-msgid "Trash is empty."
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Preview/Block/PreviewToolbar/PreviewToolbar.phtml:38
-msgid "Toggle orientation"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Preview/Block/PreviewToolbar/PreviewToolbar.phtml:49
-msgid "Reload preview"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Preview/Block/PreviewToolbar/PreviewToolbar.phtml:56
-msgid "Open preview in full"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Preview/Template/Index.phtml:28
-msgid "State"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Preview/Template/Index.phtml:30
-msgid "Reason"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Sliders/Pro/Template/Activate.phtml:24
-#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.phtml:26
-msgid "Go to dashboard"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.phtml:12
-msgid "Welcome to Smart Slider 3"
-msgstr ""
-
-#: SmartSlider3/Application/Admin/Sliders/Template/GettingStarted.phtml:23
-msgid "Don't show again"
-msgstr ""
-
-#: SmartSlider3Pro/SplitText/Block/SplitTextManager/Sidebar.phtml:16
-msgid "Save as new animation"
 msgstr ""
